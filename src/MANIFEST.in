@@ -1,0 +1,4 @@
+include fbosbot/schema.sql
+graft fbosbot/static
+graft fbosbot/templates
+global-exclude *.pyc

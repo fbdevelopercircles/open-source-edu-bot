@@ -1,0 +1,61 @@
+# French translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-07-07 00:07+0000\n"
+"PO-Revision-Date: 2020-07-07 02:26+0000\n"
+"Last-Translator: \n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"X-Generator: Poedit 2.3.1\n"
+
+#: services/messenger.py:130
+#, python-format
+msgid ""
+"🙏🏼 %(first_name)s, welcome to the Facebook Open Source Learning resource "
+"bot."
+msgstr ""
+"🙏🏼 %(first_name)s, bienvenu(e) dans le chatbot des resources "
+"d'apprentissage de l'Open Source de Facebook."
+
+#: services/messenger.py:138
+msgid ""
+"We are excited 🤩 to share resources to help you learn about open source "
+"and start contributing 👨‍💻."
+msgstr ""
+"Nous sommes excités 🤩 à l'idée de partager des resources pour t'aider à "
+"apprendre l'Open Source et de commencer à y contribuer 👨‍💻."
+
+#: services/messenger.py:148
+msgid "Main Menu 🗄️"
+msgstr "Menu Principal 🗄️"
+
+#: services/messenger.py:153
+#, python-format
+msgid "%(first_name)s click on the button bellow to se the chatbot menu 👇🏼"
+msgstr ""
+"%(first_name)s clique sur le bouton en dessous pour voir le menu du "
+"chatbot 👇🏼"
+
+#~ msgid ""
+#~ "🙏🏼 {{user_first_name}}, welcome to the Facebook Open Source Learning "
+#~ "resource bot."
+#~ msgstr ""
+#~ "🙏🏼 {{user_first_name}}, bienvenu(e) le chatbot de resources "
+#~ "d'apprentissage de l'Open Source de Facebook."
+
+#~ msgid ""
+#~ "{{user_first_name}} click on the button bellow to se the chatbot menu 👇🏼"
+#~ msgstr ""
+#~ "{{user_first_name}} click sur le bouton en dessous pour voir le menu du "
+#~ "chatbot 👇🏼"

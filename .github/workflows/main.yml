@@ -1,0 +1,34 @@
+name: Push Container to Heroku
+
+on: 
+  push:
+    branches:
+      - master
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Creating the .envprod file
+      run: cp .sample.env .envprod
+    - name: Build the docker compose stack
+      run: docker-compose -f docker-compose.prod.yml up -d --build
+    - name: Check the running containers
+      run: docker ps -a
+    - name: Check logs
+      run: docker-compose -f docker-compose.prod.yml logs app
+    # - name: Tests coverage
+    #   run: docker exec fbosbot_prod sh -c "coverage run -m pytest"
+    - name: Login to Heroku Container registry
+      env: 
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: heroku container:login 
+    - name: Build and push
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: heroku container:push -a ${{ secrets.HEROKU_APP_NAME }} web 
+    - name: Release
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: heroku container:release -a ${{ secrets.HEROKU_APP_NAME }} web 
