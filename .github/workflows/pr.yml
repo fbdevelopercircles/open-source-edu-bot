@@ -1,0 +1,19 @@
+name: PR-CI
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Creating the .env file
+      run: cp .sample.env .env && sed -i -r 's/FLASK_ENV=production/FLASK_ENV=development/g' .env
+    - name: Build the docker compose stack
+      run: docker-compose up -d --build
+    - name: Check the running containers
+      run: docker ps -a
+    - name: Check logs
+      run: docker-compose logs app
