@@ -84,4 +84,4 @@ CONTRIBUTORS
 
 ## License
 
-Facebook Developer Circles Community Content is [MIT licensed](./LICENSE).
+Open Source Education Bot is [MIT licensed](./LICENSE).
