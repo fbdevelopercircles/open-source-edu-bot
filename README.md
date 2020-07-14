@@ -1,8 +1,8 @@
 ![Push Container to Heroku](https://github.com/aboullaite/messeger-edu-bot/workflows/Push%20Container%20to%20Heroku/badge.svg)
 
-# Messenger Edu Bot
+# Open Source Education Bot
 
-Open Source bot builded by the Facebook Developers Circle community to train members on how to contribute to open source projects.
+Open Source Education bot built by the Facebook Developers Circle community to train members on how to contribute to open source projects.
 
 # Installation
 
