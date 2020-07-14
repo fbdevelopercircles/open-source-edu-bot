@@ -81,3 +81,7 @@ curl -X GET "<YOUR HOST>/webhook?hub.verify_token=<YOUR VERIFY TOKEN>&hub.chalen
 
 CONTRIBUTORS
 ------------
+
+## License
+
+Facebook Developer Circles Community Content is [MIT licensed](./LICENSE).
