@@ -6,9 +6,14 @@
 import os
 from manage import app, db
 from services.messenger import bp
+from db_connection.messages_model import messages
+from db_connection.game_user_model import game_user
 
 app.register_blueprint(bp)
 app.add_url_rule('/webhook', endpoint='webhook')
+app.register_blueprint(messages)
+app.register_blueprint(game_user)
+
 
 with app.app_context():
     from db_connection.game_user_model import Game_User_Model
