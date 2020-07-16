@@ -41,7 +41,7 @@ class Messages_Model(db.Model):
         '''
         save data to db
         '''
-        db.session.add(self)
+        db.session.add(entity)
         db.session.commit()
 
 
