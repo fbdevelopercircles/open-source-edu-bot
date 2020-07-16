@@ -5,7 +5,7 @@
 
 import os
 
-from flask import Flask
+from flask import Flask, render_template
 from flask_babel import Babel
 
 babel = Babel()
@@ -33,6 +33,11 @@ def create_app(test_config=None):
         os.makedirs(app.instance_path)
     except OSError:
         pass
+
+    # Adding the privacy page
+    @app.route('/privacy.html')
+    def privacy():
+        return render_template('privacy.html')
 
     babel.init_app(app)
     app.config['BABEL_DEFAULT_LOCALE'] = 'en'
