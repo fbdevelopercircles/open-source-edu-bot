@@ -27,12 +27,12 @@ def test_webhook(client):
 
 def test_default_get_locale():
     """Test that we can extract the locale from user data"""
-    assert get_locale() is "en"
+    assert get_locale() == "en"
 
 
 def test_default_get_timezone():
     """Test that we can extract the timezone from user data"""
-    assert get_timezone() is 0
+    assert get_timezone() == 0
 
 
 def test_main_menu_OK():

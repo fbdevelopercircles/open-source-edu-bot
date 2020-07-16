@@ -5,15 +5,14 @@
 
 import os
 
-
-from flask import Flask, request, Response, g
+from flask import Flask, render_template
 from flask_babel import Babel
 
 babel = Babel()
 
 
 def create_app(test_config=None):
-    # The app factory function
+    """The app factory function"""
 
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
@@ -35,11 +34,14 @@ def create_app(test_config=None):
     except OSError:
         pass
 
+    # Adding the privacy page
+    @app.route('/privacy.html')
+    def privacy():
+        return render_template('privacy.html')
+
     babel.init_app(app)
     app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 
-    # path = os.getcwd()
-    # locales_path = os.path.abspath(os.path.join(path, os.pardir, 'locales'))
     app.config['BABEL_TRANSLATION_DIRECTORIES'] = "../locales"
 
     from services import messenger
