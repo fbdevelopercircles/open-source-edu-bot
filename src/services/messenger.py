@@ -6,18 +6,15 @@
 import os
 import sys
 import logging
-import click
 
 from time import sleep
-from flask import Blueprint, request, Response, g, current_app
+from flask import Blueprint, request, Response
 from flask_babel import refresh, gettext as _
 
-from werkzeug.exceptions import abort
 from fbmessenger import BaseMessenger, MessengerClient
 from fbmessenger.templates import GenericTemplate
-from fbmessenger.elements import Text, Button, Element, Button
+from fbmessenger.elements import Text, Button, Element
 from fbmessenger import quick_replies
-from fbmessenger.attachments import Image, Video
 from fbmessenger.sender_actions import SenderAction
 
 from .profile import init_profile
@@ -71,10 +68,6 @@ def init_user_preference(messenger):
     get_locale()
     get_timezone()
     refresh()
-
-    # logger.debug(babel.list_translations())
-    # logger.debug(get_locale())
-    # return user
 
 
 def get_button(ratio):
@@ -148,10 +141,11 @@ def process_message(messenger, message):
     if 'attachments' in message['message']:
         if message['message']['attachments'][0]['type'] == 'location':
             logger.debug('Location received')
+            attachments = message['message']['attachments']
             response = Text(text='{}: lat: {}, long: {}'.format(
                 message['message']['attachments'][0]['title'],
-                message['message']['attachments'][0]['payload']['coordinates']['lat'],
-                message['message']['attachments'][0]['payload']['coordinates']['long']
+                attachments[0]['payload']['coordinates']['lat'],
+                attachments[0]['payload']['coordinates']['long']
             ))
             res = messenger.send(response.to_dict(), 'RESPONSE')
             logger.debug('Response: {}'.format(res))
@@ -174,45 +168,9 @@ def process_message(messenger, message):
             }
         messenger.send(text, 'RESPONSE')
         return True
-        response = Text(
-            text='Sorry didn\'t understand that: {}'.format(msg))
-        if 'text' in msg:
-            response = Text(text='This is an example text message.')
-        if 'image' in msg:
-            response = Image(url='https://unsplash.it/300/200/?random')
-        if 'video' in msg:
-            response = Video(
-                url='http://techslides.com/demos/sample-videos/small.mp4')
-        if 'quick replies' in msg:
-            qr1 = quick_replies.QuickReply(
-                title='Location', content_type='location')
-            qr2 = quick_replies.QuickReply(
-                title='Payload', payload='QUICK_REPLY_PAYLOAD')
-            qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
-            response = Text(
-                text='This is an example text message.', quick_replies=qrs)
-        if 'payload' in msg:
-            txt = 'User clicked {}, button payload is {}'.format(
-                msg,
-                'Something non sens'
-            )
-            response = Text(text=txt)
-        if 'webview-compact' in msg:
-            btn = get_button(ratio='compact')
-            elem = get_element(btn)
-            response = GenericTemplate(elements=[elem])
-        if 'webview-tall' in msg:
-            btn = get_button(ratio='tall')
-            elem = get_element(btn)
-            response = GenericTemplate(elements=[elem])
-        if 'webview-full' in msg:
-            btn = get_button(ratio='full')
-            elem = get_element(btn)
-            response = GenericTemplate(elements=[elem])
 
-        res = messenger.send(response.to_dict(), 'RESPONSE')
-        logger.debug('Response: {}'.format(res))
-        return True
+    messenger.send_action(mark_seen)
+    return True
 
 
 def process_postback(messenger, payload):
@@ -264,8 +222,8 @@ def process_postback(messenger, payload):
         qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
         text = {
             "text": _(
-                u'An important component in Open Source contribution is version'
-                ' control tools. Are you familiar with the concept of'
+                u'An important component in Open Source contribution is'
+                ' version control tools. Are you familiar with the concept of'
                 ' version control? 👇🏼'
             ),
             "quick_replies": qrs.to_dict()
@@ -303,7 +261,8 @@ def process_postback(messenger, payload):
         text = {
             "text": _(
                 u'😎 Worry not!\n\n'
-                'Version control allows you to manage changes to files over time ⏱️.'
+                'Version control allows you to manage changes to files over'
+                ' time ⏱️.'
             )
         }
         messenger.send(text, 'RESPONSE')
@@ -311,7 +270,8 @@ def process_postback(messenger, payload):
         sleep(3)
         text = {
             "text": _(
-                u'You can use version control to version code, binary files, and digital assets 🗄️.'
+                u'You can use version control to version code, binary files,'
+                ' and digital assets 🗄️.'
             )
         }
         messenger.send(text, 'RESPONSE')
@@ -319,7 +279,8 @@ def process_postback(messenger, payload):
         sleep(3)
         text = {
             "text": _(
-                u'This includes version control software, version control systems, or version control tools 🧰.'
+                u'This includes version control software, version control'
+                ' systems, or version control tools 🧰.'
             )
         }
         messenger.send(text, 'RESPONSE')
@@ -327,7 +288,8 @@ def process_postback(messenger, payload):
         sleep(3)
         text = {
             "text": _(
-                u'Version control is a component of software configuration management 🖥️.'
+                u'Version control is a component of software configuration'
+                ' management 🖥️.'
             )
         }
         messenger.send(text, 'RESPONSE')
@@ -340,7 +302,8 @@ def process_postback(messenger, payload):
         qrs = quick_replies.QuickReplies(quick_replies=[qr])
         text = {
             "text": _(
-                u'😎 Now That you understand what Version control is, let\'s explore another important topic'
+                u'😎 Now That you understand what Version control is,'
+                ' let\'s explore another important topic'
             ),
             "quick_replies": qrs.to_dict()
         }
@@ -464,7 +427,9 @@ def process_postback(messenger, payload):
             url='https://git-scm.com/downloads'
         )
         elems = Element(
-            title=_(u'Head over here, and donload git client based on your OS.'),
+            title=_(
+                u'Head over here, and donload git client based on your OS.'
+            ),
             buttons=[btn]
         )
         res = GenericTemplate(elements=[elems])
@@ -491,7 +456,8 @@ def process_postback(messenger, payload):
         messenger.send_action(typing_on)
         sleep(2)
         text = _(
-            u'Not let\'s configure your Git username and email using the following commands')
+            u'Not let\'s configure your Git username and email using the'
+            ' following commands')
         messenger.send({'text': text}, 'RESPONSE')
         messenger.send_action(typing_on)
         sleep(2)
@@ -511,7 +477,9 @@ def process_postback(messenger, payload):
         messenger.send_action(typing_on)
         sleep(2)
         text = _(
-            u'These details will be associated with any commits that you create')
+            u'These details will be associated with any commits that'
+            ' you create'
+        )
         messenger.send({'text': text}, 'RESPONSE')
         messenger.send_action(typing_on)
         sleep(2)
@@ -582,11 +550,10 @@ def process_postback(messenger, payload):
         messenger.send({'text': text}, 'RESPONSE')
         sleep(5)
 
-        # TODO put the public URL when available
         btn1 = Button(
             button_type='web_url',
             title=_('The Code Source'),
-            url='https://github.com'
+            url='https://github.com/fbdevelopercircles/open-source-edu-bot'
         )
         btn2 = Button(
             button_type='web_url',

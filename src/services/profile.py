@@ -6,10 +6,8 @@
 import os
 import sys
 import logging
-import click
 
 from validators import url
-from fbmessenger.thread_settings import MessengerProfile
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -26,15 +24,15 @@ GREETING = {
     "greeting": [
         {
             "locale": "default",
-            "text": u'🙋🏽 Hi {{user_first_name}}! Click on the Get Started button'
-            ' bellow to access Facebook DevC curated resources related to Open'
-            ' Source 🔓 😊.'
+            "text": u'🙋🏽 Hi {{user_first_name}}! Click on the Get Started'
+            ' button bellow to access Facebook DevC curated resources related'
+            ' to Open Source 🔓.'
         },
         {
             "locale": "fr_FR",
             "text": u'🙋🏽 Salut {{user_first_name}}! Clique sur le bouton'
             ' Démarrer en dessous pour accéder à des resources collectées par'
-            ' les DevC de Facebook relatives à l\'Open Source 🔓 😊.'
+            ' les DevC de Facebook relatives à l\'Open Source 🔓.'
         }
     ]
 }
