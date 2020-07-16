@@ -18,7 +18,8 @@ from fbmessenger import quick_replies
 from fbmessenger.sender_actions import SenderAction
 
 from .profile import init_profile
-from fbosbot import babel
+# from fbosbot import babel
+from manage import babel
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -93,8 +94,8 @@ def send_start_messages(messenger):
     """Function to launch at the start of restart of the chatbot"""
 
     txt = _(
-        u'🙏🏼 Hi %(first_name)s, So you’ve decided to make your first steps in'
-        ' Open source. That’s great.', **user
+        u'🙏🏼 Hello there %(first_name)s, My name is Osbot and i am here to help you become a guru at '
+        ' Open source contributing. Lets get started!', **user
     )
     messenger.send({'text': txt}, 'RESPONSE')
     messenger.send_action(typing_on)
