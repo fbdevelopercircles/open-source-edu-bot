@@ -1,4 +1,5 @@
-![Push Container to Heroku](https://github.com/aboullaite/messeger-edu-bot/workflows/Push%20Container%20to%20Heroku/badge.svg)
+![Push Container to Heroku](https://github.com/fbdevelopercircles/open-source-edu-bot/workflows/Push%20Container%20to%20Heroku/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Open Source Education Bot
 
