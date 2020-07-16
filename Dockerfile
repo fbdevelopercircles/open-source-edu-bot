@@ -15,6 +15,8 @@ RUN pip install -r /requirements.txt
 WORKDIR /app
 COPY ./src .
 
+RUN pybabel compile -d locales
+
 EXPOSE 5000
 
 CMD gunicorn "fbosbot:create_app()" --worker-class gevent --workers 5 --bind 0.0.0.0:$PORT --max-requests 10000 --timeout 5 --keep-alive 5 --log-level info

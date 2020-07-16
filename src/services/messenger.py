@@ -93,8 +93,8 @@ def send_start_messages(messenger):
     """Function to launch at the start of restart of the chatbot"""
 
     txt = _(
-        u'🙏🏼 Hi %(first_name)s, So you’ve decided to make your first steps in'
-        ' Open source. That’s great.', **user
+        u'🙏🏼 Hi %(first_name)s, so you’ve decided to make your first steps in'
+        ' Open Source. That’s great.', **user
     )
     messenger.send({'text': txt}, 'RESPONSE')
     messenger.send_action(typing_on)
@@ -108,7 +108,7 @@ def send_start_messages(messenger):
     qr2 = quick_replies.QuickReply(title=_('❌ Not yet'), payload='KNOW_OS_NO')
     qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
     text = {
-        "text": _(u'So tell me %(first_name)s do you know what Open source'
+        "text": _(u'So tell me %(first_name)s do you know what Open Source'
                   ' is? 👇🏼', **user),
         "quick_replies": qrs.to_dict()
     }
@@ -166,8 +166,7 @@ def process_message(messenger, message):
                     ' This is the main menu, select what you need bellow 👇🏼'),
                 "quick_replies": get_main_menu().to_dict()
             }
-        messenger.send(text, 'RESPONSE')
-        return True
+            messenger.send(text, 'RESPONSE')
 
     messenger.send_action(mark_seen)
     return True
@@ -392,7 +391,7 @@ def process_postback(messenger, payload):
         sleep(3)
 
         text = _(
-            u'For example, when you edit a file, git can help you determine'
+            u'For example, when you edit a file, Git can help you determine'
             ' exactly what changed, who changed it, and why.'
         )
         messenger.send({'text': text}, 'RESPONSE')
@@ -423,7 +422,7 @@ def process_postback(messenger, payload):
         sleep(3)
         btn = Button(
             button_type='web_url',
-            title=_('Download git'),
+            title=_('Download Git'),
             url='https://git-scm.com/downloads'
         )
         elems = Element(
@@ -438,12 +437,12 @@ def process_postback(messenger, payload):
         messenger.send_action(typing_on)
         sleep(3)
         qr2 = quick_replies.QuickReply(
-            title=_('Configure git ⚒️'),
+            title=_('Configure Git ⚒️'),
             payload='CONF_GIT'
         )
         qrs = quick_replies.QuickReplies(quick_replies=[qr2])
         text = {
-            "text": _(u'🧑‍🚀 Once done, let\'s configure git'),
+            "text": _(u'🧑‍🚀 Once done, let\'s configure Git'),
             "quick_replies": qrs.to_dict()
         }
         messenger.send(text, 'RESPONSE')
@@ -456,7 +455,7 @@ def process_postback(messenger, payload):
         messenger.send_action(typing_on)
         sleep(2)
         text = _(
-            u'Not let\'s configure your Git username and email using the'
+            u'Now let\'s configure your Git username and email using the'
             ' following commands')
         messenger.send({'text': text}, 'RESPONSE')
         messenger.send_action(typing_on)

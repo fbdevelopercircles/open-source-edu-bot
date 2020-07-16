@@ -12,5 +12,4 @@ COPY ./src .
 
 COPY requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
-
-# CMD ["flask", "run"]
+RUN pybabel compile -d locales
