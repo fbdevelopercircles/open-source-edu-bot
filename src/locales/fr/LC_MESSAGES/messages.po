@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-07-16 23:20+0000\n"
+"POT-Creation-Date: 2020-07-17 07:17+0000\n"
 "PO-Revision-Date: 2020-07-16 23:11+0000\n"
 "Last-Translator: \n"
 "Language: fr\n"
@@ -23,8 +23,8 @@ msgid ""
 "🙏🏼 Hi %(first_name)s, so you’ve decided to make your first steps in Open "
 "Source. That’s great."
 msgstr ""
-"🙏🏼 Salut %(first_name)s, tu t'es décidé à faire tes premiers pas dans l'Open "
-"Source. C'est génial."
+"🙏🏼 Salut %(first_name)s, tu t'es décidé à faire tes premiers pas dans "
+"l'Open Source. C'est génial."
 
 #: services/messenger.py:105 services/messenger.py:199
 #: services/messenger.py:219
@@ -88,8 +88,7 @@ msgid ""
 "tools. Are you familiar with the concept of version control? 👇🏼"
 msgstr ""
 "Un composant important pour la contribution Open Source c'est l'outil de "
-"contrôle de version. Connais-tu le concept de contrôle de version? "
-"👇🏼"
+"contrôle de version. Connais-tu le concept de contrôle de version ? 👇🏼"
 
 #: services/messenger.py:234
 msgid ""
@@ -191,8 +190,8 @@ msgstr "Site officiel"
 msgid "GitHub Tutorial"
 msgstr "Tutoriel GitHub"
 
-#: services/messenger.py:361 services/messenger.py:564
-#: services/messenger.py:579
+#: services/messenger.py:361 services/messenger.py:566
+#: services/messenger.py:581
 msgid "🚶🏽‍♀️ Main Menu 🗄️"
 msgstr "🚶🏽‍♀️ Menu principal 🗄️"
 
@@ -294,41 +293,44 @@ msgstr "Facebook 🧡 l'Open Source !"
 
 #: services/messenger.py:504
 msgid ""
-"Facebook maintains a lot of Open Source projects ranging from:\n"
-"✔️ Artificial Intelligence\n"
-"✔️ Frontend\n"
+"Facebook manages many Open Source projects in the following areas:\n"
 "✔️ Android\n"
-"✔️ Ios\n"
-"✔️ Data Structure\n"
+"✔️ Artificial Intelligence\n"
+"✔️ Data Infrastructure\n"
 "✔️ Developer Operations\n"
-"✔️ Language\n"
+"✔️ Development Tools\n"
+"✔️ Frontend\n"
+"✔️ iOS\n"
+"✔️ Languages\n"
 "✔️ Linux\n"
 "✔️ Security\n"
-"✔️ virtual reality\n"
+"✔️ Virtual Reality\n"
 "..."
 msgstr ""
-"Facebook gère de nombreux projets Open Source allant de:\n"
-"✔️ Intelligence artificielle\n"
-"✔️ Frontend\n"
+"Facebook gère de nombreux projets Open Source dans les domaines suivants "
+":\n"
 "✔️ Android\n"
-"✔️ iOS\n"
+"✔️ Intelligence artificielle\n"
 "✔️ Structure des données\n"
-"✔️ Opérations développeur\n"
-"✔️ Langue\n"
+"✔️ Opérations pour développeurs\n"
+"✔️ Outils pour développeurs\n"
+"✔️ Frontend\n"
+"✔️ iOS\n"
+"✔️ Langues\n"
 "✔️ Linux\n"
 "✔️ Sécurité\n"
 "✔️ Réalité virtuelle\n"
 "..."
 
-#: services/messenger.py:523
+#: services/messenger.py:525
 msgid "Discover them"
 msgstr "Découvre les"
 
-#: services/messenger.py:527
+#: services/messenger.py:529
 msgid "Discover Facebook Open Sources projects"
 msgstr "Découvre les projets Open Source de Facebook"
 
-#: services/messenger.py:537
+#: services/messenger.py:539
 msgid ""
 "🤓 You know what? This chatbot code is Open Source 🔓, it's developed by "
 "Facebook Developers Circles members around the world."
@@ -336,7 +338,7 @@ msgstr ""
 "🤓 Tu sais quoi? Le code de ce chatbot est Open Source 🔓, il est développé"
 " par des membres des Facebook Developers Circles du monde entier."
 
-#: services/messenger.py:545
+#: services/messenger.py:547
 #, python-format
 msgid ""
 "%(first_name)s we welcome contributors, or simply feel free to fork the "
@@ -345,18 +347,19 @@ msgstr ""
 "%(first_name)s nous souhaitons la bienvenue aux nouveaux ontributeurs, ou"
 " n'hésite pas à forker le code sur GitHub et à créer ton propre chatbot."
 
-#: services/messenger.py:554
+#: services/messenger.py:556
 msgid "The Code Source"
 msgstr "Le Code Source"
 
-#: services/messenger.py:559
+#: services/messenger.py:561
 msgid "Join a DevC"
 msgstr "Rejoindre un DevC"
 
-#: services/messenger.py:568
+#: services/messenger.py:570
 msgid "Select an option 👇🏼"
 msgstr "Sélectionne une option 👇🏼"
 
-#: services/messenger.py:584
+#: services/messenger.py:586
 msgid "Coming soon!"
 msgstr "Bientôt disponible!"
+

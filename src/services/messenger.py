@@ -502,17 +502,19 @@ def process_postback(messenger, payload):
         sleep(3)
 
         text = _(
-            u'Facebook maintains a lot of Open Source projects ranging from:\n'
-            '✔️ Artificial Intelligence\n'
-            '✔️ Frontend\n'
+            u'Facebook manages many Open Source projects in the following'
+            ' areas:\n'
             '✔️ Android\n'
-            '✔️ Ios\n'
-            '✔️ Data Structure\n'
+            '✔️ Artificial Intelligence\n'
+            '✔️ Data Infrastructure\n'
             '✔️ Developer Operations\n'
-            '✔️ Language\n'
+            '✔️ Development Tools\n'
+            '✔️ Frontend\n'
+            '✔️ iOS\n'
+            '✔️ Languages\n'
             '✔️ Linux\n'
             '✔️ Security\n'
-            '✔️ virtual reality\n'
+            '✔️ Virtual Reality\n'
             '...'
         )
         messenger.send({'text': text}, 'RESPONSE')
