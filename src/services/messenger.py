@@ -503,7 +503,8 @@ def process_postback(messenger, payload):
         sleep(3)
 
         text = _(
-            u'Facebook maintains a lot of Open Source projects ranging from:\n'
+            u'Facebook manages many Open Source projects in the following'
+            ' areas:\n'
             '✔️ Android\n'
             '✔️ Artificial Intelligence\n'
             '✔️ Data Infrastructure\n'
