@@ -503,17 +503,19 @@ def process_postback(messenger, payload):
         sleep(3)
 
         text = _(
-            u'Facebook maintains a lot of Open Source projects ranging from:\n'
-            '✔️ Artificial Intelligence\n'
-            '✔️ Frontend\n'
+            u'Facebook manages many Open Source projects in the following'
+            ' areas:\n'
             '✔️ Android\n'
-            '✔️ Ios\n'
-            '✔️ Data Structure\n'
+            '✔️ Artificial Intelligence\n'
+            '✔️ Data Infrastructure\n'
             '✔️ Developer Operations\n'
-            '✔️ Language\n'
+            '✔️ Development Tools\n'
+            '✔️ Frontend\n'
+            '✔️ iOS\n'
+            '✔️ Languages\n'
             '✔️ Linux\n'
             '✔️ Security\n'
-            '✔️ virtual reality\n'
+            '✔️ Virtual Reality\n'
             '...'
         )
         messenger.send({'text': text}, 'RESPONSE')
@@ -521,11 +523,11 @@ def process_postback(messenger, payload):
 
         btn = Button(
             button_type='web_url',
-            title=_('Discover them'),
+            title=_('Explore them'),
             url='https://opensource.facebook.com/projects'
         )
         elems = Element(
-            title=_(u'Discover Facebook Open Sources projects'),
+            title=_(u'Explore Facebook Open Source projects'),
             buttons=[btn]
         )
         res = GenericTemplate(elements=[elems])
@@ -552,12 +554,12 @@ def process_postback(messenger, payload):
 
         btn1 = Button(
             button_type='web_url',
-            title=_('The Code Source'),
+            title=_('The Source Code'),
             url='https://github.com/fbdevelopercircles/open-source-edu-bot'
         )
         btn2 = Button(
             button_type='web_url',
-            title=_('Join a DevC'),
+            title=_('Join a circle'),
             url='https://developers.facebook.com/developercircles'
         )
         btn3 = Button(
