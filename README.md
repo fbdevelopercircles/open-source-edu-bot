@@ -91,6 +91,8 @@ docker-compose up -d
 curl -X GET "<YOUR HOST>/webhook?hub.verify_token=<YOUR VERIFY TOKEN>&hub.chalenge=CHALLENGE_ACCEPTED&hub.mode=subscribe&init_bot=true"
 ```
 
+Then check the logs to see if the profile is setup succesfully!
+
 CONTRIBUTORS
 ------------
 
