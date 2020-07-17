@@ -91,8 +91,16 @@ docker-compose up -d
 curl -X GET "<YOUR HOST>/webhook?hub.verify_token=<YOUR VERIFY TOKEN>&hub.chalenge=CHALLENGE_ACCEPTED&hub.mode=subscribe&init_bot=true"
 ```
 
-CONTRIBUTORS
-------------
+## Contributors 
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](https://github.com/fbdevelopercircles/open-source-edu-bot/blob/master/CONTRIBUTING.md)
+
+- [@elinguiuriel](https://github.com/elinguiuriel)
+- [@hoduchieu01](https://github.com/hoduchieu01)
+- [@aboullaite](https://github.com/aboullaite)
+- [@caabernathy](https://github.com/caabernathy)
+
+> Check the contributions graph [here](https://github.com/fbdevelopercircles/open-source-edu-bot/graphs/contributors).
 
 ## License
 
