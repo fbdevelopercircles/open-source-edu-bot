@@ -167,18 +167,25 @@ def process_message(messenger, message):
                 "quick_replies": get_main_menu().to_dict()
             }
         else:
+            user['msg'] = msg
             text = {
                 "text": _(
                     u'I didn\'t get you %(first_name)s'
                     '!\nYou said : %(msg)s\n'
                     '\n This is the main menu, select what you need bellow 👇🏼',
-                    **user, msg=msg),
+                    **user),
                 "quick_replies": get_main_menu().to_dict()
             }
 
-        messenger.send(text, 'RESPONSE')
+    if not text:
+        text = {
+            "text": _(
+                u'%(first_name)s\n'
+                'This is the main menu, select what you need bellow 👇🏼'),
+            "quick_replies": get_main_menu().to_dict()
+        }
 
-    messenger.send_action(mark_seen)
+    messenger.send(text, 'RESPONSE')
     return True
 
 
