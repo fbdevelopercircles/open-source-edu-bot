@@ -158,17 +158,34 @@ def process_message(messenger, message):
         return True
 
     if 'text' in message['message']:
-        msg = message['message']['text'].lower()
-        if 'help' in msg:
+        msg = message['message']['text']
+        if msg.lower() in ['help', 'info']:
             text = {
                 "text": _(
                     u'Oh you need some help 🆘!'
                     ' This is the main menu, select what you need bellow 👇🏼'),
                 "quick_replies": get_main_menu().to_dict()
             }
-            messenger.send(text, 'RESPONSE')
+        else:
+            user['msg'] = msg
+            text = {
+                "text": _(
+                    u'I didn\'t get you %(first_name)s'
+                    '!\nYou said : %(msg)s\n'
+                    '\n This is the main menu, select what you need bellow 👇🏼',
+                    **user),
+                "quick_replies": get_main_menu().to_dict()
+            }
 
-    messenger.send_action(mark_seen)
+    if not text:
+        text = {
+            "text": _(
+                u'%(first_name)s\n'
+                'This is the main menu, select what you need bellow 👇🏼'),
+            "quick_replies": get_main_menu().to_dict()
+        }
+
+    messenger.send(text, 'RESPONSE')
     return True
 
 
