@@ -59,7 +59,7 @@ pip install -r requirements.txt
 **Export environment varialbes**
 
 ```bash
-export FLASK_APP fbosbot
+export FLASK_APP run
 export FLASK_RUN_HOST 0.0.0.0
 export FLASK_ENV development
 ```
