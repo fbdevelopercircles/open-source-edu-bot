@@ -553,12 +553,12 @@ def process_postback(messenger, payload):
 
         btn1 = Button(
             button_type='web_url',
-            title=_('The Code Source'),
+            title=_('The Source Code'),
             url='https://github.com/fbdevelopercircles/open-source-edu-bot'
         )
         btn2 = Button(
             button_type='web_url',
-            title=_('Join a DevC'),
+            title=_('Join a circle'),
             url='https://developers.facebook.com/developercircles'
         )
         btn3 = Button(
