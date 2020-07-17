@@ -1,4 +1,5 @@
-![Push Container to Heroku](https://github.com/aboullaite/messeger-edu-bot/workflows/Push%20Container%20to%20Heroku/badge.svg)
+![Push Container to Heroku](https://github.com/fbdevelopercircles/open-source-edu-bot/workflows/Push%20Container%20to%20Heroku/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Open Source Education Bot
 
@@ -9,6 +10,11 @@ Open Source Education Bot built by the Facebook Developer Circles community to h
 > **requirement**: python 3.6 or later
 
 Start by cloning the repository localy and enter into the project folder.
+
+```bash
+git clone https://github.com/fbdevelopercircles/open-source-edu-bot
+cd open-source-edu-bot
+```
 
 ## Using a virtual environment:
 
@@ -28,7 +34,7 @@ py -3 -m venv venv
 Copy the environments file and adapt it:
 
 ```bash
-cp .sample.env env
+cp .sample.env .env
 ```
 
 Before you work on your project, activate the corresponding environment:
@@ -58,10 +64,16 @@ export FLASK_RUN_HOST 0.0.0.0
 export FLASK_ENV development
 ```
 
-**To start the application localy run**
+**Compile de localisation files
 
 ```bash
 cd src
+pybabel compile -d locales
+```
+
+**To start the application localy run**
+
+```bash
 flask run
 ```
 
