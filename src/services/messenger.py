@@ -44,14 +44,14 @@ mark_seen = SenderAction(sender_action='mark_seen').to_dict()
 
 @babel.localeselector
 def get_locale():
-    if not user == {}:
+    if not user == {} and 'locale' in user:
         return user['locale']
     return 'en'
 
 
 @babel.timezoneselector
 def get_timezone():
-    if not user == {}:
+    if not user == {} and 'timezone' in user:
         return user['timezone']
     return 0
 
