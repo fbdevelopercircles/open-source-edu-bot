@@ -64,7 +64,7 @@ def get_timezone():
 def init_user_preference(messenger):
     # Localise the bot for the current user
     list_of_globals = globals()
-    list_of_globals['user'] = messenger.get_user()
+    list_of_globals['user'].update(messenger.get_user())
     logger.debug("Current USER: {}".format(user))
 
     get_locale()
