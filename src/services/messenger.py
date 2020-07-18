@@ -35,7 +35,12 @@ DEFAULT_API_VERSION = "7.0"
 bp = Blueprint('messenger', __name__)
 
 # Let us setup user as global variable
-user = {}
+# Default user values
+user = {
+    'first_name': _('Friend'),
+    'locale': 'en',
+    'timezone': 0
+}
 
 typing_on = SenderAction(sender_action='typing_on').to_dict()
 typing_off = SenderAction(sender_action='typing_off').to_dict()
@@ -44,19 +49,16 @@ mark_seen = SenderAction(sender_action='mark_seen').to_dict()
 
 @babel.localeselector
 def get_locale():
-    if not user == {} and 'locale' in user:
+    if 'locale' in user:
         return user['locale']
     return 'en'
 
 
 @babel.timezoneselector
 def get_timezone():
-    if not user == {} and 'timezone' in user:
+    if 'timezone' in user:
         return user['timezone']
     return 0
-
-
-PAYLOADS = ["START"]
 
 
 def init_user_preference(messenger):
