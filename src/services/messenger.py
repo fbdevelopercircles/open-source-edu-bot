@@ -64,31 +64,12 @@ def get_timezone():
 def init_user_preference(messenger):
     # Localise the bot for the current user
     list_of_globals = globals()
-    list_of_globals['user'] = messenger.get_user()
+    list_of_globals['user'].update(messenger.get_user())
     logger.debug("Current USER: {}".format(user))
 
     get_locale()
     get_timezone()
     refresh()
-
-
-def get_button(ratio):
-    return Button(
-        button_type='web_url',
-        title='facebook {}'.format(ratio),
-        url='https://facebook.com/',
-        webview_height_ratio=ratio,
-    )
-
-
-def get_element(btn):
-    return Element(
-        title='Testing template',
-        item_url='http://facebook.com',
-        image_url='http://placehold.it/300x300',
-        subtitle='Subtitle',
-        buttons=[btn]
-    )
 
 
 def send_start_messages(messenger):
