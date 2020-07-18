@@ -18,4 +18,4 @@ jobs:
     - name: Check logs
       run: docker-compose logs app
     - name: Tests and flake8
-      run: docker-compose exec -T app "pytest && flake8"
+      run: docker-compose exec -T app sh -c "pytest && flake8"
