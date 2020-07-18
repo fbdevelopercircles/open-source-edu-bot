@@ -17,3 +17,5 @@ jobs:
       run: docker ps -a
     - name: Check logs
       run: docker-compose logs app
+    - name: Tests and flake8
+      run: docker-compose -f docker-compose.prod.yml exec -T app "pytest && flake8"
