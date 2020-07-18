@@ -18,8 +18,8 @@ jobs:
       run: docker ps -a
     - name: Check logs
       run: docker-compose -f docker-compose.prod.yml logs app
-    # - name: Tests and flake8
-    #   run: docker-compose -f docker-compose.prod.yml exec app "pytest && flake8"
+    - name: Tests and flake8
+      run: docker-compose -f docker-compose.prod.yml exec -T app "pytest && flake8"
     - name: Login to Heroku Container registry
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
