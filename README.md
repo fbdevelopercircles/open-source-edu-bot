@@ -65,7 +65,7 @@ export FLASK_RUN_HOST 0.0.0.0
 export FLASK_ENV development
 ```
 
-**Compile de localisation files**
+**Compile the localization files**
 
 ```bash
 cd src
