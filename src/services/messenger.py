@@ -35,7 +35,12 @@ DEFAULT_API_VERSION = "7.0"
 bp = Blueprint('messenger', __name__)
 
 # Let us setup user as global variable
-user = {}
+# Default user values
+user = {
+    'first_name': _('Friend'),
+    'locale': 'en',
+    'timezone': 0
+}
 
 typing_on = SenderAction(sender_action='typing_on').to_dict()
 typing_off = SenderAction(sender_action='typing_off').to_dict()
@@ -44,49 +49,27 @@ mark_seen = SenderAction(sender_action='mark_seen').to_dict()
 
 @babel.localeselector
 def get_locale():
-    if not user == {} and 'locale' in user:
+    if 'locale' in user:
         return user['locale']
     return 'en'
 
 
 @babel.timezoneselector
 def get_timezone():
-    if not user == {} and 'timezone' in user:
+    if 'timezone' in user:
         return user['timezone']
     return 0
-
-
-PAYLOADS = ["START"]
 
 
 def init_user_preference(messenger):
     # Localise the bot for the current user
     list_of_globals = globals()
-    list_of_globals['user'] = messenger.get_user()
+    list_of_globals['user'].update(messenger.get_user())
     logger.debug("Current USER: {}".format(user))
 
     get_locale()
     get_timezone()
     refresh()
-
-
-def get_button(ratio):
-    return Button(
-        button_type='web_url',
-        title='facebook {}'.format(ratio),
-        url='https://facebook.com/',
-        webview_height_ratio=ratio,
-    )
-
-
-def get_element(btn):
-    return Element(
-        title='Testing template',
-        item_url='http://facebook.com',
-        image_url='http://placehold.it/300x300',
-        subtitle='Subtitle',
-        buttons=[btn]
-    )
 
 
 def send_start_messages(messenger):
