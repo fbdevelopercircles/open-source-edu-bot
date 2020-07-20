@@ -89,7 +89,7 @@ docker-compose up -d
 **Check your webhook with this command**
 
 ```bash
-curl -X GET "<YOUR HOST>/webhook?hub.verify_token=<YOUR VERIFY TOKEN>&hub.chalenge=CHALLENGE_ACCEPTED&hub.mode=subscribe&init_bot=true"
+curl -X GET "<YOUR HOST>/webhook?hub.verify_token=<YOUR VERIFY TOKEN>&hub.challenge=CHALLENGE_ACCEPTED&hub.mode=subscribe&init_bot=true"
 ```
 If your webhook verification is working as expected, you should see the following:
 
