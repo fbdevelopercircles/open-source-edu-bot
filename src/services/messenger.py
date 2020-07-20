@@ -146,7 +146,7 @@ def process_message(messenger, message):
             text = {
                 "text": _(
                     u'Oh you need some help 🆘!'
-                    ' This is the main menu, select what you need bellow 👇🏼'),
+                    ' This is the main menu, select what you need below 👇🏼'),
                 "quick_replies": get_main_menu().to_dict()
             }
         else:
@@ -155,7 +155,7 @@ def process_message(messenger, message):
                 "text": _(
                     u'I didn\'t get you %(first_name)s'
                     '!\nYou said : %(msg)s\n'
-                    '\n This is the main menu, select what you need bellow 👇🏼',
+                    '\n This is the main menu, select what you need below 👇🏼',
                     **user),
                 "quick_replies": get_main_menu().to_dict()
             }
@@ -164,7 +164,7 @@ def process_message(messenger, message):
         text = {
             "text": _(
                 u'%(first_name)s\n'
-                'This is the main menu, select what you need bellow 👇🏼'),
+                'This is the main menu, select what you need below 👇🏼'),
             "quick_replies": get_main_menu().to_dict()
         }
 
@@ -188,7 +188,7 @@ def process_postback(messenger, payload):
     if 'MAIN_MENU' in payload:
         text = {
             "text": _(
-                u'This is the main menu, select what you need bellow 👇🏼'),
+                u'This is the main menu, select what you need below 👇🏼'),
             "quick_replies": get_main_menu().to_dict()
         }
         messenger.send(text, 'RESPONSE')
@@ -247,8 +247,8 @@ def process_postback(messenger, payload):
         qrs = quick_replies.QuickReplies(quick_replies=[qr])
         text = {
             "text": _(
-                u'👩🏽‍🏫 You know ...\n✔️ Wordpress,\n✔️ Notepad++,\n✔️ Ubuntu\n'
-                'and thousand of common software started out as open source'
+                u'👩🏽‍🏫 Did you know ...\n✔️ Wordpress,\n✔️ Notepad++,\n✔️ Ubuntu\n'
+                'and thousands of common software started out as open source'
                 ' software? 👇🏼'
             ),
             "quick_replies": qrs.to_dict()
@@ -301,7 +301,7 @@ def process_postback(messenger, payload):
         qrs = quick_replies.QuickReplies(quick_replies=[qr])
         text = {
             "text": _(
-                u'😎 Now That you understand what Version control is,'
+                u'😎 Now That you understand what version control is,'
                 ' let\'s explore another important topic'
             ),
             "quick_replies": qrs.to_dict()
@@ -403,7 +403,7 @@ def process_postback(messenger, payload):
             payload='INSTALL_GIT'
         )
         qr2 = quick_replies.QuickReply(
-            title=_('🤓 I\'ve Git Installed'),
+            title=_('🤓 I\'ve got Git Installed'),
             payload='CONF_GIT'
         )
         qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
@@ -416,7 +416,7 @@ def process_postback(messenger, payload):
 
     if 'INSTALL_GIT' in payload:
 
-        text = _(u'Time to get git installed in your machine ⭕!.')
+        text = _(u'Time to get Git installed in your machine ⭕!.')
         messenger.send({'text': text}, 'RESPONSE')
         messenger.send_action(typing_on)
         sleep(3)
@@ -427,7 +427,7 @@ def process_postback(messenger, payload):
         )
         elems = Element(
             title=_(
-                u'Head over here, and donload git client based on your OS.'
+                u'Head over here, and download Git client based on your OS.'
             ),
             buttons=[btn]
         )
