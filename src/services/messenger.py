@@ -301,8 +301,8 @@ def process_postback(messenger, payload):
         qrs = quick_replies.QuickReplies(quick_replies=[qr])
         text = {
             "text": _(
-                u'😎 Now That you understand what Version control is,'
-                ' let\'s explore another important topic'
+                u'😎 Now that you understand what Version control is,'
+                ' let\'s explore another important topic.'
             ),
             "quick_replies": qrs.to_dict()
         }
