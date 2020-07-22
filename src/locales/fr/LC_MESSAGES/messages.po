@@ -262,8 +262,8 @@ msgid "Want to learn more about Git?"
 msgstr "Tu veux en savoir plus sur Git ?"
 
 #: services/messenger.py:438
-msgid "Time to get git installed in your machine ⭕!."
-msgstr "Il est temps d'installer Git sur ta machine ⭕ !."
+msgid "Time to get git installed in your machine ⭕!"
+msgstr "Il est temps d'installer Git sur ta machine ⭕ !"
 
 #: services/messenger.py:444
 msgid "Download Git"

@@ -471,7 +471,7 @@ def process_postback(messenger, payload):
         messenger.send_action(typing_on)
         sleep(2)
         text = _(
-            u'don\'t forget to replace Steve\'s name with your own.')
+            u'Don\'t forget to replace Steve\'s name and email with your own.')
         messenger.send({'text': text}, 'RESPONSE')
         messenger.send_action(typing_on)
         sleep(2)

@@ -10,7 +10,7 @@ Open Source Education Bot built by the Facebook Developer Circles community to h
 
 > **requirement**: python 3.6 or later
 
-Start by cloning the repository localy and enter into the project folder.
+Start by cloning the repository locally and enter the project folder.
 
 ```bash
 git clone https://github.com/fbdevelopercircles/open-source-edu-bot
@@ -57,7 +57,7 @@ Your shell prompt will change to show the name of the activated environment.
 pip install -r requirements.txt
 ```
 
-**Export environment varialbes**
+**Export environment variables**
 
 ```bash
 export FLASK_APP fbosbot
@@ -72,7 +72,7 @@ cd src
 pybabel compile -d locales
 ```
 
-**To start the application localy run**
+**To start the application locally run**
 
 ```bash
 flask run
@@ -89,8 +89,12 @@ docker-compose up -d
 **Check your webhook with this command**
 
 ```bash
-curl -X GET "<YOUR HOST>/webhook?hub.verify_token=<YOUR VERIFY TOKEN>&hub.chalenge=CHALLENGE_ACCEPTED&hub.mode=subscribe&init_bot=true"
+curl -X GET "<YOUR HOST>/webhook?hub.verify_token=<YOUR VERIFY TOKEN>&hub.challenge=CHALLENGE_ACCEPTED&hub.mode=subscribe&init_bot=true"
 ```
+If your webhook verification is working as expected, you should see the following:
+
+-```WEBHOOK_VERIFIED``` logged to the command line where your node process is running.\
+-```CHALLENGE_ACCEPTED``` logged to the command line where you sent the cURL request.
 
 Then check the logs to see if the profile is setup succesfully!
 
