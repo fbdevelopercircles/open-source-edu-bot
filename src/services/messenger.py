@@ -248,9 +248,9 @@ def process_postback(messenger, payload):
         qrs = quick_replies.QuickReplies(quick_replies=[qr])
         text = {
             "text": _(
-                u"��‍🏫 You know ...\n✔️ Wordpress,\n✔️ Notepad++,\n✔️ Ubuntu\n"
-                "and thousand of common software started out as open source"
-                " software? 👇🏼"
+                u'👩🏽‍🏫 You know ...\n✔️ Wordpress,\n✔️ Notepad++,\n✔️ Ubuntu\n'
+                'and thousand of common software started out as open source'
+                ' software? 👇🏼'
             ),
             "quick_replies": qrs.to_dict(),
         }
@@ -451,10 +451,11 @@ def process_postback(messenger, payload):
             messenger.send_action(typing_on)
             sleep(3)
             text = _(u"and click `Fork` on the top"
-            " right corner of your screen")
+                     " right corner of your screen")
             messenger.send({"text": text}, "RESPONSE")
             image = Image(
-                url="https://docs.github.com/assets/images/help/repository/fork_button.jpg"
+                url="https://docs.github.com/assets/"
+                "images/help/repository/fork_button.jpg"
             )
             messenger.send(image.to_dict(), "RESPONSE")
             messenger.send_action(typing_on)
@@ -694,7 +695,7 @@ def process_postback(messenger, payload):
             messenger.send(response.to_dict(), "RESPONSE")
             messenger.send(
                 {"text": _("Now the team will review your"
-                    " PR and merge it ASAP :D")},
+                           " PR and merge it ASAP :D")},
                 "RESPONSE",
             )
             messenger.send_action(typing_on)
@@ -757,7 +758,7 @@ def process_postback(messenger, payload):
         )
         elems = Element(
             title=_(u"Head over here, and donload git"
-                " client based on your OS."),
+                    " client based on your OS."),
             buttons=[btn],
         )
         res = GenericTemplate(elements=[elems])
@@ -797,7 +798,7 @@ def process_postback(messenger, payload):
         messenger.send_action(typing_on)
         sleep(2)
         text = _(u"Don't forget to replace Steve's"
-                " name and email with your own.")
+                 " name and email with your own.")
         messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(2)
@@ -953,17 +954,21 @@ def webhook():
 
         # Checks if a token and mode is in the query string of the request
         if mode and token:
-            if (mode == "subscribe" and
-                token == os.environ.get("FB_VERIFY_TOKEN")):
-                  logger.debug("CHALLENGE_ACCEPTED")
+            if (
+                mode == 'subscribe' and
+                token == os.environ.get('FB_VERIFY_TOKEN')
+            ):
+                logger.debug("CHALLENGE_ACCEPTED")
 
-                   if init_bot:
-                        logger.debug("BOT INITIALISATION")
-                        messenger.init_bot()
+                if init_bot:
+                    logger.debug('BOT INITIALISATION')
+                    messenger.init_bot()
 
-                    return Response(challenge,
-                                    status=202,
-                                    mimetype="application/json")
+                return Response(
+                    challenge,
+                    status=202,
+                    mimetype="application/json"
+                )
             return challenge
         raise ValueError("FB_VERIFY_TOKEN does not match.")
     elif request.method == "POST":
