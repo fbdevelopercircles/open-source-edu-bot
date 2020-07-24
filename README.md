@@ -8,9 +8,11 @@ Open Source Education Bot built by the Facebook Developer Circles community to h
 
 # Installation
 
-> **requirement**: python 3.6 or later
 
-Start by cloning the repository locally and enter the project folder.
+> **requirement**: python 3.6 or more
+
+
+Start by cloning the repository locally and enter the project folder into your system.
 
 ```bash
 git clone https://github.com/fbdevelopercircles/open-source-edu-bot
@@ -96,7 +98,7 @@ If your webhook verification is working as expected, you should see the followin
 -```WEBHOOK_VERIFIED``` logged to the command line where your node process is running.\
 -```CHALLENGE_ACCEPTED``` logged to the command line where you sent the cURL request.
 
-Then check the logs to see if the profile is setup succesfully!
+Then check the logs to see if the profile is setup successfully!
 
 CONTRIBUTORS
 ------------
