@@ -247,10 +247,10 @@ def process_postback(messenger, payload):
         qrs = quick_replies.QuickReplies(quick_replies=[qr])
         text = {
             "text": _(
-                u'👩🏽‍🏫 Did you know ...\n'
-                '✔️ Wordpress,\n✔️ Notepad++,\n✔️ Ubuntu\n'
-                'and thousands of common software started out as open source'
-                ' software? 👇🏼'
+                u'👩🏽‍🏫 Did you know ...'
+                '\n✔️ Wordpress,\n✔️ Notepad++,\n✔️ Ubuntu\n'
+                'and thousands of common software '
+                ' started out as open source software? 👇🏼'
             ),
             "quick_replies": qrs.to_dict()
         }
