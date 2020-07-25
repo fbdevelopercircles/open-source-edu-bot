@@ -249,7 +249,7 @@ def process_postback(messenger, payload):
         text = {
             "text": _(
                 u'👩🏽‍🏫 You know ...\n✔️ Wordpress,\n✔️ Notepad++,\n✔️ Ubuntu\n'
-                'and thousand of common software started out as open source'
+                'and thousands of common software started out as Open-source'
                 ' software? 👇🏼'
             ),
             "quick_replies": qrs.to_dict(),
@@ -338,7 +338,7 @@ def process_postback(messenger, payload):
         btn1 = Button(
             button_type="web_url",
             title=_("Official Website"),
-            url="http://github.com"
+            url="https://github.com"
         )
         btn2 = Button(
             button_type="web_url",
@@ -450,7 +450,7 @@ def process_postback(messenger, payload):
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
             sleep(3)
-            text = _(u"and click `Fork` on the top"
+            text = _(u"Now, click `Fork` on the top"
                      " right corner of your screen")
             messenger.send({"text": text}, "RESPONSE")
             image = Image(
@@ -529,7 +529,7 @@ def process_postback(messenger, payload):
             messenger.send_action(typing_on)
             sleep(3)
             text = _(
-                u"Now open a terminal, Change the current working directory"
+                u"Now open a terminal, change the current working directory"
                 " to the location where you want the cloned directory."
             )
             messenger.send({"text": text}, "RESPONSE")
@@ -547,7 +547,7 @@ def process_postback(messenger, payload):
             qrs = quick_replies.QuickReplies(quick_replies=[qr])
             text = {
                 "text": _(
-                    u"Now that you have a local copy of the project,"
+                    u"Now, you have a local copy of the project,"
                     " Let's update it!"
                 ),
                 "quick_replies": qrs.to_dict(),
@@ -747,7 +747,7 @@ def process_postback(messenger, payload):
 
     if "INSTALL_GIT" in payload:
 
-        text = _(u"Time to get git installed in your machine ⭕!.")
+        text = _(u"Time to get Git installed in your machine ⭕!.")
         messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(3)
@@ -757,8 +757,8 @@ def process_postback(messenger, payload):
             url="https://git-scm.com/downloads",
         )
         elems = Element(
-            title=_(u"Head over here, and donload git"
-                    " client based on your OS."),
+            title=_(u"Head over here, and download Git"
+                    " Client based on your OS."),
             buttons=[btn],
         )
         res = GenericTemplate(elements=[elems])
@@ -812,7 +812,7 @@ def process_postback(messenger, payload):
         qr = quick_replies.QuickReply(title=_("GitHub"), payload="GITHUB_1")
         qrs = quick_replies.QuickReplies(quick_replies=[qr])
         text = {
-            "text": _(u"Now let's check what is Github👇🏼"),
+            "text": _(u"Now let's check, what is Github?👇🏼"),
             "quick_replies": qrs.to_dict(),
         }
         messenger.send(text, "RESPONSE")
