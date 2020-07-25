@@ -247,8 +247,8 @@ def process_postback(messenger, payload):
         qrs = quick_replies.QuickReplies(quick_replies=[qr])
         text = {
             "text": _(
-                u'👩🏽‍🏫 Did you know ...\n'
-                '✔️ Wordpress,\n✔️ Notepad++,\n✔️ Ubuntu\n'
+                u'👩🏽‍🏫 Did you know ...'
+                '\n✔️ Wordpress,\n✔️ Notepad++,\n✔️ Ubuntu\n'
                 'and thousands of common software '
                 ' started out as open source software? 👇🏼'
             ),
@@ -404,7 +404,7 @@ def process_postback(messenger, payload):
             payload='INSTALL_GIT'
         )
         qr2 = quick_replies.QuickReply(
-            title=_('🤓 I\'ve Git Installed'),
+            title=_('🤓 I\'ve Installed Git'),
             payload='CONF_GIT'
         )
         qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
