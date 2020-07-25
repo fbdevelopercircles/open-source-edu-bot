@@ -112,11 +112,11 @@ msgstr "Génial !"
 
 #: services/messenger.py:242
 msgid ""
-"An important component in Open Source contribution is version control "
-"tools. Are you familiar with the concept of version control? 👇🏼"
+"An important component in Open Source contribution is version control."
+"Are you familiar with the concept of version control? 👇🏼"
 msgstr ""
-"Un composant important pour la contribution Open Source c'est l'outil de "
-"contrôle de version. Connais-tu le concept de contrôle de version ? 👇🏼"
+"Un composant important de la contribution Open Source est le contrôle de version."
+"Connais-tu le concept de contrôle de version ? 👇🏼"
 
 #: services/messenger.py:253
 msgid ""
