@@ -404,7 +404,7 @@ def process_postback(messenger, payload):
             payload='INSTALL_GIT'
         )
         qr2 = quick_replies.QuickReply(
-            title=_('🤓 I\'ve Installed Git'),
+            title=_('🤓 I\'ve Git Installed'),
             payload='CONF_GIT'
         )
         qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
