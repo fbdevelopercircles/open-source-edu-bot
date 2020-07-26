@@ -26,7 +26,7 @@ cd open-source-edu-bot
 python3 -m venv venv
 ```
 
-on Windows
+On Windows
 
 ```PowerShell
 py -3 -m venv venv
@@ -34,10 +34,10 @@ py -3 -m venv venv
 
 **Activate the environment**
 
-Copy the environments file and adapt it:
+Rename the environments file and adapt it:
 
 ```bash
-cp .sample.env .env
+rename .sample.env .env
 ```
 
 Before you work on your project, activate the corresponding environment:
@@ -65,6 +65,13 @@ pip install -r requirements.txt
 export FLASK_APP fbosbot
 export FLASK_RUN_HOST 0.0.0.0
 export FLASK_ENV development
+```
+
+On Windows:
+```bash
+set FLASK_APP fbosbot
+set FLASK_RUN_HOST 0.0.0.0
+set FLASK_ENV development
 ```
 
 **Compile the localization files**
