@@ -34,7 +34,7 @@ py -3 -m venv venv
 
 **Activate the environment**
 
-Rename the environments file and adapt it:
+Copy the environments file and adapt it:
 
 ```bash
 cp .sample.env .env
