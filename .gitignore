@@ -129,5 +129,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# Desktop Services Store
+.DS_Store
+
 .vscode/
 .vscode/settings.json
