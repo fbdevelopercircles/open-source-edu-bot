@@ -37,7 +37,12 @@ py -3 -m venv venv
 Rename the environments file and adapt it:
 
 ```bash
-rename .sample.env .env
+cp .sample.env .env
+```
+
+On Windows:
+```bash
+copy .sample.env .env
 ```
 
 Before you work on your project, activate the corresponding environment:
