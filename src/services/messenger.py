@@ -350,11 +350,6 @@ def process_postback(messenger, payload):
             title=_("👩‍💻 Make a PR"),
             payload="CONTR_1"
         )
-        btn4 = Button(
-            button_type="postback",
-            title=_("�🏽‍♀️ Main Menu 🗄️"),
-            payload="MAIN_MENU"
-        )
         app_url = os.environ.get("APP_URL", "localhost")
         elems = Element(
             title=_(u"Discover GitHub"),
@@ -363,7 +358,8 @@ def process_postback(messenger, payload):
                 u"Discover GitHub official website,"
                 " or follow a beginner" " tutorial",
             ),
-            buttons=[btn1, btn2, btn3, btn4],
+            # Messenger only accepts 3 buttons, hard choice to make!
+            buttons=[btn1, btn2, btn3],
         )
         res = GenericTemplate(elements=[elems])
         logger.debug(res.to_dict())
