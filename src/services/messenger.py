@@ -35,7 +35,7 @@ DEFAULT_API_VERSION = "7.0"
 
 bp = Blueprint("messenger", __name__)
 
-# Let us setup user as global variable
+# Let us set up a user as a global variable
 # Default user values
 user = {"first_name": _("Friend"), "locale": "en", "timezone": 0}
 
@@ -97,7 +97,7 @@ def send_start_messages(messenger):
 
 
 def get_main_menu():
-    """Function that return the main menu of the chatbot"""
+    """Function that returns the main menu of the chatbot"""
     open_source = quick_replies.QuickReply(
         title=_("Open Source 🔓"), payload="OPEN_SOURCE"
     )
@@ -145,7 +145,7 @@ def process_message(messenger, message):
             text = {
                 "text": _(
                     u"Oh you need some help 🆘!"
-                    " This is the main menu, select what you need bellow 👇🏼"
+                    " This is the main menu, select what you need below 👇🏼"
                 ),
                 "quick_replies": get_main_menu().to_dict(),
             }
@@ -155,7 +155,7 @@ def process_message(messenger, message):
                 "text": _(
                     u"I didn't get you %(first_name)s"
                     "!\nYou said : %(msg)s\n"
-                    "\n This is the main menu, select what you need bellow 👇🏼",
+                    "\n This is the main menu, select what you need below 👇🏼",
                     **user
                 ),
                 "quick_replies": get_main_menu().to_dict(),
@@ -165,7 +165,7 @@ def process_message(messenger, message):
         text = {
             "text": _(
                 u"%(first_name)s\n"
-                "This is the main menu, select what you need bellow 👇🏼"
+                "This is the main menu, select what you need below 👇🏼"
             ),
             "quick_replies": get_main_menu().to_dict(),
         }
@@ -190,7 +190,7 @@ def process_postback(messenger, payload):
     if "MAIN_MENU" in payload:
         text = {
             "text": _(u"This is the main menu,"
-                      " select what you need bellow 👇🏼"),
+                      " select what you need below 👇🏼"),
             "quick_replies": get_main_menu().to_dict(),
         }
         messenger.send(text, "RESPONSE")
