@@ -88,8 +88,8 @@ def send_start_messages(messenger):
     qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
     text = {
         "text": _(
-            u"So tell me %(first_name)s do you know"
-            " what Open Source" " is? 👇🏼", **user
+            u"So, tell me %(first_name)s do you know what Open Source"
+            " is? 👇🏼", **user
         ),
         "quick_replies": qrs.to_dict(),
     }
@@ -204,9 +204,8 @@ def process_postback(messenger, payload):
         qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
         text = {
             "text": _(
-                u"So tell me %(first_name)s do you know"
-                " what Open source" " is? 👇🏼",
-                **user
+                u"So, tell me %(first_name)s do you know what Open source"
+                " is? 👇🏼", **user
             ),
             "quick_replies": qrs.to_dict(),
         }
@@ -355,8 +354,8 @@ def process_postback(messenger, payload):
             title=_(u"Discover GitHub"),
             image_url=app_url + "/static/img/github.jpg",
             subtitle=_(
-                u"Discover GitHub official website,"
-                " or follow a beginner" " tutorial",
+                u"Discover GitHub official website, or follow a beginner"
+                " tutorial",
             ),
             # Messenger only accepts 3 buttons, hard choice to make!
             buttons=[btn1, btn2, btn3],
@@ -381,9 +380,8 @@ def process_postback(messenger, payload):
             sleep(3)
 
             text = _(
-                u"For example, when you edit a file,"
-                " Git can help you determine"
-                " exactly what changed, who changed it, and why."
+                u"For example, when you edit a file, Git can help you"
+                " determine exactly what changed, who changed it, and why."
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
@@ -426,7 +424,7 @@ def process_postback(messenger, payload):
                 title=_("🥢 1. Fork"), payload="CONTR_2")
             qrs = quick_replies.QuickReplies(quick_replies=[qr])
             text = {
-                "text": _(u"Ready for the first step ?!"),
+                "text": _(u"Ready for the first step?!"),
                 "quick_replies": qrs.to_dict(),
             }
             messenger.send(text, "RESPONSE")
@@ -439,25 +437,25 @@ def process_postback(messenger, payload):
             sleep(3)
 
             text = _(
-                u"Open this link"
+                u"Open this link in a new window: \n"
                 " https://github.com/fbdevelopercircles/open-source-edu-bot"
-                " in a new window."
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
             sleep(3)
-            text = _(u"Now, click `Fork` on the top"
-                     " right corner of your screen")
+            text = _(
+                u"Now, click `Fork` on the top right corner of your screen"
+            )
             messenger.send({"text": text}, "RESPONSE")
             image = Image(
-                url="https://docs.github.com/assets/"
-                "images/help/repository/fork_button.jpg"
+                url="https://docs.github.com/assets/images/help/repository/"
+                "fork_button.jpg"
             )
             messenger.send(image.to_dict(), "RESPONSE")
             messenger.send_action(typing_on)
             text = _(
-                u"A copy of the original project will"
-                " be created under your account."
+                u"A copy of the original project will be created under your"
+                " account."
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
@@ -466,7 +464,7 @@ def process_postback(messenger, payload):
                 title=_("🚃 2. Clone"), payload="CONTR_3_1")
             qrs = quick_replies.QuickReplies(quick_replies=[qr])
             text = {
-                "text": _(u"Ready for the next step ?!"),
+                "text": _(u"Ready for the next step?!"),
                 "quick_replies": qrs.to_dict(),
             }
             messenger.send(text, "RESPONSE")
@@ -479,24 +477,22 @@ def process_postback(messenger, payload):
             sleep(3)
 
             text = _(
-                u"Right now, you have a fork of the"
-                " `open-source-edu-bot` repository,"
-                " but you don't have the files in "
-                " that repository on your computer."
+                u"Right now, you have a fork of the `open-source-edu-bot`"
+                " repository, but you don't have the files in that repository"
+                " on your computer."
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
             sleep(3)
             text = _(
-                u"Let's create a clone of your fork locally"
-                "on your computer.\n"
-                "On GitHub, in your newly forked project,"
-                "Click `Code` above the list of files"
+                u"Let's create a clone of your fork locally on your computer."
+                "\nOn GitHub, in your newly forked project, Click on `Code`"
+                " above the list of files"
             )
             messenger.send({"text": text}, "RESPONSE")
             image = Image(
-                url="https://docs.github.com/assets/"
-                "images/help/repository/code-button.png"
+                url="https://docs.github.com/assets/images/help/repository/"
+                "code-button.png"
             )
             messenger.send(image.to_dict(), "RESPONSE")
 
@@ -511,10 +507,10 @@ def process_postback(messenger, payload):
             return True
         if "CONTR_3_2" in payload:
             text = _(
-                u'To clone the repository using HTTPS,'
-                ' under "Clone with HTTPS", click copy icon.\n'
-                'To clone the repository using an SSH key click'
-                ' Use SSH, then click copy icon.'
+                u'To clone the repository using HTTPS, under'
+                ' "Clone with HTTPS", click copy icon.\n'
+                'To clone the repository using an SSH key click "Use SSH", '
+                'then click on copy icon.'
             )
             messenger.send({"text": text}, "RESPONSE")
             image = Image(
@@ -532,9 +528,8 @@ def process_postback(messenger, payload):
             messenger.send_action(typing_on)
             sleep(3)
             text = _(
-                u"Type `git clone`, and then paste the URL you"
-                " copied earlier. \n"
-                "Press Enter. Your local clone will be created."
+                u"Type `git clone`, and then paste the URL you copied "
+                "earlier.\nPress Enter. Your local clone will be created."
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
@@ -543,8 +538,8 @@ def process_postback(messenger, payload):
             qrs = quick_replies.QuickReplies(quick_replies=[qr])
             text = {
                 "text": _(
-                    u"Now, you have a local copy of the project,"
-                    " Let's update it!"
+                    u"Now, you have a local copy of the project, Let's update"
+                    " it!"
                 ),
                 "quick_replies": qrs.to_dict(),
             }
@@ -558,8 +553,8 @@ def process_postback(messenger, payload):
             sleep(3)
 
             text = _(
-                u"Open the project using your favorite IDE,"
-                " and look for `contributors.yaml` file"
+                u"Open the project using your favorite IDE, and look for"
+                " `contributors.yaml` file"
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
@@ -571,13 +566,13 @@ def process_postback(messenger, payload):
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
             image = Image(
-                url="https://media.giphy.com/media/"
-                "UsBYak2l75W5VheVPF/giphy.gif"
+                url="https://media.giphy.com/media/UsBYak2l75W5VheVPF/"
+                "giphy.gif"
             )
             messenger.send(image.to_dict(), "RESPONSE")
             text = _(
-                u"Following the same scheme, add your name, "
-                "country and github username to the list."
+                u"Following the same scheme, add your name, country and github"
+                " username to the list."
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
@@ -586,7 +581,7 @@ def process_postback(messenger, payload):
                 title=_("🚲 4. Push"), payload="CONTR_5")
             qrs = quick_replies.QuickReplies(quick_replies=[qr])
             text = {
-                "text": _(u"Ready to commit & Push your changes ?!"),
+                "text": _(u"Ready to commit & Push your changes?!"),
                 "quick_replies": qrs.to_dict(),
             }
             messenger.send(text, "RESPONSE")
@@ -598,18 +593,17 @@ def process_postback(messenger, payload):
             messenger.send_action(typing_on)
             sleep(3)
             text = _(
-                u"Open Terminal. \n Change the current working"
-                " directory to your local repository. \n"
-                "Stage the file for commit to your local "
-                "repository using: `git add .`"
+                u"Open Terminal. \n Change the current working directory to"
+                " your local repository. \nStage the file for commit to your"
+                " local repository using: `git add .`"
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
             sleep(3)
             text = _(
                 u'Commit the file that you\'ve staged in your local'
-                ' repository: `git commit -m "Add YOUR_NAME to '
-                ' contributors list"` \n'
+                ' repository:\n'
+                '`git commit -m "Add YOUR_NAME to contributors list"`\n'
                 "Make sure to add your name :D"
             )
             messenger.send({"text": text}, "RESPONSE")
@@ -626,7 +620,7 @@ def process_postback(messenger, payload):
                 title=_("🔐 5. Merge"), payload="CONTR_6")
             qrs = quick_replies.QuickReplies(quick_replies=[qr])
             text = {
-                "text": _(u"Ready to make your first PR ?!"),
+                "text": _(u"Ready to make your first PR?!"),
                 "quick_replies": qrs.to_dict(),
             }
             messenger.send(text, "RESPONSE")
@@ -651,8 +645,8 @@ def process_postback(messenger, payload):
             messenger.send_action(typing_on)
             sleep(3)
             text = _(
-                u'Make sure that "base branch" & "head fork"'
-                ' drop-down menus both are pointing to `master`'
+                u'Make sure that "base branch" & "head fork" drop-down menus'
+                ' both are pointing to `master`'
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
@@ -680,8 +674,10 @@ def process_postback(messenger, payload):
         # Merge Step
         if "CONTR_7" in payload:
             messenger.send(
-                {"text": _("🙌🎉 Bravo %(first_name)s 🙌🎉", **user)
-                 }, "RESPONSE"
+                {
+                    "text": _("🙌🎉 Bravo %(first_name)s 🙌🎉", **user)
+                },
+                "RESPONSE"
             )
             messenger.send_action(typing_on)
             sleep(3)
@@ -690,16 +686,19 @@ def process_postback(messenger, payload):
             )
             messenger.send(response.to_dict(), "RESPONSE")
             messenger.send(
-                {"text": _("Now the team will review your"
-                           " PR and merge it ASAP :D")},
+                {
+                    "text": _(
+                        "Now the team will review your PR and merge it ASAP :D"
+                    )
+                },
                 "RESPONSE",
             )
             messenger.send_action(typing_on)
             sleep(3)
             text = {
                 "text": _(
-                    u"Below other interesting stuff"
-                    " that we can explore together:"
+                    u"Below other interesting stuff that we can explore"
+                    " together:"
                 ),
                 "quick_replies": get_main_menu().to_dict(),
             }
@@ -713,8 +712,8 @@ def process_postback(messenger, payload):
             sleep(3)
 
         text = _(
-            u"Git is a type of version control system (VCS) that makes"
-            " it easier to track changes to files. "
+            u"Git is a type of version control system (VCS) that makes it"
+            " easier to track changes to files. "
         )
         messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
@@ -793,14 +792,15 @@ def process_postback(messenger, payload):
         messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(2)
-        text = _(u"Don't forget to replace Steve's"
-                 " name and email with your own.")
+        text = _(
+            u"Don't forget to replace Steve's  name and email with your own."
+        )
         messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(2)
         text = _(
-            u"These details will be associated with any commits that"
-            " you create"
+            u"These details will be associated with any commits that you"
+            " create"
         )
         messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
@@ -935,8 +935,10 @@ class Messenger(BaseMessenger):
         init_profile(self)
 
 
-messenger = Messenger(os.environ.get("FB_PAGE_TOKEN"),
-                      api_version=DEFAULT_API_VERSION)
+messenger = Messenger(
+    os.environ.get("FB_PAGE_TOKEN"),
+    api_version=DEFAULT_API_VERSION
+)
 
 
 @bp.route("/webhook", methods=["GET", "POST"])
