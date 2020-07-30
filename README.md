@@ -112,6 +112,10 @@ If your webhook verification is working as expected, you should see the followin
 
 Then check the logs to see if the profile is setup successfully!
 
+# Test the chatbot 
+
+The chatbot can be tested here: https://m.me/OpenSourceChatbot before deploying it to your own page.
+
 CONTRIBUTORS
 ------------
 
