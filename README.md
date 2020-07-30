@@ -67,16 +67,16 @@ pip install -r requirements.txt
 **Export environment variables**  
 
 ```bash 
-export FLASK_APP fbosbot  
-export FLASK_RUN_HOST 0.0.0.0 
-export FLASK_ENV development  
+export FLASK_APP=fbosbot  
+export FLASK_RUN_HOST=0.0.0.0 
+export FLASK_ENV=development  
 ``` 
 
 On Windows: 
 ```bash 
-set FLASK_APP fbosbot 
-set FLASK_RUN_HOST 0.0.0.0  
-set FLASK_ENV development 
+set FLASK_APP=fbosbot 
+set FLASK_RUN_HOST=0.0.0.0  
+set FLASK_ENV=development 
 ``` 
 
 **Compile the localization files**
