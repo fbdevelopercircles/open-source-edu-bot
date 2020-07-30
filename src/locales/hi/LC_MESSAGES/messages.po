@@ -1,15 +1,14 @@
-# Hindi translations for PROJECT.
-# Copyright (C) 2020 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR chirag161198@gmail.com, 2020.
+# Copyright (c) Facebook, Inc. and its affiliates.
 #
+# This source code is licensed under the MIT license found in the
+# LICENSE file in the root directory of this source tree.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: chirag161198@gmail.com\n"
 "POT-Creation-Date: 2020-07-29 23:46+0530\n"
 "PO-Revision-Date: 2020-07-29 23:46+0530\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Chirag Tutlani <chirag161198@gmail.com>\n"
 "Language: hi\n"
 "Language-Team: hi <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"

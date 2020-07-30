@@ -33,6 +33,12 @@ GREETING = {
             "text": u'🙋🏽 Salut {{user_first_name}}! Clique sur le bouton'
             ' Démarrer en dessous pour accéder à des resources collectées par'
             ' les DevC de Facebook relatives à l\'Open Source 🔓.'
+        },
+        {
+            "locale": "hi_HI",
+            "text": u'🙋🏽 नमस्ते {{user_first_name}}! ओपन सोर्स से संबंधित'
+            ' फेसबुक देवसी क्यूरेट संसाधनों तक पहुंचने के लिए नीचे दिए गए'
+            ' स्टार्ट बटन पर क्लिक करें 🔓।'
         }
     ]
 }
@@ -77,6 +83,27 @@ PERSISTENT_MENU = {
                 {
                     "type": "postback",
                     "title": "🔓 FB Open Source",
+                    "payload": "FB_OS"
+                }
+            ]
+        },
+        {
+            "locale": "hi_HI",
+            "composer_input_disabled": False,
+            "call_to_actions": [
+                {
+                    "type": "postback",
+                    "title": "🏁 प्रारंभ करें",
+                    "payload": "START"
+                },
+                {
+                    "type": "postback",
+                    "title": "🗄️ मुख्य मेनू",
+                    "payload": "MAIN_MENU"
+                },
+                {
+                    "type": "postback",
+                    "title": "🔓 एफबी खुला स्रोत",
                     "payload": "FB_OS"
                 }
             ]
