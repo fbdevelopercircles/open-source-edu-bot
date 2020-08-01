@@ -14,7 +14,7 @@ services:
     container_name: fbosbot_dev
     command: flask run
     env_file: 
-      - ./src/.env
+      - ./.env
     ports:
       - "5000:5000"
     volumes: 
