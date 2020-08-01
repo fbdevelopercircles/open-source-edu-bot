@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Creating the .envprod file
-      run: cp src/.sample.env .envprod
+      run: cp src/.sample.env src/.envprod
     - name: Build the docker compose stack
       run: docker-compose -f docker-compose.prod.yml up -d --build
     - name: Check the running containers
