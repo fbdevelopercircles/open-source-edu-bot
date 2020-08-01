@@ -19,8 +19,9 @@ git clone https://github.com/fbdevelopercircles/open-source-edu-bot
 cd open-source-edu-bot
 ```
 
-## Using a virtual environment:
+## Setting up the environment:
 
+**Create the virtual environment**
 
 ```bash
 python3 -m venv venv
@@ -32,18 +33,7 @@ On Windows
 py -3 -m venv venv
 ```
 
-**Activate the environment**
-
-Copy the environments file and adapt it:
-
-```bash
-cp .sample.env .env
-```
-
-On Windows:
-```bash
-copy .sample.env .env
-```
+**Activate the virtual environment**
 
 Before you work on your project, activate the corresponding environment:
 
@@ -58,31 +48,34 @@ venv\Scripts\activate
 
 Your shell prompt will change to show the name of the activated environment.
 
-**Install the require python package**
+**Install the required python packages**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-**Export environment variables**  
+**Set up the environment variables**  
 
-```bash 
-export FLASK_APP=fbosbot  
-export FLASK_RUN_HOST=0.0.0.0 
-export FLASK_ENV=development  
-``` 
+Navigate to the src folder(root directory of the project):
 
-On Windows: 
-```bash 
-set FLASK_APP=fbosbot 
-set FLASK_RUN_HOST=0.0.0.0  
-set FLASK_ENV=development 
-``` 
+```bash
+cd src
+```
+
+Copy the environments file and adapt it:
+
+```bash
+cp .sample.env .env
+```
+
+On Windows:
+```bash
+copy .sample.env .env
+```
 
 **Compile the localization files**
 
 ```bash
-cd src
 pybabel compile -d locales
 ```
 
