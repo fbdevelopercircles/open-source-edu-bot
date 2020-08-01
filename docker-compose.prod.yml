@@ -13,6 +13,6 @@ services:
     image: devc/fbosbot:1.0-prod
     container_name: fbosbot_prod
     env_file: 
-      - ./.envprod
+      - ./src/.envprod
     ports:
       - "5000:5000"
