@@ -130,8 +130,8 @@ We have a list of [good first issues][gfi] that contain bugs which have a relati
 
 [gfi]: https://github.com/fbdevelopercircles/open-source-edu-bot/labels/good%20first%20issue
 
-CONTRIBUTORS
-------------
+## CONTRIBUTORS
+
 
 ## License
 
