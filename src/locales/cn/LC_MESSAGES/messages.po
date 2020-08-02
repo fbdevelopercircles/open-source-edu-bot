@@ -1,0 +1,80 @@
+# Copyright (c) Facebook, Inc. and its affiliates.
+#
+# This source code is licensed under the MIT license found in the
+# LICENSE file in the root directory of this source tree.
+# Use google translate to convert from english to simplified chinese and than recheck from simplified chinese to english
+# It would be ideal if someone who speaks native simplified chinese can translate and vet this  :)
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To:prilcool@gmail.com\n"
+"POT-Creation-Date: 2020-08-02 19:49+0000\n"
+"PO-Revision-Date: 2020-08-02 19:49+0000\n"
+"Last-Translator: Prilvesh Krishna <prilcool@gmail.com>\n"
+"Language: cn\n"
+"Language-Team: cn <prilcool@gmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: services/messenger.py:40
+msgid "Friend"
+msgstr "朋友"
+
+#: services/messenger.py:75
+#, python-format
+msgid ""
+"🙏🏼 Hi %(first_name)s, so you’ve decided to make your first steps in Open "
+"Source. That’s great."
+msgstr ""
+"🙏🏼 %（first_name)s，您好，所以您决定迈出开放源码的第一步. 那很棒."
+
+
+#: services/messenger.py:86 services/messenger.py:201 services/messenger.py:221
+msgid "✔️ Yes"
+msgstr "✔️ 是"
+
+#: services/messenger.py:87 services/messenger.py:203 services/messenger.py:222
+msgid "❌ Not yet"
+msgstr "❌ 还没"
+
+#: services/messenger.py:90
+#, python-format
+msgid "So, tell me %(first_name)s do you know what Open Source is? 👇🏼"
+msgstr "那么，告诉我 %（first_name)s 您知道什么是开源？ 👇🏼"
+
+#: services/messenger.py:102
+msgid "Open Source 🔓"
+msgstr "开源的 🔓"
+
+#: services/messenger.py:104
+msgid "Git"
+msgstr "吉特"
+
+#: services/messenger.py:105 services/messenger.py:808
+msgid "GitHub"
+msgstr "的GitHub"
+
+#: services/messenger.py:106
+msgid "Make a PR"
+msgstr "拉取请求"
+
+#: services/messenger.py:108
+msgid "FB Open Source"
+msgstr "FB开源"
+
+#: services/messenger.py:110
+msgid "Fork me on GitHub"
+msgstr "在GitHub上分叉给我"
+
+#: services/messenger.py:146
+msgid ""
+"Oh you need some help 🆘! This is the main menu, select what you need "
+"below 👇🏼"
+msgstr ""
+"哦，您需要帮助help 🆘! 这是主菜单，选择您需要的 👇🏼"
+
+# TODO  CONTINUE TRANSLATION  TO SIMPLIFIED CHINESE FROM LINE 71 ONWARDS YOU CAN REFERENCE THE ENGLISH TO HINDI TRANSLATION PO IN THE hi folder SO THAT YOU CAN COPY AND TRANSLATE  REMAINING MESSAGES FROM LINE  78 ONWARDS
+
