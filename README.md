@@ -6,11 +6,9 @@
 
 Open Source Education Bot built by the Facebook Developer Circles community to help members contribute to open source projects.
 
-# Installation
-
+## Installation
 
 > **requirement**: python 3.6 or more
-
 
 Start by cloning the repository locally and enter the project folder into your system.
 
@@ -85,7 +83,7 @@ pybabel compile -d locales
 flask run
 ```
 
-## Using Docker and docker-compose:
+## Using Docker and docker-compose
 
 If you have docker and docker-compose installed in your computer, just run
 
@@ -105,9 +103,26 @@ If your webhook verification is working as expected, you should see the followin
 
 Then check the logs to see if the profile is setup successfully!
 
-# Test the chatbot 
+## Test the chatbot 
 
 The chatbot can be tested here: https://m.me/OpenSourceChatbot before deploying it to your own page.
+
+## How to contribute
+
+The main purpose of this repository is to continue evolving open source. We want to make contributing to this project as easy and transparent as possible, and we grateful to the community for contributing bug fixes and improvements. Read below to learn how you can participate in improving Open Source Education Bot.
+
+### [Code of Conduct][code]
+
+Facebook has adopted a Code of Conduct that we expect project participants to adhere to.
+Please read the [full text][code] so that you can understand what actions will and will not be tolerated.
+
+[code]: https://code.fb.com/codeofconduct/
+
+### Good First Issues
+
+We have a list of [good first issues][gfi] that contain bugs which have a relatively limited scope. This is a great place to get started, gain experience, and get familiar with our contribution process.
+
+[gfi]: https://github.com/fbdevelopercircles/open-source-edu-bot/labels/good%20first%20issue
 
 CONTRIBUTORS
 ------------
