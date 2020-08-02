@@ -132,7 +132,6 @@ We have a list of [good first issues][gfi] that contain bugs which have a relati
 
 ## CONTRIBUTORS
 
-
 ## License
 
 Open Source Education Bot is [MIT licensed](./LICENSE).
