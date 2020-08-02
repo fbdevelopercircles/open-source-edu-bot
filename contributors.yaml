@@ -12,6 +12,10 @@ contributors:
       country: India
       github: ayanujju
      
+    - name: Ankit Aggarwal
+      country: India
+      github: ankitaggarwal23
+      
     - name: Vaishnavi Joshi
       country: India 
       github: vj-codes
@@ -28,4 +32,16 @@ contributors:
       country: Sri Lanka
       github: SrilalS
  
+
+    - name: Prilvesh Krishna
+      country: Fiji islands
+      github: prilcool
+
+    - name: Ho Duc Hieu
+      country: Vietnam
+      github: hoduchieu01
+
+    - name: Aayush Bisen
+      country: India
+      github: aayushbisen
 ...
