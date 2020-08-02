@@ -118,7 +118,13 @@ Please read the [full text][code] so that you can understand what actions will a
 
 [code]: https://code.fb.com/codeofconduct/
 
-### Good First Issues
+### [Contributing Guide][contribute]
+
+Read our [Contributing Guide][contribute] to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to Open Source Education Bot .
+
+[contribute]: ./CONTRIBUTING.md
+
+### [Good First Issues][gfi]
 
 We have a list of [good first issues][gfi] that contain bugs which have a relatively limited scope. This is a great place to get started, gain experience, and get familiar with our contribution process.
 
