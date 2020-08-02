@@ -1,4 +1,4 @@
-# Contributing to Sample Messenger App Original Coast Clothing
+# Contributing to Open Source Education Bot
 We want to make contributing to this project as easy and transparent as
 possible.
 
@@ -40,6 +40,6 @@ outlined on that page and do not file a public issue.
 * We use Prettier for styling
 
 ## License
-By contributing to Sample Messenger App Original Coast Clothing, you agree that
+By contributing to Open Source Education Bot, you agree that
 your contributions will be licensed under the LICENSE file in the root directory
 of this source tree.
