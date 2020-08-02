@@ -413,7 +413,7 @@ def process_postback(messenger, payload):
             sleep(3)
 
             text = _(
-                u"We gonna split the process into 5 steps: \n"
+                u"We are going to split the process into 5 steps: \n"
                 "🛵 Fork, Clone, Update, Push and Merge. "
             )
             messenger.send({"text": text}, "RESPONSE")

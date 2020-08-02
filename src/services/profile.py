@@ -25,7 +25,7 @@ GREETING = {
         {
             "locale": "default",
             "text": u'🙋🏽 Hi {{user_first_name}}! Click on the Get Started'
-            ' button bellow to access Facebook DevC curated resources related'
+            ' button below to access Facebook DevC curated resources related'
             ' to Open Source 🔓.'
         },
         {
