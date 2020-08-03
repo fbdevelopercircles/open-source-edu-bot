@@ -41,5 +41,4 @@ outlined on that page and do not file a public issue.
 
 ## License
 By contributing to Open Source Education Bot, you agree that
-your contributions will be licensed under the LICENSE file in the root directory
-of this source tree.
+your contributions will be licensed under the [MIT License](./LICENSE).
