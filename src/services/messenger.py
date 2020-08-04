@@ -742,7 +742,7 @@ def process_postback(messenger, payload):
 
     if "INSTALL_GIT" in payload:
 
-        text = _(u"Time to get Git installed in your machine ⭕!.")
+        text = _(u"Time to get Git installed in your machine ⭕!")
         messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(3)
@@ -773,7 +773,7 @@ def process_postback(messenger, payload):
 
     if "CONF_GIT" in payload:
 
-        text = _(u"Great Progress so far 👨🏽‍🎓!.")
+        text = _(u"Great Progress so far 👨🏽‍🎓!")
         messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(2)

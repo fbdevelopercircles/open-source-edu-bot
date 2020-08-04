@@ -491,7 +491,7 @@ msgid "Below other interesting stuff that we can explore together:"
 msgstr "नीचे अन्य दिलचस्प चीजें हैं जिन्हें हम एक साथ देख सकते हैं:"
 
 #: services/messenger.py:745
-msgid "Time to get Git installed in your machine ⭕!."
+msgid "Time to get Git installed in your machine ⭕!"
 msgstr "गिट को अपनी मशीन में स्थापित करने का समय  ⭕!"
 
 #: services/messenger.py:751
@@ -511,7 +511,7 @@ msgid "🧑‍🚀 Once done, let's configure Git"
 msgstr "🧑‍🚀 एक बार हो जाने के बाद, गिट में परिवर्तन करें"
 
 #: services/messenger.py:776
-msgid "Great Progress so far 👨🏽‍🎓!."
+msgid "Great Progress so far 👨🏽‍🎓!"
 msgstr "अब तक की शानदार प्रगति 👨🏽‍🎓!"
 
 #: services/messenger.py:780

@@ -438,8 +438,8 @@ msgid "Below other interesting stuff that we can explore together:"
 msgstr "පහලින් ඔයාටයි මටයි ගවේශනය කරන්න පුලුවන් වටින දේවල් ටිකක් තියනව:"
 
 #: services/messenger.py:745
-msgid "Time to get Git installed in your machine ⭕!."
-msgstr "GIt ඔයාගෙ පරිඝණකයේ ස්ථාපනය කරගන්න වෙලාව දැන් ⭕!."
+msgid "Time to get Git installed in your machine ⭕!"
+msgstr "GIt ඔයාගෙ පරිඝණකයේ ස්ථාපනය කරගන්න වෙලාව දැන් ⭕!"
 
 #: services/messenger.py:751
 msgid "Download Git"
@@ -458,8 +458,8 @@ msgid "🧑‍🚀 Once done, let's configure Git"
 msgstr "🧑‍🚀 ඕක ඉවර උනාම අපි Git සකසමු"
 
 #: services/messenger.py:776
-msgid "Great Progress so far 👨🏽‍🎓!."
-msgstr "හොඳට කරන් ආව මේදක්වා👨🏽‍🎓!."
+msgid "Great Progress so far 👨🏽‍🎓!"
+msgstr "හොඳට කරන් ආව මේදක්වා👨🏽‍🎓!"
 
 #: services/messenger.py:780
 msgid "Now let's configure your Git username and email using the following commands"
