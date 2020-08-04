@@ -504,8 +504,8 @@ msgstr ""
 "ensemble:"
 
 #: services/messenger.py:745
-msgid "Time to get Git installed in your machine ⭕!."
-msgstr "Il est temps d'installer Git sur ta machine ⭕ !."
+msgid "Time to get Git installed in your machine ⭕!"
+msgstr "Il est temps d'installer Git sur ta machine ⭕ !"
 
 #: services/messenger.py:751
 msgid "Download Git"
@@ -526,8 +526,8 @@ msgid "🧑‍🚀 Once done, let's configure Git"
 msgstr "🧑‍🚀 Une fois terminé, configurons Git"
 
 #: services/messenger.py:776
-msgid "Great Progress so far 👨🏽‍🎓!."
-msgstr "De grands progrès jusqu'à présent 👨🏽‍🎓!."
+msgid "Great Progress so far 👨🏽‍🎓!"
+msgstr "De grands progrès jusqu'à présent 👨🏽‍🎓!"
 
 #: services/messenger.py:780
 msgid ""
