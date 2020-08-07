@@ -45,6 +45,12 @@ GREETING = {
             "text": u'🙋🏽 ආයුබෝවන් {{user_first_name}}! විවෘත මූලාශ්‍ර 🔓 වලට'
             ' අදාල Facebook DevC වලින් ලබාදෙන සම්පත් වලට ප්‍රවේශ වෙන්න,'
             ' Get Started බටන් එක ක්ලික් කරන්න.'
+        },
+        {
+            "locale": "rw_RW",
+            "text": u'🙋🏽 Muraho {{user_first_name}}! Kanda hepho kuri Buto '
+            'yo gutangira kugirango ugere ku bikoresho byegeranyijwe na '
+            'Facebook DevC bijyanye na Open Source 🔓.'
         }
     ]
 }
@@ -131,6 +137,27 @@ PERSISTENT_MENU = {
                 {
                     "type": "postback",
                     "title": "🔓 FB විවෘත මූලාශ්‍ර",
+                    "payload": "FB_OS"
+                }
+            ]
+        },
+        {
+            "locale": "rw_RW",
+            "composer_input_disabled": False,
+            "call_to_actions": [
+                {
+                    "type": "postback",
+                    "title": "🏁 Tangira hejuru",
+                    "payload": "START"
+                },
+                {
+                    "type": "postback",
+                    "title": "🗄️ Ibikubiyemo",
+                    "payload": "MAIN_MENU"
+                },
+                {
+                    "type": "postback",
+                    "title": "🔓 FB Open Source",
                     "payload": "FB_OS"
                 }
             ]
