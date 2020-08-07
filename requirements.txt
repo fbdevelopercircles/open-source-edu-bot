@@ -12,3 +12,5 @@ coverage>=5.1,<6.0
 Flask-Babel>=1.0.0,<1.1.0
 flake8>=3.8.3,<3.9.0
 python-dotenv>=0.14.0,<0.15.0
+psycopg2>=2.8.5,<2.8.6
+Flask-SQLAlchemy>=2.4.4,2.4.5
