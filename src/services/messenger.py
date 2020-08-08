@@ -155,7 +155,7 @@ def process_message(messenger, message):
                 "text": _(
                     u"I didn't get you %(first_name)s"
                     "!\nYou said : %(msg)s\n"
-                    "\n This is the main menu, select what you need below 👇🏼",
+                    "\nThis is the main menu, select what you need below 👇🏼",
                     **user
                 ),
                 "quick_replies": get_main_menu().to_dict(),
