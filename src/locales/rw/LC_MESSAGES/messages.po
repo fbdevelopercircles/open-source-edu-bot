@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-08-07 15:22+0200\n"
+"POT-Creation-Date: 2020-08-08 11:06+0000\n"
 "PO-Revision-Date: 2020-08-07 12:17+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: rw\n"
@@ -27,8 +27,8 @@ msgid ""
 "🙏🏼 Hi %(first_name)s, so you’ve decided to make your first steps in Open "
 "Source. That’s great."
 msgstr ""
-"🙏🏼 Muraho% (first_name), nuko rero wahisemo gutera intambwe zawe za mbere"
-" muri OpenSource. Nibyiza."
+"🙏🏼 Muraho %(first_name)s, nuko rero wahisemo gutera intambwe zawe za "
+"mbere muri OpenSource. Nibyiza."
 
 #: services/messenger.py:86 services/messenger.py:201 services/messenger.py:221
 msgid "✔️ Yes"
@@ -41,7 +41,7 @@ msgstr "❌ Oya"
 #: services/messenger.py:90
 #, python-format
 msgid "So, tell me %(first_name)s do you know what Open Source is? 👇🏼"
-msgstr "Noneho, mbwira% (first_name) uzi Open source icyo aricyo? 👇🏼"
+msgstr "Noneho, mbwira %(first_name)s uzi Open source icyo aricyo? 👇🏼"
 
 #: services/messenger.py:102
 msgid "Open Source 🔓"
@@ -84,7 +84,7 @@ msgid ""
 " This is the main menu, select what you need below 👇🏼"
 msgstr ""
 "Sinumvise %(first_name)s!\n"
-"Wavuze:% (msg)s\n"
+"Wavuze: %(msg)s\n"
 "\n"
 "Iyi ni menu nyamukuru, hitamo ibyo ukeneye hepfo 👇🏼"
 
