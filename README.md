@@ -20,16 +20,16 @@ where YOUR_GITHUB_USER_NAME is your GitHub handle.
 
 ```
 cd open-source-edu-bot
-git remote add upstream https://github.com/fbdevelopercircles
+git remote add upstream https://github.com/fbdevelopercircles/open-source-edu-bot
 ```
 
 You can check that the previous command worked by running git remote -v. You should see the following output:
 ```
 git remote -v
-origin  https://github.com/YOUR_GITHUB_USER_NAME/fbdevelopercircles (fetch)
-origin  https://github.com/YOUR_GITHUB_USER_NAME/fbdevelopercircles (push)
-upstream        https://github.com/fbdevelopercircles (fetch)
-upstream        https://github.com/fbdevelopercircles (push)
+origin  https://github.com/YOUR_GITHUB_USER_NAME/open-source-edu-bot (fetch)
+origin  https://github.com/YOUR_GITHUB_USER_NAME/open-source-edu-bot (push)
+upstream        https://github.com/fbdevelopercircles/open-source-edu-bot (fetch)
+upstream        https://github.com/fbdevelopercircles/open-source-edu-bot (push)
 ```
 
 
