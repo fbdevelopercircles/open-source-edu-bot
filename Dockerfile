@@ -6,17 +6,14 @@
 FROM python:3.7-alpine
 LABEL MAINTAINER "Facebook Developers Circles" 
 
-RUN apk add --no-cache python3-dev libffi-dev gcc musl-dev make
-RUN pip install gunicorn[gevent]
+WORKDIR /app
+
+COPY ./src .
+
+RUN apk add --update --no-cache postgresql-client
+RUN apk add --update --no-cache --virtual .tmp-build-deps \
+    gcc libc-dev linux-headers postgresql-dev 
 
 COPY requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
-
-WORKDIR /app
-COPY ./src .
-
 RUN pybabel compile -d locales
-
-EXPOSE 5000
-
-CMD gunicorn "fbosbot:create_app()" --worker-class gevent --workers 5 --bind 0.0.0.0:$PORT --max-requests 10000 --timeout 5 --keep-alive 5 --log-level info
