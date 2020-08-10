@@ -593,9 +593,10 @@ def process_postback(messenger, payload):
             messenger.send_action(typing_on)
             sleep(3)
             text = _(
-                u"Open your Terminal. \nChange the current working directory to"
-                " your local repository. \nStage the file by commiting it to your"
-                " local repository using: `git add .`"
+                u"Open your Terminal.\nChange the current working directory"
+                "to your local repository."
+                "\nStage the file by commiting it to your"
+                "local repository using: `git add .`"
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
@@ -697,8 +698,8 @@ def process_postback(messenger, payload):
             sleep(3)
             text = {
                 "text": _(
-                    u"Given below are other interesting stuff that we can explore"
-                    " together:"
+                    u"Given below are other interesting stuff"
+                    "that we can explore together:"
                 ),
                 "quick_replies": get_main_menu().to_dict(),
             }
