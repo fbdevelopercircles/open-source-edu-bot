@@ -438,7 +438,7 @@ def process_postback(messenger, payload):
 
             text = _(
                 u"Open this link in a new window: \n"
-                " https://github.com/fbdevelopercircles/open-source-edu-bot"
+                "https://github.com/fbdevelopercircles/open-source-edu-bot"
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
@@ -454,7 +454,7 @@ def process_postback(messenger, payload):
             messenger.send(image.to_dict(), "RESPONSE")
             messenger.send_action(typing_on)
             text = _(
-                u"A copy of the original project will be created under your"
+                u"A copy of the original project will be created in your"
                 " account."
             )
             messenger.send({"text": text}, "RESPONSE")
@@ -593,9 +593,10 @@ def process_postback(messenger, payload):
             messenger.send_action(typing_on)
             sleep(3)
             text = _(
-                u"Open Terminal. \n Change the current working directory to"
-                " your local repository. \nStage the file for commit to your"
-                " local repository using: `git add .`"
+                u"Open your Terminal.\nChange the current working directory"
+                "to your local repository."
+                "\nStage the file by commiting it to your"
+                "local repository using: `git add .`"
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
@@ -658,7 +659,7 @@ def process_postback(messenger, payload):
             messenger.send(prdesc.to_dict(), "RESPONSE")
             text = _(
                 u"Type a title and description for your pull request."
-                " Then click `click Create Pull Request`"
+                " Then click `Create Pull Request`"
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
@@ -697,8 +698,8 @@ def process_postback(messenger, payload):
             sleep(3)
             text = {
                 "text": _(
-                    u"Below other interesting stuff that we can explore"
-                    " together:"
+                    u"Given below are other interesting stuff"
+                    "that we can explore together:"
                 ),
                 "quick_replies": get_main_menu().to_dict(),
             }
