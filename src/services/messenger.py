@@ -1,4 +1,4 @@
-# Copyright (c) Facebook, Inc. and its affiliates.
+# Copyright (c) Facebook Inc., and its affiliates.
 #
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
@@ -88,7 +88,7 @@ def send_start_messages(messenger):
     qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
     text = {
         "text": _(
-            u"So, tell me %(first_name)s do you know what Open Source"
+            u"So, tell me %(first_name)s do you know what Open-Source"
             " is? 👇🏼", **user
         ),
         "quick_replies": qrs.to_dict(),
@@ -99,13 +99,13 @@ def send_start_messages(messenger):
 def get_main_menu():
     """Function that returns the main menu of the chatbot"""
     open_source = quick_replies.QuickReply(
-        title=_("Open Source 🔓"), payload="OPEN_SOURCE"
+        title=_("Open-Source 🔓"), payload="OPEN_SOURCE"
     )
     git = quick_replies.QuickReply(title=_("Git"), payload="GIT_0")
     github = quick_replies.QuickReply(title=_("GitHub"), payload="GITHUB_1")
     contr = quick_replies.QuickReply(title=_("Make a PR"), payload="CONTR_1")
     fb_os = quick_replies.QuickReply(
-        title=_("FB Open Source"), payload="FB_OS")
+        title=_("FB Open-Source"), payload="FB_OS")
     fork_me = quick_replies.QuickReply(
         title=_("Fork me on GitHub"), payload="FORK_ON_GITHUB"
     )
@@ -204,7 +204,7 @@ def process_postback(messenger, payload):
         qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
         text = {
             "text": _(
-                u"So, tell me %(first_name)s do you know what Open source"
+                u"So, tell me %(first_name)s do you know what Open-source"
                 " is? 👇🏼", **user
             ),
             "quick_replies": qrs.to_dict(),
@@ -223,7 +223,7 @@ def process_postback(messenger, payload):
         qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
         text = {
             "text": _(
-                u"An important component in Open Source contribution is"
+                u"An important component in Open-Source contribution is"
                 " version control tools. Are you familiar with the concept of"
                 " version control? 👇🏼"
             ),
@@ -414,7 +414,7 @@ def process_postback(messenger, payload):
 
             text = _(
                 u"We are going to split the process into 5 steps: \n"
-                "🛵 Fork, Clone, Update, Push and Merge. "
+                "🛵 Fork, Clone, Update, Push, and Merge. "
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
@@ -444,7 +444,7 @@ def process_postback(messenger, payload):
             messenger.send_action(typing_on)
             sleep(3)
             text = _(
-                u"Now, click `Fork` on the top right corner of your screen"
+                u"Now, click `Fork` on the top right corner of your screen."
             )
             messenger.send({"text": text}, "RESPONSE")
             image = Image(
@@ -816,12 +816,12 @@ def process_postback(messenger, payload):
         return True
 
     if "FB_OS" in payload:
-        text = _(u"Facebook 🧡 Open Source!")
+        text = _(u"Facebook 🧡 Open-Source!")
         messenger.send({"text": text}, "RESPONSE")
         sleep(3)
 
         text = _(
-            u"Facebook manages many Open Source projects in the following"
+            u"Facebook manages many Open-Source projects in the following"
             " areas:\n"
             "✔️ Android\n"
             "✔️ Artificial Intelligence\n"
@@ -845,7 +845,7 @@ def process_postback(messenger, payload):
             url="https://opensource.facebook.com/projects",
         )
         elems = Element(
-            title=_(u"Explore Facebook Open Source projects"), buttons=[btn]
+            title=_(u"Explore Facebook Open-Source projects"), buttons=[btn]
         )
         res = GenericTemplate(elements=[elems])
         logger.debug(res.to_dict())
@@ -855,7 +855,7 @@ def process_postback(messenger, payload):
 
     if "FORK_ON_GITHUB" in payload:
         text = _(
-            u"🤓 You know what? This chatbot code is Open Source 🔓, it's"
+            u"🤓 You know what? This chatbot code is Open-Source 🔓, it's"
             " developed by Facebook Developers Circles members around the"
             " world."
         )
@@ -864,7 +864,7 @@ def process_postback(messenger, payload):
 
         text = _(
             u"%(first_name)s we welcome contributors, or simply feel free to"
-            " fork the code on GitHub, and create your own chatbot.",
+            " fork the code on GitHub, and create your chatbot.",
             **user
         )
         messenger.send({"text": text}, "RESPONSE")
