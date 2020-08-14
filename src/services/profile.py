@@ -51,7 +51,14 @@ GREETING = {
             "text": u"🙋🏽 Muraho {{user_first_name}}! Kanda hepho kuri Buto "
             "yo gutangira kugirango ugere ku bikoresho byegeranyijwe na "
             "Facebook DevC bijyanye na Open Source 🔓."
+        },
+        {
+            "locale": "gu_IN",
+            "text": u"🙋🏽 નમસ્તે {{user_first_name}}! ઓપન સોર્સ થી સંબંધિત "
+            "ફેસબુક ડેવલપર સર્કલ્સ ક્યુરેટેડ સ્ત્રોતોને લગતા વપરાશ માટે "
+            "નીચે પ્રારંભ કરો બટન પર ક્લિક કરો 🔓."
         }
+        
     ]
 }
 
@@ -158,6 +165,27 @@ PERSISTENT_MENU = {
                 {
                     "type": "postback",
                     "title": "🔓 FB Open Source",
+                    "payload": "FB_OS"
+                }
+            ]
+        },
+        {
+            "locale": "gu_IN",
+            "composer_input_disabled": False,
+            "call_to_actions": [
+                {
+                    "type": "postback",
+                    "title": "🏁 પ્રારંભ કરો",
+                    "payload": "START"
+                },
+                {
+                    "type": "postback",
+                    "title": "🗄️ મુખ્ય મેનુ",
+                    "payload": "MAIN_MENU"
+                },
+                {
+                    "type": "postback",
+                    "title": "🔓 એફબી ઓપન સોર્સ",
                     "payload": "FB_OS"
                 }
             ]
