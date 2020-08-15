@@ -15,7 +15,7 @@ logger.setLevel(logging.DEBUG)
 handler = logging.StreamHandler(sys.stdout)
 handler.setLevel(logging.DEBUG)
 formatter = logging.Formatter(
-    '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    "%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 
@@ -24,15 +24,33 @@ GREETING = {
     "greeting": [
         {
             "locale": "default",
-            "text": u'🙋🏽 Hi {{user_first_name}}! Click on the Get Started'
-            ' button bellow to access Facebook DevC curated resources related'
-            ' to Open Source 🔓.'
+            "text": u"🙋🏽 Hi {{user_first_name}}! Click on the Get Started"
+            " button below to access Facebook DevC curated resources related"
+            " to Open Source 🔓."
         },
         {
             "locale": "fr_FR",
-            "text": u'🙋🏽 Salut {{user_first_name}}! Clique sur le bouton'
-            ' Démarrer en dessous pour accéder à des resources collectées par'
-            ' les DevC de Facebook relatives à l\'Open Source 🔓.'
+            "text": u"🙋🏽 Salut {{user_first_name}}! Clique sur le bouton"
+            " Démarrer en dessous pour accéder à des resources collectées par"
+            " les DevC de Facebook relatives à l\"Open Source 🔓."
+        },
+        {
+            "locale": "hi_IN",
+            "text": u"🙋🏽 नमस्ते {{user_first_name}}! ओपन सोर्स से संबंधित"
+            " फेसबुक देवसी क्यूरेट संसाधनों तक पहुंचने के लिए नीचे दिए गए"
+            " स्टार्ट बटन पर क्लिक करें 🔓।"
+        },
+        {
+            "locale": "si_LK",
+            "text": u"🙋🏽 ආයුබෝවන් {{user_first_name}}! විවෘත මූලාශ්‍ර 🔓 වලට"
+            " අදාල Facebook DevC වලින් ලබාදෙන සම්පත් වලට ප්‍රවේශ වෙන්න,"
+            " Get Started බටන් එක ක්ලික් කරන්න."
+        },
+        {
+            "locale": "rw_RW",
+            "text": u"🙋🏽 Muraho {{user_first_name}}! Kanda hepho kuri Buto "
+            "yo gutangira kugirango ugere ku bikoresho byegeranyijwe na "
+            "Facebook DevC bijyanye na Open Source 🔓."
         }
     ]
 }
@@ -80,6 +98,69 @@ PERSISTENT_MENU = {
                     "payload": "FB_OS"
                 }
             ]
+        },
+        {
+            "locale": "hi_IN",
+            "composer_input_disabled": False,
+            "call_to_actions": [
+                {
+                    "type": "postback",
+                    "title": "🏁 प्रारंभ करें",
+                    "payload": "START"
+                },
+                {
+                    "type": "postback",
+                    "title": "🗄️ मुख्य मेनू",
+                    "payload": "MAIN_MENU"
+                },
+                {
+                    "type": "postback",
+                    "title": "🔓 एफबी ओपन सोर्स",
+                    "payload": "FB_OS"
+                }
+            ]
+        },
+        {
+            "locale": "si_LK",
+            "composer_input_disabled": False,
+            "call_to_actions": [
+                {
+                    "type": "postback",
+                    "title": "🏁 ආයෙ මුල ඉඳන් පටං ගන්න",
+                    "payload": "START"
+                },
+                {
+                    "type": "postback",
+                    "title": "🗄️ ප්‍රධාන මෙනුව",
+                    "payload": "MAIN_MENU"
+                },
+                {
+                    "type": "postback",
+                    "title": "🔓 FB විවෘත මූලාශ්‍ර",
+                    "payload": "FB_OS"
+                }
+            ]
+        },
+        {
+            "locale": "rw_RW",
+            "composer_input_disabled": False,
+            "call_to_actions": [
+                {
+                    "type": "postback",
+                    "title": "🏁 Tangira hejuru",
+                    "payload": "START"
+                },
+                {
+                    "type": "postback",
+                    "title": "🗄️ Ibikubiyemo",
+                    "payload": "MAIN_MENU"
+                },
+                {
+                    "type": "postback",
+                    "title": "🔓 FB Open Source",
+                    "payload": "FB_OS"
+                }
+            ]
         }
     ]
 }
@@ -92,13 +173,13 @@ def get_white_listed_urls():
 
     white_listed_urls = os.environ.get("WHITE_LISTED_URLS", None)
     if white_listed_urls:
-        white_listed_urls = white_listed_urls.split(',')
+        white_listed_urls = white_listed_urls.split(",")
         for u in white_listed_urls:
-            if u.startswith('https://') and url(u):
+            if u.startswith("https://") and url(u):
                 urls.append(u)
 
-    app_url = os.environ.get('APP_URL', None)
-    if app_url and app_url.startswith('https://') and url(app_url):
+    app_url = os.environ.get("APP_URL", None)
+    if app_url and app_url.startswith("https://") and url(app_url):
         urls.append(app_url)
 
     return urls
@@ -110,12 +191,12 @@ def init_profile(messenger):
     white_listed_urls = get_white_listed_urls()
     res = messenger.add_whitelisted_domains(white_listed_urls)
 
-    logger.debug('white_listed_urls: {}'.format(white_listed_urls))
-    logger.debug('add_withelisted: {}'.format(res))
+    logger.debug("white_listed_urls: {}".format(white_listed_urls))
+    logger.debug("add_withelisted: {}".format(res))
 
     res = messenger.set_messenger_profile(GREETING)
-    logger.debug('GreetingText: {}'.format(GREETING))
-    logger.debug('GreetingText: {}'.format(res))
+    logger.debug("GreetingText: {}".format(GREETING))
+    logger.debug("GreetingText: {}".format(res))
 
     get_started = {
         "get_started": {
@@ -123,9 +204,9 @@ def init_profile(messenger):
         }
     }
     res = messenger.set_messenger_profile(get_started)
-    logger.debug('GetStartedButton: {}'.format(get_started))
-    logger.debug('GetStartedButton: {}'.format(res))
+    logger.debug("GetStartedButton: {}".format(get_started))
+    logger.debug("GetStartedButton: {}".format(res))
 
     res = messenger.set_messenger_profile(PERSISTENT_MENU)
-    logger.debug('PersistentMenu: {}'.format(PERSISTENT_MENU))
-    logger.debug('PersistentMenu: {}'.format(res))
+    logger.debug("PersistentMenu: {}".format(PERSISTENT_MENU))
+    logger.debug("PersistentMenu: {}".format(res))

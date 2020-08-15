@@ -1,0 +1,626 @@
+# Copyright (c) Facebook, Inc. and its affiliates.
+#
+# This source code is licensed under the MIT license found in the
+# LICENSE file in the root directory of this source tree.
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-08-08 22:11+0000\n"
+"PO-Revision-Date: 2020-08-02 21:06+0530\n"
+"Last-Translator: \n"
+"Language: si\n"
+"Language-Team: si <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: services/messenger.py:40
+msgid "Friend"
+msgstr "යාළුවා"
+
+#: services/messenger.py:75
+#, python-format
+msgid ""
+"🙏🏼 Hi %(first_name)s, so you’ve decided to make your first steps in Open "
+"Source. That’s great."
+msgstr ""
+"🙏🏼 හායි %(first_name)s! , විවෘත මූලාශ්‍රයන්ට ඔබේ පලමු පියවර තියන්න ඔබ "
+"තීරණය කලා එහෙනම්. නියමයි."
+
+#: services/messenger.py:86 services/messenger.py:201 services/messenger.py:221
+msgid "✔️ Yes"
+msgstr "ඔව්"
+
+#: services/messenger.py:87 services/messenger.py:203 services/messenger.py:222
+msgid "❌ Not yet"
+msgstr "තවම නෑ"
+
+#: services/messenger.py:90
+#, python-format
+msgid "So, tell me %(first_name)s do you know what Open Source is? 👇🏼"
+msgstr ""
+"ඉතින්, මට කියන්න %(first_name)s! විවෘත මූලාශ්‍ර යනු කුමක්දැයි ඔබ දන්නවාද?"
+" 👇🏼"
+
+#: services/messenger.py:102
+msgid "Open Source 🔓"
+msgstr "විවෘත මූලාශ්‍ර"
+
+#: services/messenger.py:104
+msgid "Git"
+msgstr "ගිට්"
+
+#: services/messenger.py:105 services/messenger.py:808
+msgid "GitHub"
+msgstr "ගිට්හබ්"
+
+#: services/messenger.py:106
+msgid "Make a PR"
+msgstr "PR එකක් දාන්න"
+
+#: services/messenger.py:108
+msgid "FB Open Source"
+msgstr "FB විවෘත මූලාශ්‍ර"
+
+#: services/messenger.py:110
+msgid "Fork me on GitHub"
+msgstr "ගිට්හබ් එකෙන් මාව Fork කරගන්න"
+
+#: services/messenger.py:146
+msgid ""
+"Oh you need some help 🆘! This is the main menu, select what you need "
+"below 👇🏼"
+msgstr "ඔබට උදව්වක් ඕනෙද? 🆘 මේ ප්‍රධාන මෙනුව, ඔයාට ඕනෙ එක පහලින් තෝරගන්න. 👇🏼"
+
+#: services/messenger.py:155
+#, python-format
+msgid ""
+"I didn't get you %(first_name)s!\n"
+"You said : %(msg)s\n"
+"\n"
+"This is the main menu, select what you need below 👇🏼"
+msgstr ""
+"මට තේරූන්නෑ %(first_name)s!\n"
+"ඔයා කිව්වේ : %(msg)s\n"
+"\n"
+"මේ ප්‍රධාන මෙනුව, ඔයාට ඕනෙ එක පහලින් තෝරගන්න. 👇🏼"
+
+#: services/messenger.py:166
+#, python-format
+msgid ""
+"%(first_name)s\n"
+"This is the main menu, select what you need below 👇🏼"
+msgstr ""
+"%(first_name)s\n"
+"මේ ප්‍රධාන මෙනුව, ඔයාට ඕනෙ එක පහලින් තෝරගන්න. 👇🏼"
+
+#: services/messenger.py:192
+msgid "This is the main menu, select what you need below 👇🏼"
+msgstr "මේ ප්‍රධාන මෙනුව, ඔයාට ඕනෙ එක පහලින් තෝරගන්න. 👇🏼"
+
+#: services/messenger.py:206
+#, python-format
+msgid "So, tell me %(first_name)s do you know what Open source is? 👇🏼"
+msgstr ""
+"ඉතින්, මට කියන්න %(first_name)s! විවෘත මූලාශ්‍ර යනු කුමක්දැයි ඔබ දන්නවාද?"
+" 👇🏼"
+
+#: services/messenger.py:217
+msgid "Amazing!"
+msgstr "නියමයි!"
+
+#: services/messenger.py:225
+msgid ""
+"An important component in Open Source contribution is version control "
+"tools. Are you familiar with the concept of version control? 👇🏼"
+msgstr ""
+"විවෘත මූලාශ්‍ර වලදි වැදගත් උපාංගයක් තමා අනුවාද පාලන උපාංග. ඔයා සංස්කරණ "
+"පාලනය කියන සංකල්පය දන්නවද? 👇🏼"
+
+#: services/messenger.py:236
+msgid ""
+"According to the dictionary, Open-source 🔓 software, denotes software for"
+" which the original source code is made freely 🆓 available and may be "
+"redistributed and modified."
+msgstr ""
+"ඩික්ශනරියට අනුව විවෘත මූලාශ්‍ර 🔓 මෘදුකාංග කියන්නෙ, මුල් කේතය නොමිලේ 🆓  "
+"බෙදාහැරල තියන සහ එය නැවත බෙදාගන්න වගේම වෙනස් කරන්න පුලුවන් මෘදුකාංග."
+
+#: services/messenger.py:246 services/messenger.py:297
+#: services/messenger.py:323 services/messenger.py:500
+msgid "👉🏽 Next"
+msgstr "👉🏽 ඊලඟ"
+
+#: services/messenger.py:249
+msgid ""
+"👩🏽‍🏫 You know ...\n"
+"✔️ Wordpress,\n"
+"✔️ Notepad++,\n"
+"✔️ Ubuntu\n"
+"and thousands of common software started out as Open-source software? 👇🏼"
+msgstr ""
+"👩🏽‍🏫 ඔබ දන්නවද...\n"
+"✔️ Wordpress,\n"
+"✔️ Notepad++,\n"
+"✔️ Ubuntu\n"
+"සහ දහස් ගණනක් මෘදුකාංග පටං ගත්තෙ විවෘත මූලාශ්‍ර මෘදුකාංග හැරියට බව? 👇🏼"
+
+#: services/messenger.py:261
+msgid ""
+"😎 Worry not!\n"
+"\n"
+"Version control allows you to manage changes to files over time ⏱️."
+msgstr ""
+"😎 වද වෙන්න එපා!\n"
+"\n"
+"වර්ශන් කන්ට්‍රොල්  ඔයා කාලයත් එක්ක ෆයිල්ස්වලට කරපු වෙනස්කම් පාලනය කරන්න "
+"ඉඩ දෙනව ⏱️."
+
+#: services/messenger.py:271
+msgid ""
+"You can use version control to version code, binary files, and digital "
+"assets 🗄️."
+msgstr ""
+"ඔයාට  වර්ශන් කන්ට්‍රොල්  පාවිච්චි කරන්න පුලුවන් කේත, බයිනරි ෆයිල්ස් හා "
+"ඩිජිටල් වස්තූන් සංස්කරණ කරන්න."
+
+#: services/messenger.py:280
+msgid ""
+"This includes version control software, version control systems, or "
+"version control tools 🧰."
+msgstr ""
+"වර්ශන් කන්ට්‍රොල් මෘදුකාංග,  වර්ශන් කන්ට්‍රොල්  පද්ධති හෝ  වර්ශන් "
+"කන්ට්‍රොල් මෙවලම් මෙයට ඇතුළත් වේ."
+
+#: services/messenger.py:289
+msgid "Version control is a component of software configuration management 🖥️."
+msgstr "වර්ශන් කන්ට්‍රොල් කියන්නෙ මෘදුකාංග සැකසුම් පරිපාලනයේ කොටසක් 🖥️."
+
+#: services/messenger.py:300
+msgid ""
+"😎 Now that you understand what Version control is, let's explore another "
+"important topic."
+msgstr ""
+"😎 ඔයාට දැන් අනුවාද පාලනය කියන්නෙ මොකක්ද කියල දන්න නිසා අපි අලුත් "
+"මාතෘකාවක් ගැන කතාකරමු."
+
+#: services/messenger.py:311
+msgid "What is Git❔"
+msgstr "Git කියන්නෙ මොකක්ද❔"
+
+#: services/messenger.py:313
+msgid "What is GitHub❔"
+msgstr "GitHub කියන්නෙ මොකක්ද❔"
+
+#: services/messenger.py:316
+msgid "What do you want to start with⁉️ 👇🏼"
+msgstr "මොකෙන්ද ඔයාට පටං ගන්න ඕනෙ⁉️ 👇🏼"
+
+#: services/messenger.py:326
+msgid ""
+"GitHub is a code hosting platform for version control and collaboration. "
+"It lets you and others work together on projects from anywhere."
+msgstr ""
+"GitHub කියන්නෙ වර්ශන් කන්ට්‍රොල් තියන හා එකතුවෙලා වැඩකරන්න පුලුවන් කෝඩ් "
+"හොස්ටින්ග් ප්ලැට්ෆෝර්ම් එකක්."
+
+#: services/messenger.py:339
+msgid "Official Website"
+msgstr "නිල වෙබ් අඩවිය"
+
+#: services/messenger.py:344
+msgid "GitHub Tutorial"
+msgstr "Github පාඩම්"
+
+#: services/messenger.py:349
+msgid "👩‍💻 Make a PR"
+msgstr "👩‍💻 PR එකක් දාන්න"
+
+#: services/messenger.py:354
+msgid "Discover GitHub"
+msgstr "GitHub හඳුනගන්න"
+
+#: services/messenger.py:356
+msgid "Discover GitHub official website, or follow a beginner tutorial"
+msgstr "GitHub නිල වෙබ්අඩවිය හඳුනාගන්න. නැත්නම් නවකයන්ට තියන පාඩමක් කරන්න"
+
+#: services/messenger.py:370 services/messenger.py:710
+msgid "Good question 👌🏽"
+msgstr "හොඳ ප්‍රශ්නයක් 👌🏽"
+
+#: services/messenger.py:374 services/messenger.py:714
+msgid ""
+"Git is a type of version control system (VCS) that makes it easier to "
+"track changes to files. "
+msgstr ""
+"Git කියන්නෙ ෆයිල්ස් වලට කරන වෙනස්කම් වාර්තාගත කරන වර්ශන් කන්ට්‍රොල් "
+"පද්ධතියක් "
+
+#: services/messenger.py:382 services/messenger.py:722
+msgid ""
+"For example, when you edit a file, Git can help you determine exactly "
+"what changed, who changed it, and why."
+msgstr ""
+"උදාගරණයක් විදිහට ඔයා ෆයිල් එකක් එඩිට් කලාම, Git වලට පුලුවන් ඔයාට ඒකෙ "
+"මොකක්ද වෙනස් උනේ, කව්ද වෙනස් කලේ සහ ඇයි වෙනස් කලේ කියල හොයාගන්න උදව් "
+"වෙන්න."
+
+#: services/messenger.py:391 services/messenger.py:731
+msgid "👶🏽 Install Git"
+msgstr "👶🏽 Git ස්ථාපනය කරන්න"
+
+#: services/messenger.py:394 services/messenger.py:733
+msgid "🤓 I've Git Installed"
+msgstr "🤓 මං Git ස්ථාපනය කරල තියෙන්නෙ"
+
+#: services/messenger.py:398 services/messenger.py:737
+msgid "Want to learn more about Git?"
+msgstr "Git ගැන තව ඉගෙන ගන්න ආසද?"
+
+#: services/messenger.py:411
+msgid "Good decision 👌🏽"
+msgstr "හොඳ තීරණයක් 👌🏽"
+
+#: services/messenger.py:415
+msgid ""
+"We are going to split the process into 5 steps: \n"
+"🛵 Fork, Clone, Update, Push and Merge. "
+msgstr ""
+"අපි මේ ප්‍රොසෙස් එක කොටස් 5කට කඩමු: \n"
+"🛵 Fork, Clone, Update, Push හා Merge. "
+
+#: services/messenger.py:424
+msgid "🥢 1. Fork"
+msgstr "🥢 1. Fork"
+
+#: services/messenger.py:427
+msgid "Ready for the first step?!"
+msgstr "සූදානම්ද පලවෙනි පියවරට?!"
+
+#: services/messenger.py:435
+msgid "Awesome 👌🏽"
+msgstr "නියමයි 👌🏽"
+
+#: services/messenger.py:439
+msgid ""
+"Open this link in a new window: \n"
+" https://github.com/fbdevelopercircles/open-source-edu-bot"
+msgstr ""
+"මේ ලින්ක් එක අලුත් වින්ඩෝ එකක ඕපන් කරගන්න: \n"
+" https://github.com/fbdevelopercircles/open-source-edu-bot"
+
+#: services/messenger.py:446
+msgid "Now, click `Fork` on the top right corner of your screen"
+msgstr "දැන් ඔයාගෙ ස්ක්‍රීන් එකේ දකුණු පැත්තෙ උඩ තියන `Fork` කියන එක ක්ලික් කරන්න"
+
+#: services/messenger.py:456
+msgid "A copy of the original project will be created under your account."
+msgstr "මුල් ප්‍රොජෙක්ට් එකේ කොපියක් ඔයාගෙ එකවුන්ට් එක යටතේ හැදේවි."
+
+#: services/messenger.py:464
+msgid "🚃 2. Clone"
+msgstr "🚃 2. Clone"
+
+#: services/messenger.py:467
+msgid "Ready for the next step?!"
+msgstr "සූදානම්ද පලවෙනි පියවරට?!"
+
+#: services/messenger.py:475
+msgid "Great 👌🏽"
+msgstr "මරු 👌🏽"
+
+#: services/messenger.py:479
+msgid ""
+"Right now, you have a fork of the `open-source-edu-bot` repository, but "
+"you don't have the files in that repository on your computer."
+msgstr ""
+"දැන් ඔයා ගාව `open-source-edu-bot` රිපෝසිටරි එකේ Fork එකක් තියනව, හැබැයි "
+"ඔයාගෙ කම්පියුටර් එකේ ඒකෙ ෆයිල් ටික නෑ."
+
+#: services/messenger.py:487
+msgid ""
+"Let's create a clone of your fork locally on your computer.\n"
+"On GitHub, in your newly forked project, Click on `Code` above the list "
+"of files"
+msgstr ""
+"අපි දැන් ඔයාගෙ කම්පියුටර් එකේ ඔයාගෙ Fork එකේ පිටපතක් හදමු\n"
+"GitHub එකේ ඔයාගෙ අලුතෙන් Fork කරපු ප්‍රොජෙක්ට් එකට ගිහින් ෆයිල් ලිස්ට් "
+"එකට උඩින් තියන `Code` කියන එක ක්ලික් කරන්න"
+
+#: services/messenger.py:503
+msgid "When you feel Ready🔥, hit Next to continue."
+msgstr "ඔයා සූදානම් නම් 🔥, \"Next\" ක්ලික් කරන්න ඊලඟ එකට යන්න."
+
+#: services/messenger.py:509
+msgid ""
+"To clone the repository using HTTPS, under \"Clone with HTTPS\", click "
+"copy icon.\n"
+"To clone the repository using an SSH key click \"Use SSH\", then click on"
+" copy icon."
+msgstr ""
+"HTTPS වලින් රිපෝ එක පිටපත් කරන්නනම්, \"Clone with HTTPS\" යටතේ තියන කොපි "
+"අයිකන් එක ක්ලික් කරන්න.\n"
+"SSH Key එකකින් පිටපත් කරන්න ඕන නම්, \"Use SSH\", යටතේ තියන කොපි අයිකන් එක"
+" ක්ලික් කරන්න."
+
+#: services/messenger.py:523
+msgid ""
+"Now open a terminal, change the current working directory to the location"
+" where you want the cloned directory."
+msgstr ""
+"ටර්මිනල් එක ඕපන් කරල දැන් ඉන්න ඩිරෙක්ටරිය වෙනස් කරන්න ඔයා රිපෝ එක පිටපත් "
+"කරපු ඩිරෙක්ටරියට."
+
+#: services/messenger.py:530
+msgid ""
+"Type `git clone`, and then paste the URL you copied earlier.\n"
+"Press Enter. Your local clone will be created."
+msgstr ""
+"`git clone` කියල ටයිප් කරල කලින් කොපි කරපු URL එක පේස්ට් කරන්න\n"
+"Enter එක ඔබන්න. ඔයාගෙ ලෝකල් පිටපත නිර්මාණය වෙයි."
+
+#: services/messenger.py:537
+msgid "🥯 3. Update"
+msgstr "🥯 3. Update"
+
+#: services/messenger.py:540
+msgid "Now, you have a local copy of the project, Let's update it!"
+msgstr "දැන් ඔයා ලෝකල් පිටපතක් හැදුවනේ ප්‍රොජෙක්ට් එකේ, දැන් ඒක යාවත්කාලීන කරමු!"
+
+#: services/messenger.py:551
+msgid "Amazing 👌🏽"
+msgstr "නියමයි 👌🏽"
+
+#: services/messenger.py:555
+msgid ""
+"Open the project using your favorite IDE, and look for "
+"`contributors.yaml` file"
+msgstr ""
+"ඔයාගෙ ආසම IDE එකෙන් ප්‍රොජෙක්ට් එක විවෘත කරල, `contributors.yaml` ෆයිල් "
+"එක හොයාගන්න"
+
+#: services/messenger.py:562
+msgid "This Yaml file contains list of project contributors, just like you."
+msgstr "මේ Yaml ෆයිල් එකේ තියනව ප්‍රොජෙක්ට් එකේ ඔයාවගේම අනිත් දායකයෝ ලිස්ට් එක."
+
+#: services/messenger.py:573
+msgid ""
+"Following the same scheme, add your name, country and github username to "
+"the list."
+msgstr ""
+"එකම යෝජනා ක්‍රමය අනුගමනය කරමින්, ඔබේ නම, රට සහ GitHub පරිශීලක නාමය "
+"ලැයිස්තුවට එක් කරන්න."
+
+#: services/messenger.py:581
+msgid "🚲 4. Push"
+msgstr "🚲 4. Push"
+
+#: services/messenger.py:584
+msgid "Ready to commit & Push your changes?!"
+msgstr "ලෑස්තිද ඔයාගෙ commitටික කරල Push කරන්න?!"
+
+#: services/messenger.py:592
+msgid "Way to go 👌🏽"
+msgstr "අන්න ක්‍රමේ 👌🏽"
+
+#: services/messenger.py:595
+msgid ""
+"Open Terminal. \n"
+" Change the current working directory to your local repository. \n"
+"Stage the file for commit to your local repository using: `git add .`"
+msgstr ""
+"ටර්මිනල් එක ඕපන් කරගන්න\n"
+"ටර්මිනල් එක ඕපන් කරල දැන් ඉන්න ඩිරෙක්ටරිය වෙනස් කරන්න ඔයා ලෝකල් රිපෝ "
+"ඩිරෙක්ටරියට.\n"
+"`git add .` වලින් ඔයාගෙ ෆයිල් එක Stage කරන්න ලෝකල් රිපෝ එකට Commit කරන්න"
+
+#: services/messenger.py:603
+msgid ""
+"Commit the file that you've staged in your local repository:\n"
+"`git commit -m \"Add YOUR_NAME to contributors list\"`\n"
+"Make sure to add your name :D"
+msgstr ""
+"ඔයා ලෝකල් රිපෝ එකේ Staged කරපු ෆයිල් ටික Commit කරන්න:\n"
+"`git commit -m \"Add ඔයාගේ_නම_මෙතන to contributors list\"`\n"
+"අමතක නොකර ඔයාගෙ නම දාන්න :D"
+
+#: services/messenger.py:612
+msgid ""
+"Finally, Push the changes in your local repository to  GitHub: `git push "
+"origin master`"
+msgstr ""
+"අවසානෙට ඔයාගෙ ලෝකල් රිපෝ එකේ තියන වෙනස්කම් ටික GitHub එකට Push කරන්න: "
+"`git push origin master`"
+
+#: services/messenger.py:620
+msgid "🔐 5. Merge"
+msgstr "🔐 5. Merge"
+
+#: services/messenger.py:623
+msgid "Ready to make your first PR?!"
+msgstr "ඔයාගෙ පලවෙනි PR එක දාන්න ලෑස්තිද?!"
+
+#: services/messenger.py:631
+msgid "Proud of you 👌🏽"
+msgstr "ආඩම්බරයි ඔයාගැන 👌🏽"
+
+#: services/messenger.py:634
+msgid ""
+"Now go back to the original repo: https://github.com/fbdevelopercircles"
+"/open-source-edu-bot \n"
+"Above the list of files, click `Pull request`."
+msgstr ""
+"දැන් ආපහු මුල් රිපෝ එකට යන්න: https://github.com/fbdevelopercircles/open-"
+"source-edu-bot \n"
+"ෆයිල් ලිස්ට් එකට උඩින් තියන `Pull request` කියන එක ක්ලික් කරන්න."
+
+#: services/messenger.py:647
+msgid ""
+"Make sure that \"base branch\" & \"head fork\" drop-down menus both are "
+"pointing to `master`"
+msgstr ""
+"\"base branch\" ඩ්‍රොප් ඩවුන් මෙනු එකයි, \"head fork\" ඩ්‍රොප් ඩවුන් මෙනු"
+" එකයි `master` එකේද තියෙන්නෙ කියල බලන්න"
+
+#: services/messenger.py:659
+msgid ""
+"Type a title and description for your pull request. Then click `click "
+"Create Pull Request`"
+msgstr ""
+"ඔයාගෙ Pull request එකට නමකුයි විස්තරෙයි දාන්න. ඊටපස්සේ `click Create Pull"
+" Request` ක්ලික් කරන්න"
+
+#: services/messenger.py:665
+msgid "✅ Done"
+msgstr "✅ හරි"
+
+#: services/messenger.py:668
+msgid "Have you created your first PR?"
+msgstr "ඔයාගෙ පලවෙනි PR එක කලාද?"
+
+#: services/messenger.py:678
+#, python-format
+msgid "🙌🎉 Bravo %(first_name)s 🙌🎉"
+msgstr "🙌🎉 පට්ට %(first_name)s 🙌🎉"
+
+#: services/messenger.py:690
+msgid "Now the team will review your PR and merge it ASAP :D"
+msgstr "දැන් කණ්ඩායම විසින් ඔයාගෙ PR එක බලල ඒක පුලුවන් තරම් ඉක්මනට Merge කරාවි :D"
+
+#: services/messenger.py:699
+msgid "Below other interesting stuff that we can explore together:"
+msgstr "පහලින් ඔයාටයි මටයි ගවේශනය කරන්න පුලුවන් වටින දේවල් ටිකක් තියනව:"
+
+#: services/messenger.py:745
+msgid "Time to get Git installed in your machine ⭕!"
+msgstr "GIt ඔයාගෙ පරිඝණකයේ ස්ථාපනය කරගන්න වෙලාව දැන් ⭕!"
+
+#: services/messenger.py:751
+msgid "Download Git"
+msgstr "Git බාගතකරගන්න"
+
+#: services/messenger.py:755
+msgid "Head over here, and download Git Client based on your OS."
+msgstr "මෙතෙන්ට ගිහින් ඔයාගෙ මෙහෙයුම් පද්ධතියට අදාල Git ක්ලයන්ට් එක බාගත කරගන්න."
+
+#: services/messenger.py:765
+msgid "Configure Git ⚒️"
+msgstr "Git සකසමු ⚒️"
+
+#: services/messenger.py:768
+msgid "🧑‍🚀 Once done, let's configure Git"
+msgstr "🧑‍🚀 ඕක ඉවර උනාම අපි Git සකසමු"
+
+#: services/messenger.py:776
+msgid "Great Progress so far 👨🏽‍🎓!"
+msgstr "හොඳට කරන් ආව මේදක්වා👨🏽‍🎓!"
+
+#: services/messenger.py:780
+msgid ""
+"Now let's configure your Git username and email using the following "
+"commands"
+msgstr "හරි දැන් අපි ඔයාගෙ Git පරිශීලක නාමයයි ඊමේල් එකක් සකසමු පහල විධාන වලින්"
+
+#: services/messenger.py:787
+msgid "`$ git config --global user.name \"Steve Josh\"`"
+msgstr "`$ git config --global user.name \"Steve Josh\"`"
+
+#: services/messenger.py:791
+msgid "`$ git config --global user.email \"josh@example.com\"`"
+msgstr "`$ git config --global user.email \"josh@example.com\"`"
+
+#: services/messenger.py:795
+msgid "Don't forget to replace Steve's  name and email with your own."
+msgstr "ස්ටීව්ගෙ නමයි ඊමේල් එකයි වෙනුවට ඔයාගෙ ඒව දාන්න අමතක කරන්න එපා."
+
+#: services/messenger.py:801
+msgid "These details will be associated with any commits that you create"
+msgstr "මේ විස්තර ඔයා කරන හැම Commit එකක් එක්කම බැඳිල තියනව"
+
+#: services/messenger.py:811
+msgid "Now let's check, what is Github?👇🏼"
+msgstr "හරි දැන් බලමු, මොකක්ද Github?👇🏼"
+
+#: services/messenger.py:818
+msgid "Facebook 🧡 Open Source!"
+msgstr "Facebook 🧡 විවෘත මූලාශ්‍රයන්ට!"
+
+#: services/messenger.py:822
+msgid ""
+"Facebook manages many Open Source projects in the following areas:\n"
+"✔️ Android\n"
+"✔️ Artificial Intelligence\n"
+"✔️ Data Infrastructure\n"
+"✔️ Developer Operations\n"
+"✔️ Development Tools\n"
+"✔️ Frontend\n"
+"✔️ iOS\n"
+"✔️ Languages\n"
+"✔️ Linux\n"
+"✔️ Security\n"
+"✔️ Virtual Reality\n"
+"..."
+msgstr ""
+"Facebook එකෙන් ගොඩක් විවෘත මූලාශ්‍ර ප්‍රොජෙක්ට්ස් පහල මාතෘකාවලින් "
+"පවත්වාගෙන යනව:\n"
+"✔️ Android\n"
+"✔️ Artificial Intelligence\n"
+"✔️ Data Infrastructure\n"
+"✔️ Developer Operations\n"
+"✔️ Development Tools\n"
+"✔️ Frontend\n"
+"✔️ iOS\n"
+"✔️ Languages\n"
+"✔️ Linux\n"
+"✔️ Security\n"
+"✔️ Virtual Reality\n"
+"..."
+
+#: services/messenger.py:843
+msgid "Explore them"
+msgstr "ඒව ගවේශනය කරන්න"
+
+#: services/messenger.py:847
+msgid "Explore Facebook Open Source projects"
+msgstr "Facebook විවෘත මූලාශ්‍ර වැඩසටහන් ගවේශනය කරන්න"
+
+#: services/messenger.py:856
+msgid ""
+"🤓 You know what? This chatbot code is Open Source 🔓, it's developed by "
+"Facebook Developers Circles members around the world."
+msgstr ""
+"🤓 ඔයා දන්නවද? මේ චැට් බොට් එකත් විවෘත මූලාශ්‍ර. 🔓, මේක හැදුවෙ ලෝකෙ වටේම "
+"ඉන්න Facebook Developers Circles සාමාජිකයන්."
+
+#: services/messenger.py:864
+#, python-format
+msgid ""
+"%(first_name)s we welcome contributors, or simply feel free to fork the "
+"code on GitHub, and create your own chatbot."
+msgstr ""
+"%(first_name)s අපි සාදරයෙන් පිලිගන්නව වෙනස් කිරීම්, GitHub එකේ Fork කරන "
+"එක හා ඔයාගෙම චැට්බොට් එකක් හදන එක."
+
+#: services/messenger.py:874
+msgid "The Source Code"
+msgstr "මූලික කේතය"
+
+#: services/messenger.py:879
+msgid "Join a circle"
+msgstr "වටේකට එකතු වෙන්න"
+
+#: services/messenger.py:884 services/messenger.py:897
+msgid "🚶🏽‍♀️ Main Menu 🗄️"
+msgstr "🚶🏽‍♀️ ප්‍රධාන මෙනුව 🗄️"
+
+#: services/messenger.py:887
+msgid "Select an option 👇🏼"
+msgstr "එකක් තෝරාගන්න 👇🏼"
+
+#: services/messenger.py:899
+msgid "Coming soon!"
+msgstr "ඉක්මනින්ම එනව!"
+
