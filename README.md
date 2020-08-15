@@ -10,7 +10,7 @@ Open Source Education Bot built by the Facebook Developer Circles community to h
 
 > **requirement**: python 3.6 or more
 
-Start by  fork and then cloning the repository locally and enter the project folder into your system.
+Start by fork and then cloning the repository locally and enter the project folder into your system.
 
 ```bash
 git clone https://github.com/fbdevelopercircles/YOUR_GITHUB_USER_NAME/open-source-edu-bot 
