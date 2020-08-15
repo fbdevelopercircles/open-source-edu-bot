@@ -122,9 +122,9 @@ msgstr ""
 
 #: services/messenger.py:236
 msgid ""
-"According to the dictionary, Open-source 🔓 software, denotes software for"
-" which the original source code is made freely 🆓 available and may be "
-"redistributed and modified."
+"Open-Source Software, is any Software available for modification ⌨️."
+"This usually includes a license for programmers to change and contribute to the software. 🔧"
+"Programmers can fix bugs, improve the software, or adapt it according to their own needs! 🆓"
 msgstr ""
 "ඩික්ශනරියට අනුව විවෘත මූලාශ්‍ර 🔓 මෘදුකාංග කියන්නෙ, මුල් කේතය නොමිලේ 🆓  "
 "බෙදාහැරල තියන සහ එය නැවත බෙදාගන්න වගේම වෙනස් කරන්න පුලුවන් මෘදුකාංග."
