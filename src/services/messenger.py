@@ -15,6 +15,7 @@ from fbmessenger import BaseMessenger, MessengerClient
 from fbmessenger.templates import GenericTemplate
 from fbmessenger.elements import Text, Button, Element
 from fbmessenger import quick_replies
+from fbmessenger.attachments import Image
 from fbmessenger.sender_actions import SenderAction
 
 from .profile import init_profile
@@ -26,45 +27,41 @@ logger.setLevel(logging.DEBUG)
 handler = logging.StreamHandler(sys.stdout)
 handler.setLevel(logging.DEBUG)
 formatter = logging.Formatter(
-    '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    "%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 
 DEFAULT_API_VERSION = "7.0"
 
-bp = Blueprint('messenger', __name__)
+bp = Blueprint("messenger", __name__)
 
 # Let us setup user as global variable
 # Default user values
-user = {
-    'first_name': _('Friend'),
-    'locale': 'en',
-    'timezone': 0
-}
+user = {"first_name": _("Friend"), "locale": "en", "timezone": 0}
 
-typing_on = SenderAction(sender_action='typing_on').to_dict()
-typing_off = SenderAction(sender_action='typing_off').to_dict()
-mark_seen = SenderAction(sender_action='mark_seen').to_dict()
+typing_on = SenderAction(sender_action="typing_on").to_dict()
+typing_off = SenderAction(sender_action="typing_off").to_dict()
+mark_seen = SenderAction(sender_action="mark_seen").to_dict()
 
 
 @babel.localeselector
 def get_locale():
-    if 'locale' in user:
-        return user['locale']
-    return 'en'
+    if "locale" in user:
+        return user["locale"]
+    return "en"
 
 
 @babel.timezoneselector
 def get_timezone():
-    if 'timezone' in user:
-        return user['timezone']
+    if "timezone" in user:
+        return user["timezone"]
     return 0
 
 
 def init_user_preference(messenger):
     # Localise the bot for the current user
     list_of_globals = globals()
-    list_of_globals['user'].update(messenger.get_user())
+    list_of_globals["user"].update(messenger.get_user())
     logger.debug("Current USER: {}".format(user))
 
     get_locale()
@@ -76,83 +73,88 @@ def send_start_messages(messenger):
     """Function to launch at the start of restart of the chatbot"""
 
     txt = _(
-        u'🙏🏼 Hi %(first_name)s, so you’ve decided to make your first steps in'
-        ' Open Source. That’s great.', **user
+        u"🙏🏼 Hi %(first_name)s, so you’ve decided to make your first steps in"
+        " Open Source. That’s great.",
+        **user
     )
-    messenger.send({'text': txt}, 'RESPONSE')
+    messenger.send({"text": txt}, "RESPONSE")
     messenger.send_action(typing_on)
     sleep(3)
 
     # A quick reply to the main menu
     qr1 = quick_replies.QuickReply(
-        title=_('✔️ Yes'),
-        payload='KNOW_OS_YES_FULL'
-    )
-    qr2 = quick_replies.QuickReply(title=_('❌ Not yet'), payload='KNOW_OS_NO')
+        title=_("✔️ Yes"), payload="KNOW_OS_YES_FULL")
+    qr2 = quick_replies.QuickReply(title=_("❌ Not yet"), payload="KNOW_OS_NO")
     qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
     text = {
-        "text": _(u'So tell me %(first_name)s do you know what Open Source'
-                  ' is? 👇🏼', **user),
-        "quick_replies": qrs.to_dict()
+        "text": _(
+            u"So tell me %(first_name)s do you know"
+            " what Open Source" " is? 👇🏼", **user
+        ),
+        "quick_replies": qrs.to_dict(),
     }
-    messenger.send(text, 'RESPONSE')
+    messenger.send(text, "RESPONSE")
 
 
 def get_main_menu():
     """Function that return the main menu of the chatbot"""
     open_source = quick_replies.QuickReply(
-        title=_('Open Source 🔓'),
-        payload='OPEN_SOURCE'
+        title=_("Open Source 🔓"), payload="OPEN_SOURCE"
     )
-    git = quick_replies.QuickReply(title=_('Git'), payload='GIT_0')
-    github = quick_replies.QuickReply(title=_('GitHub'), payload='GITHUB_1')
+    git = quick_replies.QuickReply(title=_("Git"), payload="GIT_0")
+    github = quick_replies.QuickReply(title=_("GitHub"), payload="GITHUB_1")
+    contr = quick_replies.QuickReply(title=_("Make a PR"), payload="CONTR_1")
     fb_os = quick_replies.QuickReply(
-        title=_('FB Open Source'),
-        payload='FB_OS'
-    )
+        title=_("FB Open Source"), payload="FB_OS")
     fork_me = quick_replies.QuickReply(
-        title=_('Fork me on GitHub'),
-        payload='FORK_ON_GITHUB'
+        title=_("Fork me on GitHub"), payload="FORK_ON_GITHUB"
     )
 
     return quick_replies.QuickReplies(
-        quick_replies=[open_source, git, github, fb_os, fork_me]
+        quick_replies=[open_source, git, github, contr, fb_os, fork_me]
     )
 
 
 def process_message(messenger, message):
-    if 'attachments' in message['message']:
-        if message['message']['attachments'][0]['type'] == 'location':
-            logger.debug('Location received')
-            attachments = message['message']['attachments']
-            response = Text(text='{}: lat: {}, long: {}'.format(
-                message['message']['attachments'][0]['title'],
-                attachments[0]['payload']['coordinates']['lat'],
-                attachments[0]['payload']['coordinates']['long']
-            ))
-            res = messenger.send(response.to_dict(), 'RESPONSE')
-            logger.debug('Response: {}'.format(res))
+    if "attachments" in message["message"]:
+        if message["message"]["attachments"][0]["type"] == "location":
+            logger.debug("Location received")
+            attachments = message["message"]["attachments"]
+            response = Text(
+                text="{}: lat: {}, long: {}".format(
+                    message["message"]["attachments"][0]["title"],
+                    attachments[0]["payload"]["coordinates"]["lat"],
+                    attachments[0]["payload"]["coordinates"]["long"],
+                )
+            )
+            res = messenger.send(response.to_dict(), "RESPONSE")
+            logger.debug("Response: {}".format(res))
             return True
 
-    if ('quick_reply' in message['message']
-            and 'payload' in message['message']['quick_reply']):
-        payload = message['message']['quick_reply']['payload']
+    if (
+        "quick_reply" in message["message"]
+        and "payload" in message["message"]["quick_reply"]
+    ):
+        payload = message["message"]["quick_reply"]["payload"]
         process_postback(messenger, payload)
         return True
 
-    if 'text' in message['message']:
-        msg = message['message']['text']
-        if msg.lower() in ['help', 'info']:
+    if "text" in message["message"]:
+        msg = message["message"]["text"]
+        if msg.lower() in ["help", "info"]:
             text = {
                 "text": _(
+
                     u'Oh you need some help 🆘!'
                     ' This is the main menu, select what you need below 👇🏼'),
                 "quick_replies": get_main_menu().to_dict()
+
             }
         else:
-            user['msg'] = msg
+            user["msg"] = msg
             text = {
                 "text": _(
+
                     u'I didn\'t get you %(first_name)s'
                     '!\nYou said : %(msg)s\n'
                     '\n This is the main menu, select what you need below 👇🏼',
@@ -163,12 +165,13 @@ def process_message(messenger, message):
     if not text:
         text = {
             "text": _(
+
                 u'%(first_name)s\n'
                 'This is the main menu, select what you need below 👇🏼'),
             "quick_replies": get_main_menu().to_dict()
         }
 
-    messenger.send(text, 'RESPONSE')
+    messenger.send(text, "RESPONSE")
     return True
 
 
@@ -181,69 +184,70 @@ def process_postback(messenger, payload):
     """
     init_user_preference(messenger)
 
-    if 'START' in payload:
+    if "START" in payload:
         send_start_messages(messenger)
         return True
 
-    if 'MAIN_MENU' in payload:
+    if "MAIN_MENU" in payload:
         text = {
+
             "text": _(
                 u'This is the main menu, select what you need below 👇🏼'),
             "quick_replies": get_main_menu().to_dict()
+
         }
-        messenger.send(text, 'RESPONSE')
+        messenger.send(text, "RESPONSE")
         return True
 
-    if 'OPEN_SOURCE' in payload:
+    if "OPEN_SOURCE" in payload:
         qr1 = quick_replies.QuickReply(
-            title=_('✔️ Yes'),
-            payload='KNOW_OS_YES_FULL'
-        )
+            title=_("✔️ Yes"), payload="KNOW_OS_YES_FULL")
         qr2 = quick_replies.QuickReply(
-            title=_('❌ Not yet'), payload='KNOW_OS_NO')
-        qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
-        text = {
-            "text": _(u'So tell me %(first_name)s do you know what Open source'
-                      ' is? 👇🏼', **user),
-            "quick_replies": qrs.to_dict()
-        }
-        messenger.send(text, 'RESPONSE')
-        return True
-
-    if payload.startswith('KNOW_OS_YES'):
-        if 'KNOW_OS_YES_FULL' in payload:
-            messenger.send({'text': _(u'Amazing!')}, 'RESPONSE')
-            messenger.send_action(typing_on)
-            sleep(3)
-
-        qr1 = quick_replies.QuickReply(title=_('✔️ Yes'), payload='CVS_YES')
-        qr2 = quick_replies.QuickReply(title=_('❌ Not yet'), payload='CVS_NO')
+            title=_("❌ Not yet"), payload="KNOW_OS_NO")
         qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
         text = {
             "text": _(
-                u'An important component in Open Source contribution is'
-                ' version control tools. Are you familiar with the concept of'
-                ' version control? 👇🏼'
+                u"So tell me %(first_name)s do you know"
+                " what Open source" " is? 👇🏼",
+                **user
             ),
-            "quick_replies": qrs.to_dict()
+            "quick_replies": qrs.to_dict(),
         }
-        messenger.send(text, 'RESPONSE')
+        messenger.send(text, "RESPONSE")
         return True
 
-    if 'KNOW_OS_NO' in payload:
+    if payload.startswith("KNOW_OS_YES"):
+        if "KNOW_OS_YES_FULL" in payload:
+            messenger.send({"text": _(u"Amazing!")}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+
+        qr1 = quick_replies.QuickReply(title=_("✔️ Yes"), payload="CVS_YES")
+        qr2 = quick_replies.QuickReply(title=_("❌ Not yet"), payload="CVS_NO")
+        qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
+        text = {
+            "text": _(
+                u"An important component in Open Source contribution is"
+                " version control tools. Are you familiar with the concept of"
+                " version control? 👇🏼"
+            ),
+            "quick_replies": qrs.to_dict(),
+        }
+        messenger.send(text, "RESPONSE")
+        return True
+
+    if "KNOW_OS_NO" in payload:
         text = _(
-            u'According to the dictionary, Open-source 🔓 software, denotes'
-            ' software for which the original source code is made freely 🆓'
-            ' available and may be redistributed and modified.'
+            u"According to the dictionary, Open-source 🔓 software, denotes"
+            " software for which the original source code is made freely 🆓"
+            " available and may be redistributed and modified."
         )
-        messenger.send({'text': text}, 'RESPONSE')
+        messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(3)
 
         qr = quick_replies.QuickReply(
-            title=_('👉🏽 Next'),
-            payload='KNOW_OS_YES'
-        )
+            title=_("👉🏽 Next"), payload="KNOW_OS_YES")
         qrs = quick_replies.QuickReplies(quick_replies=[qr])
         text = {
             "text": _(
@@ -252,354 +256,676 @@ def process_postback(messenger, payload):
                 'and thousands of common software '
                 ' started out as open source software? 👇🏼'
             ),
-            "quick_replies": qrs.to_dict()
+            "quick_replies": qrs.to_dict(),
         }
-        messenger.send(text, 'RESPONSE')
+        messenger.send(text, "RESPONSE")
         return True
 
-    if 'CVS_NO' in payload:
+    if "CVS_NO" in payload:
         text = {
             "text": _(
-                u'😎 Worry not!\n\n'
-                'Version control allows you to manage changes to files over'
-                ' time ⏱️.'
+                u"😎 Worry not!\n\n"
+                "Version control allows you to manage changes to files over"
+                " time ⏱️."
             )
         }
-        messenger.send(text, 'RESPONSE')
+        messenger.send(text, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(3)
         text = {
             "text": _(
-                u'You can use version control to version code, binary files,'
-                ' and digital assets 🗄️.'
+                u"You can use version control to version code, binary files,"
+                " and digital assets 🗄️."
             )
         }
-        messenger.send(text, 'RESPONSE')
+        messenger.send(text, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(3)
         text = {
             "text": _(
-                u'This includes version control software, version control'
-                ' systems, or version control tools 🧰.'
+                u"This includes version control software, version control"
+                " systems, or version control tools 🧰."
             )
         }
-        messenger.send(text, 'RESPONSE')
+        messenger.send(text, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(3)
         text = {
             "text": _(
-                u'Version control is a component of software configuration'
-                ' management 🖥️.'
+                u"Version control is a component of software configuration"
+                " management 🖥️."
             )
         }
-        messenger.send(text, 'RESPONSE')
+        messenger.send(text, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(3)
-        qr = quick_replies.QuickReply(
-            title=_('👉🏽 Next'),
-            payload='CVS_YES'
-        )
+        qr = quick_replies.QuickReply(title=_("👉🏽 Next"), payload="CVS_YES")
         qrs = quick_replies.QuickReplies(quick_replies=[qr])
         text = {
             "text": _(
+
                 u'😎 Now that you understand what version control is,'
                 ' let\'s explore another important topic'
+
             ),
-            "quick_replies": qrs.to_dict()
+            "quick_replies": qrs.to_dict(),
         }
-        messenger.send(text, 'RESPONSE')
+        messenger.send(text, "RESPONSE")
         return True
 
-    if 'CVS_YES' in payload:
+    if "CVS_YES" in payload:
         qr1 = quick_replies.QuickReply(
-            title=_('What is Git❔'),
-            payload='GIT_1'
-        )
+            title=_("What is Git❔"), payload="GIT_1")
         qr2 = quick_replies.QuickReply(
-            title=_('What is GitHub❔'),
-            payload='GITHUB_1'
-        )
+            title=_("What is GitHub❔"), payload="GITHUB_1")
         qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
         text = {
-            "text": _(
-                u'What do you want to start with⁉️ 👇🏼'
-            ),
-            "quick_replies": qrs.to_dict()
+            "text": _(u"What do you want to start with⁉️ 👇🏼"),
+            "quick_replies": qrs.to_dict(),
         }
-        messenger.send(text, 'RESPONSE')
+        messenger.send(text, "RESPONSE")
         return True
 
-    if 'GITHUB_1' in payload:
-        qr = quick_replies.QuickReply(
-            title=_('👉🏽 Next'),
-            payload='GITHUB_2'
-        )
+    if "GITHUB_1" in payload:
+        qr = quick_replies.QuickReply(title=_("👉🏽 Next"), payload="GITHUB_2")
         qrs = quick_replies.QuickReplies(quick_replies=[qr])
         text = {
             "text": _(
-                u'GitHub is a code hosting platform for version control and'
-                ' collaboration. It lets you and others work together on'
-                ' projects from anywhere.'
+                u"GitHub is a code hosting platform for version control and"
+                " collaboration. It lets you and others work together on"
+                " projects from anywhere."
             ),
-            "quick_replies": qrs.to_dict()
+            "quick_replies": qrs.to_dict(),
         }
-        messenger.send(text, 'RESPONSE')
+        messenger.send(text, "RESPONSE")
         return True
 
-    if 'GITHUB_2' in payload:
+    if "GITHUB_2" in payload:
         btn1 = Button(
-            button_type='web_url',
-            title=_('Official Website'),
-            url='http://github.com'
+            button_type="web_url",
+            title=_("Official Website"),
+            url="http://github.com"
         )
         btn2 = Button(
-            button_type='web_url',
-            title=_('GitHub Tutorial'),
-            url='https://guides.github.com/activities/hello-world/'
+            button_type="web_url",
+            title=_("GitHub Tutorial"),
+            url="https://guides.github.com/activities/hello-world/",
         )
         btn3 = Button(
-            button_type='postback',
-            title=_('🚶🏽‍♀️ Main Menu 🗄️'),
-            payload='MAIN_MENU'
+            button_type="postback",
+            title=_("👩‍💻 Make a PR"),
+            payload="CONTR_1"
         )
-        app_url = os.environ.get('APP_URL', 'localhost')
+        btn4 = Button(
+            button_type="postback",
+            title=_("�🏽‍♀️ Main Menu 🗄️"),
+            payload="MAIN_MENU"
+        )
+        app_url = os.environ.get("APP_URL", "localhost")
         elems = Element(
-            title=_(u'Discover GitHub'),
-            image_url=app_url + '/static/img/github.jpg',
+            title=_(u"Discover GitHub"),
+            image_url=app_url + "/static/img/github.jpg",
             subtitle=_(
-                u'Discover GitHub official website, or follow a beginner'
-                ' tutorial',
+                u"Discover GitHub official website,"
+                " or follow a beginner" " tutorial",
             ),
-            buttons=[btn1, btn2, btn3]
+            buttons=[btn1, btn2, btn3, btn4],
         )
         res = GenericTemplate(elements=[elems])
         logger.debug(res.to_dict())
-        messenger.send(res.to_dict(), 'RESPONSE')
+        messenger.send(res.to_dict(), "RESPONSE")
         return True
 
-    if payload.startswith('GIT_'):
-        if 'GIT_1' in payload:
-            messenger.send({'text': _('Good question 👌🏽')}, 'RESPONSE')
+    if payload.startswith("GIT_"):
+        if "GIT_1" in payload:
+            messenger.send({"text": _("Good question 👌🏽")}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+
+            text = _(
+                u"Git is a type of version control system (VCS) that makes"
+                " it easier to track changes to files. "
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+
+            text = _(
+                u"For example, when you edit a file,"
+                " Git can help you determine"
+                " exactly what changed, who changed it, and why."
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+
+            qr1 = quick_replies.QuickReply(
+                title=_("👶🏽 Install Git"), payload="INSTALL_GIT"
+            )
+            qr2 = quick_replies.QuickReply(
+                title=_("🤓 I've Git Installed"), payload="CONF_GIT"
+            )
+            qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
+            text = {
+                "text": _(u"Want to learn more about Git?"),
+                "quick_replies": qrs.to_dict(),
+            }
+            messenger.send(text, "RESPONSE")
+            return True
+
+    ###################################
+    # FIRST TIME CONTRIBUTION SECTION #
+    ###################################
+    # Guiding users to this first time contribution
+    if payload.startswith("CONTR_"):
+
+        if "CONTR_1" in payload:
+            messenger.send({"text": _("Good decision 👌🏽")}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+
+            text = _(
+                u"We gonna split the process into 5 steps: \n"
+                "🛵 Fork, Clone, Update, Push and Merge. "
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+
+            qr = quick_replies.QuickReply(
+                title=_("🥢 1. Fork"), payload="CONTR_2")
+            qrs = quick_replies.QuickReplies(quick_replies=[qr])
+            text = {
+                "text": _(u"Ready for the first step ?!"),
+                "quick_replies": qrs.to_dict(),
+            }
+            messenger.send(text, "RESPONSE")
+            return True
+
+        # Fork Step
+        if "CONTR_2" in payload:
+            messenger.send({"text": _("Awesome 👌🏽")}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+
+            text = _(
+                u"Open this link"
+                " https://github.com/fbdevelopercircles/open-source-edu-bot"
+                " in a new window."
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+            text = _(u"and click `Fork` on the top"
+                     " right corner of your screen")
+            messenger.send({"text": text}, "RESPONSE")
+            image = Image(
+                url="https://docs.github.com/assets/"
+                "images/help/repository/fork_button.jpg"
+            )
+            messenger.send(image.to_dict(), "RESPONSE")
+            messenger.send_action(typing_on)
+            text = _(
+                u"A copy of the original project will"
+                " be created under your account."
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+            qr = quick_replies.QuickReply(
+                title=_("🚃 2. Clone"), payload="CONTR_3_1")
+            qrs = quick_replies.QuickReplies(quick_replies=[qr])
+            text = {
+                "text": _(u"Ready for the next step ?!"),
+                "quick_replies": qrs.to_dict(),
+            }
+            messenger.send(text, "RESPONSE")
+            return True
+
+        # Clone Step
+        if "CONTR_3_1" in payload:
+            messenger.send({"text": _("Great 👌🏽")}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+
+            text = _(
+                u"Right now, you have a fork of the"
+                " `open-source-edu-bot` repository,"
+                " but you don't have the files in "
+                " that repository on your computer."
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+            text = _(
+                u"Let's create a clone of your fork locally"
+                "on your computer.\n"
+                "On GitHub, in your newly forked project,"
+                "Click `Code` above the list of files"
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            image = Image(
+                url="https://docs.github.com/assets/"
+                "images/help/repository/code-button.png"
+            )
+            messenger.send(image.to_dict(), "RESPONSE")
+
+            qr = quick_replies.QuickReply(
+                title=_("👉🏽 Next"), payload="CONTR_3_2")
+            qrs = quick_replies.QuickReplies(quick_replies=[qr])
+            text = {
+                "text": _(u"When you feel Ready🔥, hit Next to continue."),
+                "quick_replies": qrs.to_dict(),
+            }
+            messenger.send(text, "RESPONSE")
+            return True
+        if "CONTR_3_2" in payload:
+            text = _(
+                u'To clone the repository using HTTPS,'
+                ' under "Clone with HTTPS", click copy icon.\n'
+                'To clone the repository using an SSH key click'
+                ' Use SSH, then click copy icon.'
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            image = Image(
+                url="https://docs.github.com/assets/"
+                "images/help/repository/https-url-clone.png"
+            )
+            messenger.send(image.to_dict(), "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+            text = _(
+                u"Now open a terminal, Change the current working directory"
+                " to the location where you want the cloned directory."
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+            text = _(
+                u"Type `git clone`, and then paste the URL you"
+                " copied earlier. \n"
+                "Press Enter. Your local clone will be created."
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            qr = quick_replies.QuickReply(
+                title=_("🥯 3. Update"), payload="CONTR_4")
+            qrs = quick_replies.QuickReplies(quick_replies=[qr])
+            text = {
+                "text": _(
+                    u"Now that you have a local copy of the project,"
+                    " Let's update it!"
+                ),
+                "quick_replies": qrs.to_dict(),
+            }
+            messenger.send(text, "RESPONSE")
+            return True
+
+        # Update Step
+        if "CONTR_4" in payload:
+            messenger.send({"text": _("Amazing 👌🏽")}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+
+            text = _(
+                u"Open the project using your favorite IDE,"
+                " and look for `contributors.yaml` file"
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+            text = _(
+                u"This Yaml file contains list of project contributors,"
+                " just like you."
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            image = Image(
+                url="https://media.giphy.com/media/"
+                "UsBYak2l75W5VheVPF/giphy.gif"
+            )
+            messenger.send(image.to_dict(), "RESPONSE")
+            text = _(
+                u"Following the same scheme, add your name, "
+                "country and github username to the list."
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+            qr = quick_replies.QuickReply(
+                title=_("🚲 4. Push"), payload="CONTR_5")
+            qrs = quick_replies.QuickReplies(quick_replies=[qr])
+            text = {
+                "text": _(u"Ready to commit & Push your changes ?!"),
+                "quick_replies": qrs.to_dict(),
+            }
+            messenger.send(text, "RESPONSE")
+            return True
+
+        # Push Step
+        if "CONTR_5" in payload:
+            messenger.send({"text": _("Way to go 👌🏽")}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+            text = _(
+                u"Open Terminal. \n Change the current working"
+                " directory to your local repository. \n"
+                "Stage the file for commit to your local "
+                "repository using: `git add .`"
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+            text = _(
+                u'Commit the file that you\'ve staged in your local'
+                ' repository: `git commit -m "Add YOUR_NAME to '
+                ' contributors list"` \n'
+                "Make sure to add your name :D"
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+            text = _(
+                u"Finally, Push the changes in your local repository to "
+                " GitHub: `git push origin master`"
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+            qr = quick_replies.QuickReply(
+                title=_("🔐 5. Merge"), payload="CONTR_6")
+            qrs = quick_replies.QuickReplies(quick_replies=[qr])
+            text = {
+                "text": _(u"Ready to make your first PR ?!"),
+                "quick_replies": qrs.to_dict(),
+            }
+            messenger.send(text, "RESPONSE")
+            return True
+
+        # Merge Step
+        if "CONTR_6" in payload:
+            messenger.send({"text": _("Proud of you 👌🏽")}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+            text = _(
+                u"Now go back to the original repo:"
+                " https://github.com/fbdevelopercircles/open-source-edu-bot \n"
+                "Above the list of files, click `Pull request`."
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            primg = Image(
+                url="https://docs.github.com/assets/images/help/"
+                "pull_requests/pull-request-start-review-button.png"
+            )
+            messenger.send(primg.to_dict(), "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+            text = _(
+                u'Make sure that "base branch" & "head fork"'
+                ' drop-down menus both are pointing to `master`'
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            sleep(3)
+            prdesc = Image(
+                url="https://docs.github.com/assets/images/help/"
+                "pull_requests/pullrequest-description.png"
+            )
+            messenger.send(prdesc.to_dict(), "RESPONSE")
+            text = _(
+                u"Type a title and description for your pull request."
+                " Then click `click Create Pull Request`"
+            )
+            messenger.send({"text": text}, "RESPONSE")
+            messenger.send_action(typing_on)
+            qr = quick_replies.QuickReply(title=_("✅ Done"), payload="CONTR_7")
+            qrs = quick_replies.QuickReplies(quick_replies=[qr])
+            text = {
+                "text": _(u"Have you created your first PR?"),
+                "quick_replies": qrs.to_dict(),
+            }
+            messenger.send(text, "RESPONSE")
+            return True
+
+        # Merge Step
+        if "CONTR_7" in payload:
+            messenger.send(
+                {"text": _("🙌🎉 Bravo %(first_name)s 🙌🎉", **user)
+                 }, "RESPONSE"
+            )
+            messenger.send_action(typing_on)
+            sleep(3)
+            response = Image(
+                url="https://media.giphy.com/media/l0MYJnJQ4EiYLxvQ4/giphy.gif"
+            )
+            messenger.send(response.to_dict(), "RESPONSE")
+            messenger.send(
+                {"text": _("Now the team will review your"
+                           " PR and merge it ASAP :D")},
+                "RESPONSE",
+            )
+            messenger.send_action(typing_on)
+            sleep(3)
+            text = {
+                "text": _(
+                    u"Below other interesting stuff"
+                    " that we can explore together:"
+                ),
+                "quick_replies": get_main_menu().to_dict(),
+            }
+            messenger.send(text, "RESPONSE")
+            return True
+
+    if payload.startswith("GIT_"):
+        if "GIT_1" in payload:
+            messenger.send({"text": _("Good question 👌🏽")}, "RESPONSE")
             messenger.send_action(typing_on)
             sleep(3)
 
         text = _(
-            u'Git is a type of version control system (VCS) that makes'
-            ' it easier to track changes to files. '
+            u"Git is a type of version control system (VCS) that makes"
+            " it easier to track changes to files. "
         )
-        messenger.send({'text': text}, 'RESPONSE')
+        messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(3)
 
         text = _(
-            u'For example, when you edit a file, Git can help you determine'
-            ' exactly what changed, who changed it, and why.'
+            u"For example, when you edit a file, Git can help you determine"
+            " exactly what changed, who changed it, and why."
         )
-        messenger.send({'text': text}, 'RESPONSE')
+        messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(3)
 
         qr1 = quick_replies.QuickReply(
-            title=_('👶🏽 Install Git'),
-            payload='INSTALL_GIT'
-        )
+            title=_("👶🏽 Install Git"), payload="INSTALL_GIT")
         qr2 = quick_replies.QuickReply(
-            title=_('🤓 I\'ve Git Installed'),
-            payload='CONF_GIT'
+            title=_("🤓 I've Git Installed"), payload="CONF_GIT"
         )
         qrs = quick_replies.QuickReplies(quick_replies=[qr1, qr2])
         text = {
-            "text": _(u'Want to learn more about Git?'),
-            "quick_replies": qrs.to_dict()
+            "text": _(u"Want to learn more about Git?"),
+            "quick_replies": qrs.to_dict(),
         }
-        messenger.send(text, 'RESPONSE')
+        messenger.send(text, "RESPONSE")
         return True
 
-    if 'INSTALL_GIT' in payload:
+    if "INSTALL_GIT" in payload:
+
 
         text = _(u'Time to get Git installed in your machine ⭕!.')
         messenger.send({'text': text}, 'RESPONSE')
+
         messenger.send_action(typing_on)
         sleep(3)
         btn = Button(
-            button_type='web_url',
-            title=_('Download Git'),
-            url='https://git-scm.com/downloads'
+            button_type="web_url",
+            title=_("Download Git"),
+            url="https://git-scm.com/downloads",
         )
         elems = Element(
+
             title=_(
                 u'Head over here, and download Git client based on your OS.'
             ),
             buttons=[btn]
+
         )
         res = GenericTemplate(elements=[elems])
         logger.debug(res.to_dict())
-        messenger.send(res.to_dict(), 'RESPONSE')
+        messenger.send(res.to_dict(), "RESPONSE")
         messenger.send_action(typing_on)
         sleep(3)
         qr2 = quick_replies.QuickReply(
-            title=_('Configure Git ⚒️'),
-            payload='CONF_GIT'
-        )
+            title=_("Configure Git ⚒️"), payload="CONF_GIT")
         qrs = quick_replies.QuickReplies(quick_replies=[qr2])
         text = {
-            "text": _(u'🧑‍🚀 Once done, let\'s configure Git'),
-            "quick_replies": qrs.to_dict()
+            "text": _(u"🧑‍🚀 Once done, let's configure Git"),
+            "quick_replies": qrs.to_dict(),
         }
-        messenger.send(text, 'RESPONSE')
+        messenger.send(text, "RESPONSE")
         return True
 
-    if 'CONF_GIT' in payload:
+    if "CONF_GIT" in payload:
 
-        text = _(u'Great Progress so far 👨🏽‍🎓!.')
-        messenger.send({'text': text}, 'RESPONSE')
+        text = _(u"Great Progress so far 👨🏽‍🎓!.")
+        messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(2)
         text = _(
-            u'Now let\'s configure your Git username and email using the'
-            ' following commands')
-        messenger.send({'text': text}, 'RESPONSE')
+            u"Now let's configure your Git username and email using the"
+            " following commands"
+        )
+        messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(2)
-        text = _(
-            u'`$ git config --global user.name "Steve Josh"`')
-        messenger.send({'text': text}, 'RESPONSE')
+        text = _(u'`$ git config --global user.name "Steve Josh"`')
+        messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(2)
-        text = _(
-            u'`$ git config --global user.email "josh@example.com"`')
-        messenger.send({'text': text}, 'RESPONSE')
+        text = _(u'`$ git config --global user.email "josh@example.com"`')
+        messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(2)
+
         text = _(
             u'don\'t forget to replace Steve\'s name with your own.')
         messenger.send({'text': text}, 'RESPONSE')
+
         messenger.send_action(typing_on)
         sleep(2)
         text = _(
-            u'These details will be associated with any commits that'
-            ' you create'
+            u"These details will be associated with any commits that"
+            " you create"
         )
-        messenger.send({'text': text}, 'RESPONSE')
+        messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
         sleep(2)
-        qr = quick_replies.QuickReply(
-            title=_('GitHub'),
-            payload='GITHUB_1'
-        )
+        qr = quick_replies.QuickReply(title=_("GitHub"), payload="GITHUB_1")
         qrs = quick_replies.QuickReplies(quick_replies=[qr])
         text = {
-            "text": _(
-                u'Now let\'s check what is Github👇🏼'
-            ),
-            "quick_replies": qrs.to_dict()
+            "text": _(u"Now let's check what is Github👇🏼"),
+            "quick_replies": qrs.to_dict(),
         }
-        messenger.send(text, 'RESPONSE')
+        messenger.send(text, "RESPONSE")
         return True
 
-    if 'FB_OS' in payload:
-        text = _(u'Facebook 🧡 Open Source!')
-        messenger.send({'text': text}, 'RESPONSE')
+    if "FB_OS" in payload:
+        text = _(u"Facebook 🧡 Open Source!")
+        messenger.send({"text": text}, "RESPONSE")
         sleep(3)
 
         text = _(
-            u'Facebook manages many Open Source projects in the following'
-            ' areas:\n'
-            '✔️ Android\n'
-            '✔️ Artificial Intelligence\n'
-            '✔️ Data Infrastructure\n'
-            '✔️ Developer Operations\n'
-            '✔️ Development Tools\n'
-            '✔️ Frontend\n'
-            '✔️ iOS\n'
-            '✔️ Languages\n'
-            '✔️ Linux\n'
-            '✔️ Security\n'
-            '✔️ Virtual Reality\n'
-            '...'
+            u"Facebook manages many Open Source projects in the following"
+            " areas:\n"
+            "✔️ Android\n"
+            "✔️ Artificial Intelligence\n"
+            "✔️ Data Infrastructure\n"
+            "✔️ Developer Operations\n"
+            "✔️ Development Tools\n"
+            "✔️ Frontend\n"
+            "✔️ iOS\n"
+            "✔️ Languages\n"
+            "✔️ Linux\n"
+            "✔️ Security\n"
+            "✔️ Virtual Reality\n"
+            "..."
         )
-        messenger.send({'text': text}, 'RESPONSE')
+        messenger.send({"text": text}, "RESPONSE")
         sleep(3)
 
         btn = Button(
-            button_type='web_url',
-            title=_('Explore them'),
-            url='https://opensource.facebook.com/projects'
+            button_type="web_url",
+            title=_("Explore them"),
+            url="https://opensource.facebook.com/projects",
         )
         elems = Element(
-            title=_(u'Explore Facebook Open Source projects'),
-            buttons=[btn]
+            title=_(u"Explore Facebook Open Source projects"), buttons=[btn]
         )
         res = GenericTemplate(elements=[elems])
         logger.debug(res.to_dict())
-        messenger.send(res.to_dict(), 'RESPONSE')
+        messenger.send(res.to_dict(), "RESPONSE")
 
         return True
 
-    if 'FORK_ON_GITHUB' in payload:
+    if "FORK_ON_GITHUB" in payload:
         text = _(
-            u'🤓 You know what? This chatbot code is Open Source 🔓, it\'s'
-            ' developed by Facebook Developers Circles members around the'
-            ' world.'
+            u"🤓 You know what? This chatbot code is Open Source 🔓, it's"
+            " developed by Facebook Developers Circles members around the"
+            " world."
         )
-        messenger.send({'text': text}, 'RESPONSE')
+        messenger.send({"text": text}, "RESPONSE")
         sleep(5)
 
         text = _(
-            u'%(first_name)s we welcome contributors, or simply feel free to'
-            ' fork the code on GitHub, and create your own chatbot.', **user
+            u"%(first_name)s we welcome contributors, or simply feel free to"
+            " fork the code on GitHub, and create your own chatbot.",
+            **user
         )
-        messenger.send({'text': text}, 'RESPONSE')
+        messenger.send({"text": text}, "RESPONSE")
         sleep(5)
 
         btn1 = Button(
-            button_type='web_url',
-            title=_('The Source Code'),
-            url='https://github.com/fbdevelopercircles/open-source-edu-bot'
+            button_type="web_url",
+            title=_("The Source Code"),
+            url="https://github.com/fbdevelopercircles/open-source-edu-bot",
         )
         btn2 = Button(
-            button_type='web_url',
-            title=_('Join a circle'),
-            url='https://developers.facebook.com/developercircles'
+            button_type="web_url",
+            title=_("Join a circle"),
+            url="https://developers.facebook.com/developercircles",
         )
         btn3 = Button(
-            button_type='postback',
-            title=_('🚶🏽‍♀️ Main Menu 🗄️'),
-            payload='MAIN_MENU'
+            button_type="postback",
+            title=_("🚶🏽‍♀️ Main Menu 🗄️"),
+            payload="MAIN_MENU"
         )
-        elems = Element(
-            title=_(u'Select an option 👇🏼'),
-            buttons=[btn1, btn2, btn3]
-        )
+        elems = Element(title=_(u"Select an option 👇🏼"),
+                        buttons=[btn1, btn2, btn3])
         res = GenericTemplate(elements=[elems])
         logger.debug(res.to_dict())
-        messenger.send(res.to_dict(), 'RESPONSE')
+        messenger.send(res.to_dict(), "RESPONSE")
 
         return True
 
     # the default action
     qr = quick_replies.QuickReply(
-        title=_('🚶🏽‍♀️ Main Menu 🗄️'),
-        payload='MAIN_MENU'
-    )
+        title=_("🚶🏽‍♀️ Main Menu 🗄️"), payload="MAIN_MENU")
     qrs = quick_replies.QuickReplies(quick_replies=[qr])
-    text = {
-        "text": _(u'Coming soon!'),
-        "quick_replies": qrs.to_dict()
-    }
-    messenger.send(text, 'RESPONSE')
+    text = {"text": _(u"Coming soon!"), "quick_replies": qrs.to_dict()}
+    messenger.send(text, "RESPONSE")
     return False
 
 
 class Messenger(BaseMessenger):
-
     def __init__(self, page_access_token, app_secret=None, **kwargs):
         self.page_access_token = page_access_token
         self.app_secret = app_secret
         self.client = MessengerClient(
             self.page_access_token,
             app_secret=self.app_secret,
-            api_version=kwargs.get('api_version', DEFAULT_API_VERSION)
+            api_version=kwargs.get("api_version", DEFAULT_API_VERSION),
         )
         # super(Messenger, self).__init__(self.page_access_token)
 
@@ -616,7 +942,7 @@ class Messenger(BaseMessenger):
         pass
 
     def postback(self, message):
-        payload = message['postback']['payload']
+        payload = message["postback"]["payload"]
         process_postback(self, payload)
 
     def optin(self, message):
@@ -626,20 +952,18 @@ class Messenger(BaseMessenger):
         init_profile(self)
 
 
-messenger = Messenger(
-    os.environ.get('FB_PAGE_TOKEN'),
-    api_version=DEFAULT_API_VERSION
-)
+messenger = Messenger(os.environ.get("FB_PAGE_TOKEN"),
+                      api_version=DEFAULT_API_VERSION)
 
 
-@bp.route('/webhook', methods=['GET', 'POST'])
+@bp.route("/webhook", methods=["GET", "POST"])
 def webhook():
 
-    if request.method == 'GET':
-        mode = request.args.get('hub.mode')
-        token = request.args.get('hub.verify_token')
-        challenge = request.args.get('hub.challenge')
-        init_bot = request.args.get('init_bot', False)
+    if request.method == "GET":
+        mode = request.args.get("hub.mode")
+        token = request.args.get("hub.verify_token")
+        challenge = request.args.get("hub.challenge")
+        init_bot = request.args.get("init_bot", False)
 
         # Checks if a token and mode is in the query string of the request
         if mode and token:
@@ -659,9 +983,9 @@ def webhook():
                     mimetype="application/json"
                 )
             return challenge
-        raise ValueError('FB_VERIFY_TOKEN does not match.')
-    elif request.method == 'POST':
+        raise ValueError("FB_VERIFY_TOKEN does not match.")
+    elif request.method == "POST":
         message = request.get_json(force=True)
         logger.debug("Message : {}".format(message))
         messenger.handle(message)
-    return ''
+    return ""
