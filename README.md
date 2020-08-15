@@ -4,7 +4,7 @@
 
 # Open Source Education Bot
 
-**Open Source Education Bot** built by the Facebook Developer Circles community to help members contribute to open source projects.
+Open Source Education Bot built by the Facebook Developer Circles community to help members contribute to open source projects.
 
 ## Installation
 
