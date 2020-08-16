@@ -51,6 +51,16 @@ GREETING = {
             "text": u"🙋🏽 Muraho {{user_first_name}}! Kanda hepho kuri Buto "
             "yo gutangira kugirango ugere ku bikoresho byegeranyijwe na "
             "Facebook DevC bijyanye na Open Source 🔓."
+        },
+        {
+            "locale": "ar_AR",
+            "text": u" 🙋🏽 " 
+            u" أهلا "
+            u" {{user_first_name}}! "
+            u" انقر فوق زر البدء أدناه "
+            " للوصول إلى الموارد المنسقة من دوائر مطوري فيسبوك "
+            " والمتعلقة بالمصادر المفتوحة "
+            " .🔓 "
         }
     ]
 }
@@ -158,6 +168,27 @@ PERSISTENT_MENU = {
                 {
                     "type": "postback",
                     "title": "🔓 FB Open Source",
+                    "payload": "FB_OS"
+                }
+            ]
+        },
+        {
+            "locale": "ar_AR",
+            "composer_input_disabled": False,
+            "call_to_actions": [
+                {
+                    "type": "postback",
+                    "title": "🏁 ابدأ من جديد ",
+                    "payload": "START"
+                },
+                {
+                    "type": "postback",
+                    "title": "🗄️ القائمة الرئيسية ",
+                    "payload": "MAIN_MENU"
+                },
+                {
+                    "type": "postback",
+                    "title": "🔓 فيسبوك مفتوح المصدر ",
                     "payload": "FB_OS"
                 }
             ]
