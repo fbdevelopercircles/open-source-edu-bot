@@ -236,7 +236,8 @@ def process_postback(messenger, payload):
         text = _(
             u"According to the dictionary, Open-source 🔓 software, denotes"
             " software for which the original source code is made freely 🆓"
-            " available and may be redistributed and modified."
+            " available and may be redistributed and modified"
+            " according to the requirement of the user 👨‍💻."
         )
         messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
@@ -261,7 +262,7 @@ def process_postback(messenger, payload):
             "text": _(
                 u"😎 Worry not!\n\n"
                 "Version control allows you to manage changes to files over"
-                " time ⏱️."
+                " time ⏱️ so that you can recall specific versions later."
             )
         }
         messenger.send(text, "RESPONSE")
