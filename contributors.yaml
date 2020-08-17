@@ -4,6 +4,11 @@
 # Add your details to the list                      #
 #####################################################
 contributors:
+
+    - name: Nitish Awasthi
+      country: India
+      github: Nitish-Awasthi
+      
     - name: Mohammed Aboullaite
       country: Morocco
       github: aboullaite
