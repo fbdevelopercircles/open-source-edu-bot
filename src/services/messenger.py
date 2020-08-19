@@ -236,7 +236,8 @@ def process_postback(messenger, payload):
         text = _(
             u"According to the dictionary, Open-source 🔓 software, denotes"
             " software for which the original source code is made freely 🆓"
-            " available and may be redistributed and modified."
+            " available and may be redistributed and modified"
+            " according to the requirement of the user 👨‍💻."
         )
         messenger.send({"text": text}, "RESPONSE")
         messenger.send_action(typing_on)
@@ -261,7 +262,7 @@ def process_postback(messenger, payload):
             "text": _(
                 u"😎 Worry not!\n\n"
                 "Version control allows you to manage changes to files over"
-                " time ⏱️."
+                " time ⏱️ so that you can recall specific versions later."
             )
         }
         messenger.send(text, "RESPONSE")
@@ -594,9 +595,9 @@ def process_postback(messenger, payload):
             sleep(3)
             text = _(
                 u"Open your Terminal.\nChange the current working directory"
-                "to your local repository."
+                " to your local repository."
                 "\nStage the file by commiting it to your"
-                "local repository using: `git add .`"
+                " local repository using: `git add .`"
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
@@ -647,7 +648,7 @@ def process_postback(messenger, payload):
             sleep(3)
             text = _(
                 u'Make sure that "base branch" & "head fork" drop-down menus'
-                ' both are pointing to `master`'
+                ' both are pointing to `master`.'
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
@@ -659,7 +660,7 @@ def process_postback(messenger, payload):
             messenger.send(prdesc.to_dict(), "RESPONSE")
             text = _(
                 u"Type a title and description for your pull request."
-                " Then click `Create Pull Request`"
+                " Then click `Create Pull Request`."
             )
             messenger.send({"text": text}, "RESPONSE")
             messenger.send_action(typing_on)
@@ -683,7 +684,7 @@ def process_postback(messenger, payload):
             messenger.send_action(typing_on)
             sleep(3)
             response = Image(
-                url="https://media.giphy.com/media/l0MYJnJQ4EiYLxvQ4/giphy.gif"
+                url="https://media.giphy.com/media/MOWPkhRAUbR7i/giphy.gif"
             )
             messenger.send(response.to_dict(), "RESPONSE")
             messenger.send(
@@ -699,7 +700,7 @@ def process_postback(messenger, payload):
             text = {
                 "text": _(
                     u"Given below are other interesting stuff"
-                    "that we can explore together:"
+                    " that we can explore together:"
                 ),
                 "quick_replies": get_main_menu().to_dict(),
             }
