@@ -2,19 +2,14 @@
 #
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
-#
-# Arabic translations for PROJECT.
-# Copyright (C) 2020 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR Fady Ibrahim, 2020.
-#
+
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Project-Id-Version: Arabic translation\n"
+"Report-Msgid-Bugs-To: @fady-a-m-ibrahim\n"
 "POT-Creation-Date: 2020-08-15 20:37+0200\n"
-"PO-Revision-Date: 2020-08-15 12:58+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2020-08-20 12:58+0200\n"
+"Last-Translator: Fady Ibrahim <@fady-a-m-ibrahim>\n"
 "Language: ar\n"
 "Language-Team: ar <LL@li.org>\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
