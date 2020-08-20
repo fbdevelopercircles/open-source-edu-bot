@@ -139,6 +139,7 @@ def process_message(messenger, message):
         process_postback(messenger, payload)
         return True
 
+    text = None
     if "text" in message["message"]:
         msg = message["message"]["text"]
         if msg.lower() in ["help", "info"]:
@@ -189,8 +190,7 @@ def process_postback(messenger, payload):
 
     if "MAIN_MENU" in payload:
         text = {
-            "text": _(u"This is the main menu,"
-                      " select what you need below 👇🏼"),
+            "text": _(u"This is the main menu, select what you need below 👇🏼"),
             "quick_replies": get_main_menu().to_dict(),
         }
         messenger.send(text, "RESPONSE")
