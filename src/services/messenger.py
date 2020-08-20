@@ -47,6 +47,11 @@ mark_seen = SenderAction(sender_action="mark_seen").to_dict()
 @babel.localeselector
 def get_locale():
     if "locale" in user:
+        
+        # ar_AR is not supported so we have to make an exception
+        if user["locale"].startswith("ar_"):
+            return "ar"
+
         return user["locale"]
     return "en"
 
