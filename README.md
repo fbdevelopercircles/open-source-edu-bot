@@ -133,8 +133,8 @@ You can also find your app [here](https://developers.facebook.com/apps/)
 3. PAGE_ID: Go to your app Dashboard. Under Add Product find Messenger and click Set Up.\
 Now you should be in the app Messenger Settings . 
 Under Access Tokens, click on Add or Remove Page button and link your Facebook Page to your Messenger App. \
-Now save your PAGE_ID which is displayed below your Page name under Access Tokens .
-4. FB_PAGE_TOKEN: After completing Step 3, click on Generate Token button and now save your FB_PAGE_TOKEN .
+Now save your PAGE_ID which is displayed below your Page name under Access Tokens.
+4. FB_PAGE_TOKEN: After completing Step 3, click on Generate Token button and now save your FB_PAGE_TOKEN.
 
 ## Testing the chatbot 
 
