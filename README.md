@@ -10,30 +10,23 @@ Open Source Education Bot built by the Facebook Developer Circles community to h
 
 > **requirement**: python 3.6 or more
 
-Start by fork and then cloning the repository locally and enter the project folder into your system.
+Start by cloning the repository locally and enter the project folder into your system.
 
 ```bash
-git clone https://github.com/fbdevelopercircles/YOUR_GITHUB_USER_NAME/open-source-edu-bot 
-```
-
-where YOUR_GITHUB_USER_NAME is your GitHub handle.
-
-```
+git clone https://github.com/fbdevelopercircles/open-source-edu-bot
 cd open-source-edu-bot
-git remote add upstream https://github.com/fbdevelopercircles/open-source-edu-bot
 ```
 
-You can check that the previous command worked by running git remote -v. You should see the following output:
-```
-git remote -v
-origin  https://github.com/YOUR_GITHUB_USER_NAME/open-source-edu-bot (fetch)
-origin  https://github.com/YOUR_GITHUB_USER_NAME/open-source-edu-bot (push)
-upstream        https://github.com/fbdevelopercircles/open-source-edu-bot (fetch)
-upstream        https://github.com/fbdevelopercircles/open-source-edu-bot (push)
+## Method 1: Using Docker and docker-compose
+
+If you have docker and docker-compose installed in your computer, just run
+
+```bash
+docker-compose up -d
 ```
 
 
-## Setting up the environment:
+## Method 2: Without Docker and docker-compose
 
 **Create the virtual environment**
 
@@ -99,15 +92,7 @@ pybabel compile -d locales
 flask run
 ```
 
-## Using Docker and docker-compose
-
-If you have docker and docker-compose installed in your computer, just run
-
-```bash
-docker-compose up -d
-```
-
-**Check your webhook with this command**
+## Check your webhook with this command
 
 ```bash
 curl -X GET "<YOUR HOST>/webhook?hub.verify_token=<YOUR VERIFY TOKEN>&hub.challenge=CHALLENGE_ACCEPTED&hub.mode=subscribe&init_bot=true"
