@@ -1,3 +1,4 @@
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/fbdevelopercircles/open-source-edu-bot/pulls)
 ![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)
 ![Push Container to Heroku](https://github.com/fbdevelopercircles/open-source-edu-bot/workflows/Push%20Container%20to%20Heroku/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
@@ -10,30 +11,23 @@ Open Source Education Bot built by the Facebook Developer Circles community to h
 
 > **requirement**: python 3.6 or more
 
-Start by fork and then cloning the repository locally and enter the project folder into your system.
+Start by cloning the repository locally and enter the project folder into your system.
 
 ```bash
-git clone https://github.com/fbdevelopercircles/YOUR_GITHUB_USER_NAME/open-source-edu-bot 
-```
-
-where YOUR_GITHUB_USER_NAME is your GitHub handle.
-
-```
+git clone https://github.com/fbdevelopercircles/open-source-edu-bot
 cd open-source-edu-bot
-git remote add upstream https://github.com/fbdevelopercircles/open-source-edu-bot
 ```
 
-You can check that the previous command worked by running git remote -v. You should see the following output:
-```
-git remote -v
-origin  https://github.com/YOUR_GITHUB_USER_NAME/open-source-edu-bot (fetch)
-origin  https://github.com/YOUR_GITHUB_USER_NAME/open-source-edu-bot (push)
-upstream        https://github.com/fbdevelopercircles/open-source-edu-bot (fetch)
-upstream        https://github.com/fbdevelopercircles/open-source-edu-bot (push)
+## Method 1: Using Docker and docker-compose
+
+If you have docker and docker-compose installed in your computer, just run
+
+```bash
+docker-compose up -d
 ```
 
 
-## Setting up the environment:
+## Method 2: Without Docker and docker-compose
 
 **Create the virtual environment**
 
@@ -99,41 +93,41 @@ pybabel compile -d locales
 flask run
 ```
 
-## Using Docker and docker-compose
+## Check your webhook with this command
 
-If you have docker and docker-compose installed in your computer, just run
-
-```bash
-docker-compose up -d
-```
-
-**Check your webhook with this command**
+In the command below change `<FB_VERIFY_TOKEN>` by the value defined in `.src/.env`
 
 ```bash
-curl -X GET "<YOUR HOST>/webhook?hub.verify_token=<YOUR VERIFY TOKEN>&hub.challenge=CHALLENGE_ACCEPTED&hub.mode=subscribe&init_bot=true"
+curl -X GET "<YOUR HOST>/webhook?hub.verify_token=<FB_VERIFY_TOKEN>&hub.challenge=CHALLENGE_ACCEPTED&hub.mode=subscribe&init_bot=true"
 ```
+
 If your webhook verification is working as expected, you should see the following:
 
--```WEBHOOK_VERIFIED``` logged to the command line where your node process is running.\
--```CHALLENGE_ACCEPTED``` logged to the command line where you sent the cURL request.
+- `WEBHOOK_VERIFIED` logged to the command line where your node process is running.\
+- `CHALLENGE_ACCEPTED` logged to the command line where you sent the cURL request.
 
 Then check the logs to see if the profile is setup successfully!
 
 ## Setting up your Messenger App
+
 > **requirements**: 
 >- **Facebook Page:**  Open-source-edu-bot will be only available for integration on a Facebook Page and not on your personal profile page.
 To create a new page, visit https://www.facebook.com/pages/create .You can create a test page or a page with any suitable name.
 >- **Facebook Developer Account:**  Required to create new apps, which are the core of any Facebook integration. You can register as a developer by going to the [Facebook Developers website](https://developers.facebook.com/) and clicking the "Get Started" button.
 >- **Facebook App:** The Facebook app contains settings for your app like access tokens which are required in the .env file. To create a new app visit https://developers.facebook.com/ and click on **Add New App**
 
-Now let's collect all tokens required for adapting your .env file .
+Now let's collect all tokens required for adapting your .env file.
+
 1.  App_ID: Go to your app dashboard and then to Basic Settings, and now save your App_ID . \
 You can also find your app [here](https://developers.facebook.com/apps/) 
+
 2. APP_SECRET: Go to your app dashboard and then to Basic Settings, click on Show, enter your password and now save your APP_SECRET .
+
 3. PAGE_ID: Go to your app Dashboard. Under Add Product find Messenger and click Set Up.\
 Now you should be in the app Messenger Settings . 
 Under Access Tokens, click on Add or Remove Page button and link your Facebook Page to your Messenger App. \
 Now save your PAGE_ID which is displayed below your Page name under Access Tokens.
+
 4. FB_PAGE_TOKEN: After completing Step 3, click on Generate Token button and now save your FB_PAGE_TOKEN.
 
 ## Testing the chatbot 
@@ -147,6 +141,7 @@ The main purpose of this repository is to continue evolving open source. We want
 ### [Code of Conduct][code]
 
 Facebook has adopted a Code of Conduct that we expect project participants to adhere to.
+
 Please read the [full text][code] so that you can understand what actions will and will not be tolerated.
 
 [code]: ./CODE_OF_CONDUCT.md
@@ -161,8 +156,6 @@ Read our [Contributing Guide][contribute] to learn about our development process
 We have a list of [good first issues][gfi] that contain bugs which have a relatively limited scope. This is a great place to get started, gain experience, and get familiar with our contribution process.
 
 [gfi]: https://github.com/fbdevelopercircles/open-source-edu-bot/labels/good%20first%20issue
-
-## Contributors
 
 ## License
 
