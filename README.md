@@ -111,12 +111,9 @@ Then check the logs to see if the profile is setup successfully!
 ## Setting up your Messenger App
 
 > **requirements**: 
-
 >- **Facebook Page:**  Open-source-edu-bot will be only available for integration on a Facebook Page and not on your personal profile page.
 To create a new page, visit https://www.facebook.com/pages/create .You can create a test page or a page with any suitable name.
-
 >- **Facebook Developer Account:**  Required to create new apps, which are the core of any Facebook integration. You can register as a developer by going to the [Facebook Developers website](https://developers.facebook.com/) and clicking the "Get Started" button.
-
 >- **Facebook App:** The Facebook app contains settings for your app like access tokens which are required in the .env file. To create a new app visit https://developers.facebook.com/ and click on **Add New App**
 
 Now let's collect all tokens required for adapting your .env file.
