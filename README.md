@@ -87,7 +87,7 @@ copy .sample.env .env
 pybabel compile -d locales
 ```
 
-**To start the application locally run**
+**To start the application locally, run**
 
 ```bash
 flask run
@@ -95,7 +95,7 @@ flask run
 
 ## Check your webhook with this command
 
-In the command below change `<FB_VERIFY_TOKEN>` by the value defined in `.src/.env`
+In the command below, change `<FB_VERIFY_TOKEN>` by the value defined in `.src/.env`
 
 ```bash
 curl -X GET "<YOUR HOST>/webhook?hub.verify_token=<FB_VERIFY_TOKEN>&hub.challenge=CHALLENGE_ACCEPTED&hub.mode=subscribe&init_bot=true"
@@ -111,24 +111,24 @@ Then check the logs to see if the profile is setup successfully!
 ## Setting up your Messenger App
 
 > **requirements**: 
->- **Facebook Page:**  Open-source-edu-bot will be only available for integration on a Facebook Page and not on your personal profile page.
+>- **Facebook Page:**  Open-source-edu-bot will only be available for integration on a Facebook Page and not on your personal profile page.
 To create a new page, visit https://www.facebook.com/pages/create .You can create a test page or a page with any suitable name.
 >- **Facebook Developer Account:**  Required to create new apps, which are the core of any Facebook integration. You can register as a developer by going to the [Facebook Developers website](https://developers.facebook.com/) and clicking the "Get Started" button.
->- **Facebook App:** The Facebook app contains settings for your app like access tokens which are required in the .env file. To create a new app visit https://developers.facebook.com/ and click on **Add New App**
+>- **Facebook App:** The Facebook app contains settings for your app like access tokens, which are required in the .env file. To create a new app, visit https://developers.facebook.com/ and click on **Add New App**
 
 Now let's collect all tokens required for adapting your .env file.
 
-1.  App_ID: Go to your app dashboard and then to Basic Settings, and now save your App_ID . \
-You can also find your app [here](https://developers.facebook.com/apps/) 
+1.  App_ID: Go to your App dashboard and then to Basic Settings, and now save your App_ID . \
+You can also find your App [here](https://developers.facebook.com/apps/) 
 
-2. APP_SECRET: Go to your app dashboard and then to Basic Settings, click on Show, enter your password and now save your APP_SECRET .
+2. APP_SECRET: Go to your App dashboard and then to Basic Settings, click on Show, enter your password and now save your APP_SECRET.
 
-3. PAGE_ID: Go to your app Dashboard. Under Add Product find Messenger and click Set Up.\
-Now you should be in the app Messenger Settings . 
-Under Access Tokens, click on Add or Remove Page button and link your Facebook Page to your Messenger App. \
-Now save your PAGE_ID which is displayed below your Page name under Access Tokens.
+3. PAGE_ID: Go to your app Dashboard. Under Add Product, find Messenger and click Set Up.\
+Now you should be in the app Messenger Settings. 
+Under Access Tokens, click on the Add or Remove Page button and link your Facebook Page to your Messenger App. \
+Now save your PAGE_ID, which is displayed below your Page name under Access Tokens.
 
-4. FB_PAGE_TOKEN: After completing Step 3, click on Generate Token button and now save your FB_PAGE_TOKEN.
+4. FB_PAGE_TOKEN: After completing Step 3, click on the Generate Token button and now save your FB_PAGE_TOKEN.
 
 ## Testing the chatbot 
 
@@ -136,7 +136,7 @@ The chatbot can be tested here: https://m.me/OpenSourceChatbot before deploying 
 
 ## How to contribute
 
-The main purpose of this repository is to continue evolving open source. We want to make contributing to this project as easy and transparent as possible, and we grateful to the community for contributing bug fixes and improvements. Read below to learn how you can participate in improving Open Source Education Bot.
+The primary purpose of this repository is to continue evolving open source. We want to make contributing to this project as easy and transparent as possible, and we grateful to the community for contributing bug fixes and improvements. Read below to learn how you can participate in improving the Open Source Education Bot.
 
 ### [Code of Conduct][code]
 
