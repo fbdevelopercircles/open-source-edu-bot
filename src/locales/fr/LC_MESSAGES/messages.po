@@ -121,13 +121,13 @@ msgstr ""
 
 #: services/messenger.py:236
 msgid ""
-"According to the dictionary, Open-source 🔓 software, denotes software for"
-" which the original source code is made freely 🆓 available and may be "
-"redistributed and modified according to the requirement of the user 👨‍💻."
+"Open-Source Software, is any Software available for modification ⌨️."
+"This usually includes a license for programmers to change and contribute to the software. 🔧"
+"Programmers can fix bugs, improve the software, or adapt it according to their own needs! 🆓"
 msgstr ""
-"Selon le dictionnaire, Logiciel Open-source 🔓, désigne un logiciel pour "
-"lequel le code source original est rendu disponible librement 🆓 et peut "
-"être redistribué et modifié d'après les besoins de l'utilisateur 👨‍💻."
+"Logiciel Open-Source, est tout Logiciel disponible pour modification ⌨️."
+"Cela inclut généralement une licence permettant aux programmeurs de modifier et de contribuer au logiciel. 🔧"
+"Les programmeurs peuvent corriger les bugs, améliorer le logiciel ou l'adapter selon leurs propres besoins! 🆓"
 
 #: services/messenger.py:247 services/messenger.py:298
 #: services/messenger.py:324 services/messenger.py:501

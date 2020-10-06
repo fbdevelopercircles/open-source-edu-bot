@@ -121,13 +121,13 @@ msgstr ""
 
 #: services/messenger.py:236
 msgid ""
-"According to the dictionary, Open-source 🔓 software, denotes software for"
-" which the original source code is made freely 🆓 available and may be "
-"redistributed and modified according to the requirement of the user 👨‍💻."
+"Open-Source Software, is any Software available for modification ⌨️."
+"This usually includes a license for programmers to change and contribute to the software. 🔧"
+"Programmers can fix bugs, improve the software, or adapt it according to their own needs! 🆓"
 msgstr ""
-"Ukurikije inkoranyamagambo, Open-source 🔓 software, bisobanura software "
-"code zayo zatanzwe kubuntu 🆓 zikaba zihari kandi zishobora kubazakongera "
-"zigatangwa no guhindurwa ukurikije ibisabwa byukoresha 👨‍💻."
+"Gufungura-Inkomoko ya Porogaramu, ni Porogaramu iyo ari yo yose iboneka kugira ngo ihindurwe ⌨️."
+"Ubusanzwe ibi birimo uruhushya rwabashinzwe porogaramu guhindura no gutanga umusanzu muri software. 🔧"
+"Abashinzwe porogaramu barashobora gukosora amakosa, kunoza porogaramu, cyangwa kuyihuza bakurikije ibyo bakeneye! 🆓"
 
 #: services/messenger.py:247 services/messenger.py:298
 #: services/messenger.py:324 services/messenger.py:501
