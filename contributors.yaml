@@ -92,6 +92,7 @@ contributors:
   - name: Eduardo Galeano
     country: Colombia
     github: cegard
+<<<<<<< HEAD
 
   - name: Jigar Shah
     country: India
@@ -118,3 +119,5 @@ contributors:
   - name: Amir Toukour
     country: Cameroon
     github: amirtechnoide
+=======
+>>>>>>> 18e0ef8 (Added contributor info on contributors.yml file.)
