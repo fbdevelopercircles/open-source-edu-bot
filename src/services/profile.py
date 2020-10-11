@@ -70,9 +70,15 @@ GREETING = {
         },
         {
             "locale": "es_LA",
+<<<<<<< HEAD
             "text": u"🙋🏽 ¡Hola {{user_first_name}}! Haz click en el botón de"
             " Empezar abajo para acceder a los recursos seleccionados de"
             " Facebook DevC relacionados con el Open Source 🔓."
+=======
+            "text": u"🙋🏽 ¡Hola {{user_first_name}}! Haz click en el botón de "
+            " Empezar abajo para acceder a los recursos seleccionados de Facebook DevC"
+            " relacionados con el Open Source 🔓."
+>>>>>>> 43ca596 (Added spanish entries on main menu.)
         },
     ]
 }
