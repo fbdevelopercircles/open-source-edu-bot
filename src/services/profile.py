@@ -67,7 +67,13 @@ GREETING = {
             "text": u"🙋🏽 નમસ્તે {{user_first_name}}! ઓપન સોર્સ થી સંબંધિત "
             "ફેસબુક ડેવલપર સર્કલ્સ ક્યુરેટેડ સ્ત્રોતોને લગતા વપરાશ માટે "
             "નીચે પ્રારંભ કરો બટન પર ક્લિક કરો 🔓."
-        }
+        },
+        {
+            "locale": "es_LA",
+            "text": u"🙋🏽 ¡Hola {{user_first_name}}! Haz click en el botón de "
+            " Empezar abajo para acceder a los recursos seleccionados de Facebook DevC"
+            " relacionados con el Open Source 🔓."
+        },
     ]
 }
 
@@ -216,6 +222,27 @@ PERSISTENT_MENU = {
                 {
                     "type": "postback",
                     "title": "🔓 એફબી ઓપન સોર્સ",
+                    "payload": "FB_OS"
+                }
+            ]
+        },
+        {
+            "locale": "es_LA",
+            "composer_input_disabled": False,
+            "call_to_actions": [
+                {
+                    "type": "postback",
+                    "title": " 🏁 Empezar",
+                    "payload": "START"
+                },
+                {
+                    "type": "postback",
+                    "title": "🗄️ Menú Principal",
+                    "payload": "MAIN_MENU"
+                },
+                {
+                    "type": "postback",
+                    "title": "🔓 FB Open Source",
                     "payload": "FB_OS"
                 }
             ]
