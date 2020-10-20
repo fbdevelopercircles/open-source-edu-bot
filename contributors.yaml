@@ -102,7 +102,11 @@ contributors:
     city: douala
     github: honorezemagho
    
-  - name: Akshay
-    country: India
-    city: Indore
-    github: avenger55
+   -name: Akshay
+   country: India
+   city: Indore
+   github: avenger55
+
+  - name: Fanlan Zhang
+    country: Taiwan
+    github: fanlan1210 
