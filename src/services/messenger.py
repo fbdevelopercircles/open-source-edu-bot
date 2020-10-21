@@ -48,9 +48,15 @@ mark_seen = SenderAction(sender_action="mark_seen").to_dict()
 def get_locale():
 
     if "locale" in user:
+        # make sure your language is supported by Babel of make and exception
+        # see http://babel.pocoo.org/en/latest/api/core.html#babel.core.Locale
         # ar_AR is not supported so we have to make an exception
         if user["locale"].startswith("ar_"):
             return "ar"
+
+        # es_LA is not supported so we have to make an exception        
+        if user["locale"].startswith("es_"):
+            return "es"
 
         return user["locale"]
     return "en"
