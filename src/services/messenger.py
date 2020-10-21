@@ -54,7 +54,7 @@ def get_locale():
         if user["locale"].startswith("ar_"):
             return "ar"
 
-        # es_LA is not supported so we have to make an exception        
+        # es_LA is not supported so we have to make an exception
         if user["locale"].startswith("es_"):
             return "es"
 
