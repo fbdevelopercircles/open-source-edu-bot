@@ -115,10 +115,10 @@ contributors:
     country: Cameroon
     github: traore19
 
-  - name: Amir Toukour
+    - name: Amir Toukour
     country: Cameroon
     github: amirtechnoide
 
-  - name: Flovet Asong
-    country: Cameroon
-    github: Flovet-stack
+    - name: Flovet Asong
+      country: Cameroon
+      github: Flovet-stack
