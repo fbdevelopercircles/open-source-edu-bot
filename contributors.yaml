@@ -89,25 +89,41 @@ contributors:
     country: Morocco
     github: aymaneMx
 
-  -name: Jigar Shah
-   country: India
-   github: shahjigar556
-   
-   -name: ZEMAGHO KALONG EUGENE HONORE
-   country: cameroon
-   city: douala
-   github: honorezemagho
+  - name: Eduardo Galeano
+    country: Colombia
+    github: cegard
+
+  - name: Jigar Shah
+    country: India
+    github: shahjigar556
+    
+  - name: ZEMAGHO KALONG EUGENE HONORE
+    country: cameroon
+    city: douala
+    github: honorezemagho
    
    -name: Akshay
-   country: India
-   city: Indore
-   github: avenger55
+    country: India
+    city: Indore
+    github: avenger55
 
   - name: Fanlan Zhang
     country: Taiwan
     github: fanlan1210 
 
   - name: KAMTHIE LONTCHI LIONELLE
-   country: Cameroon
-   city: Douala
-   github: Lontchi12
+    country: Cameroon
+    city: Douala
+    github: Lontchi12
+
+  - name: Fadimatou Traore
+    country: Cameroon
+    github: traore19
+
+  - name: Amir Toukour
+    country: Cameroon
+    github: amirtechnoide
+
+  - name: Flovet Asong
+    country: Cameroon
+    github: Flovet-stack
