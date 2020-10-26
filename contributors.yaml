@@ -103,13 +103,18 @@ contributors:
     github: honorezemagho
    
    -name: Akshay
-   country: India
-   city: Indore
-   github: avenger55
+    country: India
+    city: Indore
+    github: avenger55
 
   - name: Fanlan Zhang
     country: Taiwan
     github: fanlan1210 
+
+  - name: KAMTHIE LONTCHI LIONELLE
+    country: Cameroon
+    city: Douala
+    github: Lontchi12
 
   - name: Fadimatou Traore
     country: Cameroon
