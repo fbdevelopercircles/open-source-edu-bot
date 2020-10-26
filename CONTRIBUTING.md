@@ -1,12 +1,12 @@
-# Contributing to Sample Messenger App Original Coast Clothing
+# Contributing to Open Source Education Bot
 We want to make contributing to this project as easy and transparent as
 possible.
 
 ## Our Development Process
 Informed by internal platform changes and Messenger product design and best
 practices we will decide on the direction of the product. Suggestions are welcome
-and for external contributions the recomendation is to file an Issue explaining
-why the changes would be usefull. Please also add to the issue if you would like
+and for external contributions the recommendation is to file an Issue explaining
+why the changes would be useful. Please also add to the issue if you would like
 to submit a Pull Request to solve the issue.
 
 When submitting a PR please provide the context and is best to reference the 
@@ -40,6 +40,5 @@ outlined on that page and do not file a public issue.
 * We use Prettier for styling
 
 ## License
-By contributing to Sample Messenger App Original Coast Clothing, you agree that
-your contributions will be licensed under the LICENSE file in the root directory
-of this source tree.
+By contributing to Open Source Education Bot, you agree that
+your contributions will be licensed under the [MIT License](./LICENSE).

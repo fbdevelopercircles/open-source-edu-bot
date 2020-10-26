@@ -5,13 +5,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: elinguiuriel@gmail.com\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2020-08-20 15:45+0000\n"
-"PO-Revision-Date: 2020-07-29 20:58+0000\n"
-"Last-Translator: \n"
-"Language: fr\n"
-"Language-Team: fr <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"PO-Revision-Date: 2020-08-07 12:17+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: rw\n"
+"Language-Team: rw <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: services/messenger.py:40
 msgid "Friend"
-msgstr "Ami(e)"
+msgstr "Nshuti"
 
 #: services/messenger.py:75
 #, python-format
@@ -27,21 +27,21 @@ msgid ""
 "🙏🏼 Hi %(first_name)s, so you’ve decided to make your first steps in Open "
 "Source. That’s great."
 msgstr ""
-"🙏🏼 Salut %(first_name)s, tu t'es décidé à faire tes premiers pas dans "
-"l'Open Source. C'est génial."
+"🙏🏼 Muraho %(first_name)s, nuko rero wahisemo gutera intambwe zawe za "
+"mbere muri OpenSource. Nibyiza."
 
 #: services/messenger.py:86 services/messenger.py:201 services/messenger.py:221
 msgid "✔️ Yes"
-msgstr "✔️ Oui"
+msgstr "✔️ Ego"
 
 #: services/messenger.py:87 services/messenger.py:203 services/messenger.py:222
 msgid "❌ Not yet"
-msgstr "❌ Pas encore"
+msgstr "❌ Oya"
 
 #: services/messenger.py:90
 #, python-format
 msgid "So, tell me %(first_name)s do you know what Open Source is? 👇🏼"
-msgstr "Alors, dis-moi %(first_name)s sais-tu ce qu'est l'Open Source ? 👇🏼"
+msgstr "Noneho, mbwira %(first_name)s uzi Open source icyo aricyo? 👇🏼"
 
 #: services/messenger.py:102
 msgid "Open Source 🔓"
@@ -57,7 +57,7 @@ msgstr ""
 
 #: services/messenger.py:106
 msgid "Make a PR"
-msgstr "Faire une PR"
+msgstr "Gukora PR"
 
 #: services/messenger.py:108
 msgid "FB Open Source"
@@ -65,15 +65,15 @@ msgstr ""
 
 #: services/messenger.py:110
 msgid "Fork me on GitHub"
-msgstr "Fork sur GitHub"
+msgstr "Kora fork kuri GitHub"
 
 #: services/messenger.py:147
 msgid ""
 "Oh you need some help 🆘! This is the main menu, select what you need "
 "below 👇🏼"
 msgstr ""
-"Oh, tu as besoin d'aide 🆘 ! Ceci est le menu principal, sélectionne ce "
-"dont tu as besoin ci-dessous 👇🏼"
+"Yoo ukeneye ubufasha 🆘! Iyi ni menu nyamukuru, hitamo icyo ukeneye.munsi "
+"👇🏼"
 
 #: services/messenger.py:156
 #, python-format
@@ -83,10 +83,10 @@ msgid ""
 "\n"
 "This is the main menu, select what you need below 👇🏼"
 msgstr ""
-"Je ne t'ai pas compris %(first_name)s !\n"
-"Tu as écris : %(msg)s\n"
+"Sinumvise %(first_name)s!\n"
+"Wavuze: %(msg)s\n"
 "\n"
-"Ceci est le menu principal, sélectionne ce dont tu as besoin ci-dessous 👇🏼"
+"Iyi ni menu nyamukuru, hitamo ibyo ukeneye hepfo 👇🏼"
 
 #: services/messenger.py:167
 #, python-format
@@ -95,29 +95,29 @@ msgid ""
 "This is the main menu, select what you need below 👇🏼"
 msgstr ""
 "%(first_name)s\n"
-"Ceci est le menu principal, sélectionne ce dont tu as besoin ci-dessous 👇🏼"
+"Iyi ni menu nyamukuru, hitamo ibyo ukeneye hepfo 👇🏼"
 
 #: services/messenger.py:193
 msgid "This is the main menu, select what you need below 👇🏼"
-msgstr "Ceci est le menu principal, sélectionne ce dont tu as besoin ci-dessous 👇🏼"
+msgstr "Iyi ni menu nyamukuru, hitamo ibyo ukeneye hepfo 👇🏼"
 
 #: services/messenger.py:206
 #, python-format
 msgid "So, tell me %(first_name)s do you know what Open source is? 👇🏼"
-msgstr "Alors, dis-moi %(first_name)s sais-tu ce qu'est l'Open Source ? 👇🏼"
+msgstr "Noneho, mbwira %(first_name)s uzi Open source icyo aricyo? 👇🏼"
 
 #: services/messenger.py:217
 msgid "Amazing!"
-msgstr "Génial !"
+msgstr "Byiza!"
 
 #: services/messenger.py:225
 msgid ""
 "An important component in Open Source contribution is version control "
 "tools. Are you familiar with the concept of version control? 👇🏼"
 msgstr ""
-"Les outils de contrôle de version sont un élément important de la "
-"contribution Open Source. Connaisses-tu le concept de contrôle de version"
-" ? 👇🏼"
+"Ikintu cy'ingenzi mu gutanga umusanzu kuri Open Source ni ibikoresho by' "
+"igenzura rya verisiyo. Waba uzi neza ibijyanye n' igenzura rya verisiyo? "
+"👇🏼"
 
 #: services/messenger.py:236
 msgid ""
@@ -125,14 +125,14 @@ msgid ""
 "This usually includes a license for programmers to change and contribute to the software. 🔧"
 "Programmers can fix bugs, improve the software, or adapt it according to their own needs! 🆓"
 msgstr ""
-"Logiciel Open-Source, est tout Logiciel disponible pour modification ⌨️."
-"Cela inclut généralement une licence permettant aux programmeurs de modifier et de contribuer au logiciel. 🔧"
-"Les programmeurs peuvent corriger les bugs, améliorer le logiciel ou l'adapter selon leurs propres besoins! 🆓"
+"Gufungura-Inkomoko ya Porogaramu, ni Porogaramu iyo ari yo yose iboneka kugira ngo ihindurwe ⌨️."
+"Ubusanzwe ibi birimo uruhushya rwabashinzwe porogaramu guhindura no gutanga umusanzu muri software. 🔧"
+"Abashinzwe porogaramu barashobora gukosora amakosa, kunoza porogaramu, cyangwa kuyihuza bakurikije ibyo bakeneye! 🆓"
 
 #: services/messenger.py:247 services/messenger.py:298
 #: services/messenger.py:324 services/messenger.py:501
 msgid "👉🏽 Next"
-msgstr "👉🏽 Suivant"
+msgstr "👉🏽 Ibikurikiye"
 
 #: services/messenger.py:250
 msgid ""
@@ -142,12 +142,12 @@ msgid ""
 "✔️ Ubuntu\n"
 "and thousands of common software started out as Open-source software? 👇🏼"
 msgstr ""
-"👩🏽‍🏫 Sais-tu que ...\n"
+"Uzi ...\n"
 "✔️ Wordpress,\n"
-"✔️ Bloc-notes ++,\n"
-"✔️ Ubuntu\n"
-"et des milliers de logiciels communs ont commencé comme des logiciels "
-"Open Source ? 👇🏼"
+"✔️ Notepad ++,\n"
+"Ubuntu\n"
+"n'ibihumbi n'ibihumbi bya porogaramu rusange byatangiye ari Open-source "
+"software? 👇🏼"
 
 #: services/messenger.py:262
 msgid ""
@@ -156,126 +156,122 @@ msgid ""
 "Version control allows you to manage changes to files over time ⏱️ so "
 "that you can recall specific versions later."
 msgstr ""
-"😎 Pas t'inquiètude !\n"
+"😎 Ntugire ubwoba!\n"
 "\n"
-"Le contrôle de version te permet de gérer les modifications des fichiers "
-"au fil du temps ⏱️ afin que tu puisses rappeler des versions spécifiques "
-"plus tard."
+"Igenzura rya verisiyo rigufasha gucunga impinduka muri dosiye ighe "
+"icyaricyo cyose ⏱️ kugirango ubashe kwibuka verisiyo yihariye nyuma."
 
 #: services/messenger.py:272
 msgid ""
 "You can use version control to version code, binary files, and digital "
 "assets 🗄️."
 msgstr ""
-"Tu peux utiliser le contrôle de version pour versionner le code, les "
-"fichiers binaires et les ressources numériques 🗄️."
+"Ushobora gukoresha Igenzura rya verisiyo muku verisiyona kode zawe, "
+"dosiye, nimitungo iri digitale 🗄️."
 
 #: services/messenger.py:281
 msgid ""
 "This includes version control software, version control systems, or "
 "version control tools 🧰."
 msgstr ""
-"Cela inclut le logiciel de contrôle de version, les systèmes de contrôle "
-"de version ou les outils de contrôle de version 🧰."
+"Ibi birimo porogaramu igenzura verisiyo, sisitemu yo kugenzura verisiyo, "
+"cyangwa ibikoresho byo kugenzura verisiyo 🧰."
 
 #: services/messenger.py:290
 msgid "Version control is a component of software configuration management 🖥️."
-msgstr ""
-"Le contrôle de version est un composant de la gestion de la configuration"
-" logicielle 🖥️."
+msgstr "Igenzura rya verisiyo ni igice cyimikorere ya software management 🖥️."
 
 #: services/messenger.py:301
 msgid ""
 "😎 Now that you understand what Version control is, let's explore another "
 "important topic."
 msgstr ""
-"😎 Maintenant que tu comprends ce qu'est le contrôle de version, explorons"
-" un autre sujet important."
+"😎 Noneho ko umaze gusobanukirwa icyo kugenzura verisiyo aricyo, reka "
+"dusuzume indi ngingo y'ingenzi."
 
 #: services/messenger.py:312
 msgid "What is Git❔"
-msgstr "C'est quoi Git❔"
+msgstr "Git niki❔"
 
 #: services/messenger.py:314
 msgid "What is GitHub❔"
-msgstr "C'est quoi GitHub ❔"
+msgstr "Github niki❔"
 
 #: services/messenger.py:317
 msgid "What do you want to start with⁉️ 👇🏼"
-msgstr "Par quoi veux-tu commencer ⁉️ 👇🏼"
+msgstr "Niki ushaka gutangirana nacyo⁉️ 👇🏼"
 
 #: services/messenger.py:327
 msgid ""
 "GitHub is a code hosting platform for version control and collaboration. "
 "It lets you and others work together on projects from anywhere."
 msgstr ""
-"GitHub est une plateforme d'hébergement de code pour le contrôle de "
-"version et la collaboration. Il te permet, ainsi qu'à d'autres, de "
-"travailler ensemble sur des projets depuis n'importe où."
+"GitHub ni kode yakira urubuga rwo kugenzura no gukorana.Bituma wowe "
+"n'abandi mukorera hamwe mu mishinga aho ariho hose."
 
 #: services/messenger.py:340
 msgid "Official Website"
-msgstr "Site officiel"
+msgstr "Urubuga rwemewe"
 
 #: services/messenger.py:345
 msgid "GitHub Tutorial"
-msgstr "Tutoriel GitHub"
+msgstr "Inyigisho za  Github"
 
 #: services/messenger.py:350
 msgid "👩‍💻 Make a PR"
-msgstr "👩‍💻 Faire une PR"
+msgstr "👩‍💻 Gukora PR"
 
 #: services/messenger.py:355
 msgid "Discover GitHub"
-msgstr "Découvre GitHub"
+msgstr "Menya GitHub"
 
 #: services/messenger.py:357
 msgid "Discover GitHub official website, or follow a beginner tutorial"
-msgstr "Découvre le site officiel de GitHub, ou suis un tutoriel pour débutant"
+msgstr "Menya urubuga rwemewe rwa GitHub, cyangwa ukurikire inyigisho zabatangira"
 
 #: services/messenger.py:371 services/messenger.py:712
 msgid "Good question 👌🏽"
-msgstr "Bonne question 👌🏽"
+msgstr "Ikibazo cyiza 👌🏽"
 
 #: services/messenger.py:375 services/messenger.py:716
 msgid ""
 "Git is a type of version control system (VCS) that makes it easier to "
 "track changes to files. "
 msgstr ""
-"Git est un type de système de contrôle de version (VCS) qui facilite le "
-"suivi des modifications apportées aux fichiers. "
+"Git ni ubwoko bwa sisitemu yo kugenzura verisiyo (VCS) "
+"yoroherezagukurikirana impinduka kuri dosiye."
 
 #: services/messenger.py:383 services/messenger.py:724
 msgid ""
 "For example, when you edit a file, Git can help you determine exactly "
 "what changed, who changed it, and why."
 msgstr ""
-"Par exemple, lorsque qu'on modifie un fichier, Git peut t'aider à "
-"déterminer exactement ce qui a changé, qui l'a modifié et pourquoi."
+"Urugero, iyo uhinduye dosiye, Git ishobora kugufasha kumenya "
+"nezaicyahindutse, uwagihinduye, n'impamvu."
 
 #: services/messenger.py:392 services/messenger.py:733
 msgid "👶🏽 Install Git"
-msgstr "👶🏽 Installer Git"
+msgstr "👶🏽 Shyiramo Git"
 
 #: services/messenger.py:395 services/messenger.py:735
 msgid "🤓 I've Git Installed"
-msgstr "🤓 J'ai installé Git"
+msgstr "🤓 Git ndayifite"
 
 #: services/messenger.py:399 services/messenger.py:739
 msgid "Want to learn more about Git?"
-msgstr "Tu veux en savoir plus sur Git ?"
+msgstr "Urashaka kumenya byinshi kuri Git?"
 
 #: services/messenger.py:412
 msgid "Good decision 👌🏽"
-msgstr "Bonne décision 👌🏽"
+msgstr "Icyemezo cyiza 👌🏽"
 
 #: services/messenger.py:416
 msgid ""
 "We are going to split the process into 5 steps: \n"
 "🛵 Fork, Clone, Update, Push and Merge. "
 msgstr ""
-"On va diviser le processus en 5 étapes:\n"
-"🛵 Fork, Cloner, mettre à jour, Push et Merge."
+"Tugiye kugabanya inzira mu ntambwe 5: \n"
+"🛵 Fork, Clone, Update, Push and Merge."
 
 #: services/messenger.py:425
 msgid "🥢 1. Fork"
@@ -283,27 +279,27 @@ msgstr ""
 
 #: services/messenger.py:428
 msgid "Ready for the first step?!"
-msgstr "Prêt pour la première étape ?!"
+msgstr "Witegure intambwe yambere?!"
 
 #: services/messenger.py:436
 msgid "Awesome 👌🏽"
-msgstr "Génial 👌🏽"
+msgstr "Byiza 👌🏽"
 
 #: services/messenger.py:440
 msgid ""
 "Open this link in a new window: \n"
 "https://github.com/fbdevelopercircles/open-source-edu-bot"
 msgstr ""
-"Ouvre ce lien dans une nouvelle fenêtre:\n"
-"https://github.com/fbdevelopercircles/open-source-edu-bot"
+"Fungura iyi link mu idirishya rishya: \n"
+"https://github.com/fbdevelopercircles/fungura-source-edu-bot"
 
 #: services/messenger.py:447
 msgid "Now, click `Fork` on the top right corner of your screen"
-msgstr "Maintenant, clique sur `Fork` dans le coin supérieur droit de ton écran"
+msgstr "Noneho, kanda `Fork` hejuru iburyo bwa ecran yawe"
 
 #: services/messenger.py:457
 msgid "A copy of the original project will be created in your account."
-msgstr "Une copie du projet original sera créée sur ton compte."
+msgstr "Kopi originale ya project izashyirwa muri konte yawe."
 
 #: services/messenger.py:465
 msgid "🚃 2. Clone"
@@ -311,19 +307,19 @@ msgstr "🚃 2. Clone"
 
 #: services/messenger.py:468
 msgid "Ready for the next step?!"
-msgstr "Prêt pour la prochaine étape ?!"
+msgstr "Witegure intambwe ikurikira ?!"
 
 #: services/messenger.py:476
 msgid "Great 👌🏽"
-msgstr "Super 👌🏽"
+msgstr "Byiza cyane 👌🏽"
 
 #: services/messenger.py:480
 msgid ""
 "Right now, you have a fork of the `open-source-edu-bot` repository, but "
 "you don't have the files in that repository on your computer."
 msgstr ""
-"Actuellement, tu as un fork du dépôt `open-source-edu-bot`, mais tu n'as "
-"pas les fichiers dans ce dépôt sur ton ordinateur."
+"Kuri ubu, ufite fork ya `open-source-edu-bot`, ariko ntabwo ufite dosiye "
+"ziri mur' ubwo bubiko kuri mudasobwa yawe."
 
 #: services/messenger.py:488
 msgid ""
@@ -331,13 +327,13 @@ msgid ""
 "On GitHub, in your newly forked project, Click on `Code` above the list "
 "of files"
 msgstr ""
-"Créons un clone de ton fork sur ton ordinateur.\n"
-"Sur GitHub, dans ton nouveau projet forké, cliques sur `Code` au-dessus "
-"de la liste des fichiers"
+"Reka dukore clone ya folk wakoze kuri mudasobwa yawe.\n"
+"Kuri GitHub, mu mushinga wawe mushya umaze gukorera folk, Kanda kuri "
+"`Code` hejuru y'urutonde rwa dosiye"
 
 #: services/messenger.py:504
 msgid "When you feel Ready🔥, hit Next to continue."
-msgstr "Lorsque tu te sens prêt🔥, clique sur Suivant pour continuer."
+msgstr "Niwumva witeguye🔥, kanda ahakurikira kugirango ukomeze."
 
 #: services/messenger.py:510
 msgid ""
@@ -346,72 +342,70 @@ msgid ""
 "To clone the repository using an SSH key click \"Use SSH\", then click on"
 " copy icon."
 msgstr ""
-"Pour cloner le dépôt en HTTPS, sous «Cloner avec HTTPS», clique sur "
-"l'icône de copie.\n"
-"Pour cloner le dépôt à l'aide d'une clé SSH, clique sur \"Use SSH\", puis"
-" clique sur l'icône de copie."
+"Kugirango uhindure ububiko ukoresheje HTTPS, munsi ya \"Clone with "
+"HTTPS\", kandaishusho ya kopi.\n"
+"Kugirango uhindure ububiko ukoresheje urufunguzo rwa SSH kanda \"Use "
+"SSH\", hanyuma ukande kuriishusho ya kopi."
 
 #: services/messenger.py:524
 msgid ""
 "Now open a terminal, change the current working directory to the location"
 " where you want the cloned directory."
 msgstr ""
-"Maintenant, ouvre un terminal, change le répertoire de travail actuel à "
-"l'emplacement où tu mis le dépôt cloné."
+"Noneho fungura terminal, hindura ububiko ujyeaho ushaka gushyira prooject"
+" wakoreye clone."
 
 #: services/messenger.py:531
 msgid ""
 "Type `git clone`, and then paste the URL you copied earlier.\n"
 "Press Enter. Your local clone will be created."
 msgstr ""
-"Tapes `git clone`, puis colles l'URL que copiée précédemment.\n"
-"Appuis sur Entrée. Ton clone local sera créé."
+"Andika `git clone`, hanyuma wandike URL wakopiye kare.\n"
+"Kanda Enter. Clone yawe irahita ikorwa."
 
 #: services/messenger.py:538
 msgid "🥯 3. Update"
-msgstr "🥯 3. Mettre à jour"
+msgstr "🥯 3. Update"
 
 #: services/messenger.py:541
 msgid "Now, you have a local copy of the project, Let's update it!"
-msgstr "Maintenant, tu as une copie locale du projet, mettons-le à jour!"
+msgstr "Noneho, ufite kopi ya project, Reka tuyivugurure!"
 
 #: services/messenger.py:552
 msgid "Amazing 👌🏽"
-msgstr "Génial 👌🏽"
+msgstr "Byiza 👌🏽"
 
 #: services/messenger.py:556
 msgid ""
 "Open the project using your favorite IDE, and look for "
 "`contributors.yaml` file"
 msgstr ""
-"Ouvre le projet en utilisant ton IDE préféré et recherche le fichier "
-"`contributors.yaml`"
+"Fungura project ukoresheje IDE ukunda, hanyuma "
+"ushakishe.`contributors.yaml` file"
 
 #: services/messenger.py:563
 msgid "This Yaml file contains list of project contributors, just like you."
-msgstr ""
-"Ce fichier Yaml contient la liste des contributeurs du projet, tout comme"
-" toi."
+msgstr "Iyi dosiye ya Yaml ikubiyemo urutonde rwabaterankunga, nkawe."
 
 #: services/messenger.py:574
 msgid ""
 "Following the same scheme, add your name, country and github username to "
 "the list."
 msgstr ""
-"En suivant le même schéma, ajoute ton nom, ton pays et ton nom "
-"d'utilisateur github à la liste."
+"Kurikiza gahunda imwe, ongeraho izina ryawe, igihugu ndetse n'izina rya "
+"github kurutonde."
 
 #: services/messenger.py:582
 msgid "🚲 4. Push"
-msgstr ""
+msgstr "🚲 4. Push"
 
 #: services/messenger.py:585
 msgid "Ready to commit & Push your changes?!"
-msgstr "Prêt à commiter et à Pusher tes changements ?!"
+msgstr "Witegure commit & Push ibyo wahinduye?!"
 
 #: services/messenger.py:593
 msgid "Way to go 👌🏽"
-msgstr "Etapes à suivre 👌🏽"
+msgstr "Twagiye 👌🏽"
 
 #: services/messenger.py:596
 msgid ""
@@ -419,11 +413,10 @@ msgid ""
 "Change the current working directory to your local repository.\n"
 "Stage the file by commiting it to your local repository using: `git add .`"
 msgstr ""
-"Ouvre ton Terminal.\n"
-"Déplace toi du répertoire courant vers le répertoire avec le clone du "
-"dépôt.\n"
-"Marque le fichier pour la validation dans ton dépôt local en utilisant: "
-"`git add .`"
+"Fungura Terminal. \n"
+"Hindura ububiko bwaho uri ujye aho wabitse ya project.\n"
+"Kora stage kugirango wemeze ibyo wakoze mububiko bwawe bwibanze "
+"ukoresheje: `git add .`"
 
 #: services/messenger.py:605
 msgid ""
@@ -431,29 +424,29 @@ msgid ""
 "`git commit -m \"Add YOUR_NAME to contributors list\"`\n"
 "Make sure to add your name :D"
 msgstr ""
-"Commit le fichier que tu as marqué dans ton dépôt local:\n"
-"`git commit -m \" Add YOUR_NAME to contributors list\"`\n"
-"Assures-toi d'ajouter ton nom :D"
+"Emeza dosiye wateguye(stage) mu bubiko bwawe:\n"
+"`git commit -m \\ \"Ongeraho amazina yawe kurutonde rwabaterankunga \"`\n"
+"menya neza ko wongeyeho izina ryawe: D"
 
 #: services/messenger.py:614
 msgid ""
 "Finally, Push the changes in your local repository to  GitHub: `git push "
 "origin master`"
 msgstr ""
-"Enfin, Push les modifications de ton dépôt local vers GitHub: `git push "
-"origin master`"
+"Hanyuma, Shyira impinduka mububiko bwawe kuri GitHub: `git push origin "
+"master`"
 
 #: services/messenger.py:622
 msgid "🔐 5. Merge"
-msgstr ""
+msgstr "🔐 5. Merge"
 
 #: services/messenger.py:625
 msgid "Ready to make your first PR?!"
-msgstr "Prêt à faire ta première PR ?!"
+msgstr "Witegure gukora PR yawe yambere?!"
 
 #: services/messenger.py:633
 msgid "Proud of you 👌🏽"
-msgstr "Fier de toi 👌🏽"
+msgstr "Ndakwishimiye 👌🏽"
 
 #: services/messenger.py:636
 msgid ""
@@ -461,108 +454,102 @@ msgid ""
 "/open-source-edu-bot \n"
 "Above the list of files, click `Pull request`."
 msgstr ""
-"Reviens maintenant au repo d'origine: "
-"https://github.com/fbdevelopercircles/open-source-edu-bot\n"
-"Au-dessus de la liste des fichiers, cliques sur \"Pull request\"."
+"Noneho subira kuri repo y'umwimerere: "
+"https://github.com/fbdevelopercircles/open-source-edu-bot \n"
+"Hejuru y'urutonde rwa dosiye, kanda `Pull request`."
 
 #: services/messenger.py:649
 msgid ""
 "Make sure that \"base branch\" & \"head fork\" drop-down menus both are "
 "pointing to `master`."
 msgstr ""
-"Assures-toi que les menus déroulants \"base branch\" et \"head fork\" "
-"pointent tous les deux vers `master`"
+"Menya neza ko \"base branch\" & \"head fork\" menu zireba hasi "
+"zombizerekeza kuri `master`"
 
 #: services/messenger.py:661
 msgid ""
 "Type a title and description for your pull request. Then click `Create "
 "Pull Request`."
 msgstr ""
-"Tape un titre et une description pour ta pull request. Clique ensuite sur"
-" `Create Pull Request`"
+"Andika umutwe n'ibisobanuro kubyo usaba gukurura. Noneho kanda `Create "
+"Pull Request`."
 
 #: services/messenger.py:667
 msgid "✅ Done"
-msgstr "✅ Terminé"
+msgstr ""
 
 #: services/messenger.py:670
 msgid "Have you created your first PR?"
-msgstr "As-tu créé ta première PR ?"
+msgstr "✅ Byakozwe"
 
 #: services/messenger.py:680
 #, python-format
 msgid "🙌🎉 Bravo %(first_name)s 🙌🎉"
-msgstr ""
+msgstr "🙌🎉 Bravo %(first_name)s 🙌🎉"
 
 #: services/messenger.py:692
 msgid "Now the team will review your PR and merge it ASAP :D"
-msgstr "Maintenant, l'équipe examinera ta PR et la fusionnera dès que possible: D"
+msgstr "Noneho itsinda rizasuzuma PR yawe hanyuma riyihuze ASAP :D"
 
 #: services/messenger.py:701
 msgid "Given below are other interesting stuff that we can explore together:"
-msgstr ""
-"Ci-dessous d'autres choses intéressantes que nous pouvons explorer "
-"ensemble :"
+msgstr "Munsi y'hari ibindi bintu bishimishije dushobora gushakisha hamwe:"
 
 #: services/messenger.py:747
 msgid "Time to get Git installed in your machine ⭕!"
-msgstr "Il est temps d'installer Git sur ta machine ⭕ !"
+msgstr "Igihe cyo gushyira Git mumashini yawe ⭕!"
 
 #: services/messenger.py:753
 msgid "Download Git"
-msgstr "Télécharger Git"
+msgstr "Manura Git"
 
 #: services/messenger.py:757
 msgid "Head over here, and download Git Client based on your OS."
-msgstr ""
-"Rends-toi ici et télécharge le client Git en fonction de ton système "
-"d'exploitation."
+msgstr "Kanda hano, hanyuma umanure Git Client ukurikije OS yawe."
 
 #: services/messenger.py:767
 msgid "Configure Git ⚒️"
-msgstr "Configurer Git ⚒️"
+msgstr "Gukonfigira Git ⚒️"
 
 #: services/messenger.py:770
 msgid "🧑‍🚀 Once done, let's configure Git"
-msgstr "🧑‍🚀 Une fois terminé, configurons Git"
+msgstr "🧑‍🚀 Bimaze gukorwa, reka duconfigire Git"
 
 #: services/messenger.py:778
 msgid "Great Progress so far 👨🏽‍🎓!"
-msgstr "De grands progrès jusqu'à présent 👨🏽‍🎓!"
+msgstr "Kugeza ubu bimeze neza 👨🏽‍🎓!"
 
 #: services/messenger.py:782
 msgid ""
 "Now let's configure your Git username and email using the following "
 "commands"
 msgstr ""
-"Maintenant, configure ton nom d'utilisateur et ton e-mail Git à l'aide "
-"des commandes suivantes"
+"Noneho reka dushyireho username na email bya Git ukoresheje amategeko "
+"akurikira"
 
 #: services/messenger.py:789
 msgid "`$ git config --global user.name \"Steve Josh\"`"
-msgstr ""
+msgstr "`$ git config --global user.name \"Steve Josh\"`"
 
 #: services/messenger.py:793
 msgid "`$ git config --global user.email \"josh@example.com\"`"
-msgstr ""
+msgstr "`$ git config --global user.email \"josh@example.com\"`"
 
 #: services/messenger.py:797
 msgid "Don't forget to replace Steve's  name and email with your own."
-msgstr ""
-"N'oublies pas de remplacer le nom et l'adresse e-mail de Steve par les "
-"tiens"
+msgstr "Ntiwibagirwe gusimbuza izina na email bya Steve ibyawe."
 
 #: services/messenger.py:803
 msgid "These details will be associated with any commits that you create"
-msgstr "Ces détails seront associés à tous les commits que tu feras"
+msgstr "Ibisobanuro birambuye bizahuzwa nibikorwa byose ukora"
 
 #: services/messenger.py:813
 msgid "Now let's check, what is Github?👇🏼"
-msgstr "Voyons maintenant, qu'est-ce que Github ?👇🏼"
+msgstr "Noneho reka dusuzume, Github ni iki? 👇🏼"
 
 #: services/messenger.py:820
 msgid "Facebook 🧡 Open Source!"
-msgstr "Facebook 🧡 l'Open Source !"
+msgstr "Facebook 🧡 Open Source!"
 
 #: services/messenger.py:824
 msgid ""
@@ -580,37 +567,35 @@ msgid ""
 "✔️ Virtual Reality\n"
 "..."
 msgstr ""
-"Facebook gère de nombreux projets Open Source dans les domaines suivants "
-":\n"
+"Facebook icunga imishinga myinshi ya Open Source mu bice bikurikira:\n"
 "✔️ Android\n"
-"✔️ Intelligence artificielle\n"
-"✔️ Structure des données\n"
-"✔️ Opérations pour développeurs\n"
-"✔️ Outils pour développeurs\n"
+"✔️ Artificial Intelligence\n"
+"✔️ Data Infrastructure\n"
+"✔️ Developer Operations\n"
+"✔️ Development Tools\n"
 "✔️ Frontend\n"
 "✔️ iOS\n"
-"✔️ Langues\n"
+"✔️ Languages\n"
 "✔️ Linux\n"
-"✔️ Sécurité\n"
-"✔️ Réalité virtuelle\n"
+"✔️ Security\n"
+"✔️ Virtual Reality\n"
 "..."
 
 #: services/messenger.py:845
 msgid "Explore them"
-msgstr "Explore les"
+msgstr "Zinyuremo"
 
 #: services/messenger.py:849
 msgid "Explore Facebook Open Source projects"
-msgstr "Explore les projects Open Source de Facebook"
+msgstr "Nyura muri project za Facebook ziri Open Source"
 
 #: services/messenger.py:858
 msgid ""
 "🤓 You know what? This chatbot code is Open Source 🔓, it's developed by "
 "Facebook Developers Circles members around the world."
 msgstr ""
-"🤓 Tu sais quoi ? Le code de ce chatbot est Open Source 🔓, il est "
-"développé par des membres des Facebook Developers Circles du monde "
-"entier."
+"🤓 Uzi nikindi? Izi code za chatbot ni Open Source 🔓, yakozwe n' "
+"abanyamuryango ba Facebook Developers Circles bari kw' isi hose."
 
 #: services/messenger.py:866
 #, python-format
@@ -618,26 +603,25 @@ msgid ""
 "%(first_name)s we welcome contributors, or simply feel free to fork the "
 "code on GitHub, and create your own chatbot."
 msgstr ""
-"%(first_name)s nous souhaitons la bienvenue aux nouveaux ontributeurs, ou"
-" n'hésite pas à forker le code sur GitHub et à créer ton propre chatbot."
+"%(first_name)s twakiriye neza abaterankunga, cyangwa wisanzure mugukora "
+"folk yakode kuri GitHub, hanyuma ukore chatbot yawe bwite."
 
 #: services/messenger.py:876
 msgid "The Source Code"
-msgstr "Le Code Source"
+msgstr "Source Code"
 
 #: services/messenger.py:881
 msgid "Join a circle"
-msgstr "Réjoins un Circle"
+msgstr "Injira mu ruziga"
 
 #: services/messenger.py:886 services/messenger.py:899
 msgid "🚶🏽‍♀️ Main Menu 🗄️"
-msgstr "🚶🏽‍♀️ Menu principal 🗄️"
+msgstr "🚶🏽‍♀️Menu nyamukuru 🗄️"
 
 #: services/messenger.py:889
 msgid "Select an option 👇🏼"
-msgstr "Sélectionne une option 👇🏼"
+msgstr "Hitamo uburyo 👇🏼"
 
 #: services/messenger.py:901
 msgid "Coming soon!"
-msgstr "Bientôt disponible !"
-
+msgstr "Bizaza vuba!"
