@@ -3,8 +3,7 @@
 # Welcome to Open source educational bot from DevC  #
 # Add your details to the list                      #
 #####################################################
-contributors:
-  
+contributors:  
   - name: Mohammed Aboullaite
     country: Morocco
     github: aboullaite
@@ -104,13 +103,18 @@ contributors:
     github: honorezemagho
    
    -name: Akshay
-   country: India
-   city: Indore
-   github: avenger55
+    country: India
+    city: Indore
+    github: avenger55
 
   - name: Fanlan Zhang
     country: Taiwan
     github: fanlan1210 
+
+  - name: KAMTHIE LONTCHI LIONELLE
+    country: Cameroon
+    city: Douala
+    github: Lontchi12
 
   - name: Fadimatou Traore
     country: Cameroon
@@ -119,5 +123,12 @@ contributors:
   - name: Amir Toukour
     country: Cameroon
     github: amirtechnoide
+<<<<<<< HEAD
 =======
 >>>>>>> 18e0ef8 (Added contributor info on contributors.yml file.)
+=======
+
+  - name: Flovet Asong
+    country: Cameroon
+    github: Flovet-stack
+>>>>>>> 5ce5f92d412fd72107a99c62297462dd252f0044
