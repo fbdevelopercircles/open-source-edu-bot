@@ -102,10 +102,6 @@ contributors:
     github: honorezemagho
    
    -name: Akshay
-   country: India
-   city: Indore
-   github: avenger55
-   
     country: India
     city: Indore
     github: avenger55
@@ -132,6 +128,6 @@ contributors:
     github: Flovet-stack
     
   - name: DZE RICHARD
-   country: cameroon
-   city: douala
-   github: dfrichard
+    country: cameroon
+    city: douala
+    github: dfrichard
