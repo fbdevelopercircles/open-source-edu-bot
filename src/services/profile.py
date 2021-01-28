@@ -74,6 +74,12 @@ GREETING = {
             " Empezar abajo para acceder a los recursos seleccionados de"
             " Facebook DevC relacionados con el Open Source 🔓."
         },
+	{
+            "locale": "ru_RU",
+            "text": u"🙋🏽 Здравствуйте {{user_first_name}}! Нажмите Начать,"
+            " кнопку ниже, чтобы получить доступ к ресурсам"
+            " DevC Facebook, связанным с миром Open Source 🔓."
+        }
     ]
 }
 
@@ -238,6 +244,27 @@ PERSISTENT_MENU = {
                 {
                     "type": "postback",
                     "title": "🗄️ Menú Principal",
+                    "payload": "MAIN_MENU"
+                },
+                {
+                    "type": "postback",
+                    "title": "🔓 FB Open Source",
+                    "payload": "FB_OS"
+                }
+            ]
+        },
+	{
+            "locale": "ru_RU",
+            "composer_input_disabled": False,
+            "call_to_actions": [
+                {
+                    "type": "postback",
+                    "title": "🏁 Начать",
+                    "payload": "START"
+                },
+                {
+                    "type": "postback",
+                    "title": "🗄️ Главное меню",
                     "payload": "MAIN_MENU"
                 },
                 {
