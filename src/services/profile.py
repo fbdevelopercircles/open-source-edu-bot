@@ -74,7 +74,7 @@ GREETING = {
             " Empezar abajo para acceder a los recursos seleccionados de"
             " Facebook DevC relacionados con el Open Source 🔓."
         },
-	{
+        {
             "locale": "ru_RU",
             "text": u"🙋🏽 Здравствуйте {{user_first_name}}! Нажмите Начать,"
             " кнопку ниже, чтобы получить доступ к ресурсам"
@@ -253,7 +253,7 @@ PERSISTENT_MENU = {
                 }
             ]
         },
-	{
+        {
             "locale": "ru_RU",
             "composer_input_disabled": False,
             "call_to_actions": [
